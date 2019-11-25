@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/map.css" />
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=HTaxBoWvUHHaqPGpcrZkayIeFqPt5lAr"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="js/map.js"></script>
+	<title>百度地图</title>
+	<style type="text/css">
+		html {
+			height: 100%;
+		}
+
+		body {
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="inputbox">
+		<!--搜索条组 -->
+		<div class="input-group input-group-lg inputdiv">
+			<input type="text" class="form-control searchinput" placeholder="请输入您要查看的区域" id="suggestId" />
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-info">
+					<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+				</button>
+			</span>
+		</div>
+		<!--按钮组-->
+		<div class="statebtns">
+			<button class="btncount" id="isdevice">设备数量：<span id="devicecount"></span></button>
+			<button class="btnnormal" id="iswork">工作中：<span id="zhengchang"></span></button>
+			<button class="btnyaoshui" id="qyunnormal">药水异常：<span id="queyao"></span></button>
+			<button class="btnguzhang" id="qyreport">药水告警：<span id="guzhang"></span></button>
+			<button class="btn btn-info qpbtn" onclick="showFull()">全屏</button>
+			<button class="btn btn-success tcqpbtn" onclick="delFull()">退出全屏</button>
+		</div>
+	</div>
+	<!--地图容器-->
+	<div id="container"></div>
+	<!--结果面板-->
+	<div id="searchResultPanel"></div>
+</body>
+<script>
+	var devicename=null;
+	$.ajax({
+			url: '/b3reportSystem/api/TDic/getByDicType',
+			method: 'POST',
+			contentType:'application/x-www-form-urlencoded',
+			//processData: false,
+			cache: false,
+			dataType: "json",//预期服务器返回的数据类型
+			data:{'dicType':'devicetype'},
+			headers: {
+				token:localStorage.getItem("token"),
+			},
+			context: this,
+			success: function (res) {
+				devicename=res.data;
+			}
+	});
+	var clientlist=[];
+	$.ajax({
+			url: '/b3reportSystem/api/RsClient/queryRsClientList',   //客户
+			method: 'POST',
+			contentType:'application/json;charset=utf-8',
+			data: JSON.stringify({page: 1, len: 10}),
+			headers: {
+				token:localStorage.getItem("token"),
+			},
+			context: this,
+			success: function (res) {
+				var objClientList = JSON.parse(res).data.list;
+				//console.log("queryRsClientList",objClientList);
+				for(var i=0;i<objClientList.length;i++){
+					var clientid=objClientList[i].client_id;
+					var clientname=objClientList[i].client_name;
+					var json={};
+					json.clientID=clientid;
+					json.clientName=clientname;
+					clientlist.push(json);
+				}
+			}
+	});
+	var appname = "b3reportSystem-webNew";
+	var map = new BMap.Map("container");
+	var p1=localStorage.getItem("zonelon" + appname).replace('"','');
+	var p2=localStorage.getItem("zonelan" + appname).replace('"','');
+	var level=localStorage.getItem("zonelevel" + appname).replace('"','');
+	var point = new BMap.Point(parseFloat(p1),parseFloat(p2) );
+	map.centerAndZoom(point,parseInt(level) );
+	//var point = new BMap.Point(118.834042,32.085274);
+	//map.centerAndZoom(point, 12);
+	map.enableScrollWheelZoom(true);
+	addDevicemarker();
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+	//输入地址自动提示
+	var ac = new BMap.Autocomplete({         					//建立一个自动完成的对象
+		"input": "suggestId",
+		"location": map
+	});
+	ac.addEventListener("onhighlight", function (e) {  //鼠标放在下拉列表上的事件
+		var str = "";
+		var _value = e.fromitem.value;
+		var value = "";
+		if (e.fromitem.index > -1) {
+			value = _value.province + _value.city + _value.district + _value.street + _value.business;
+		}
+		str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+		value = "";
+		if (e.toitem.index > -1) {
+			_value = e.toitem.value;
+			value = _value.province + _value.city + _value.district + _value.street + _value.business;
+		}
+		str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+		G("searchResultPanel").innerHTML = str;
+	});
+
+	var myValue;
+	ac.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+		var _value = e.item.value;
+		myValue = _value.province + _value.city + _value.district + _value.street + _value.business;
+		G("searchResultPanel").innerHTML = "onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+		setPlace();
+	});
+
+	function setPlace() {
+		//map.clearOverlays();    //清除地图上所有覆盖物
+		function myFun() {
+			var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+			map.centerAndZoom(pp, 18);								//视野转移
+			//map.addOverlay(new BMap.Marker(pp));    //添加标注
+		};
+		var local = new BMap.LocalSearch(map, { onSearchComplete: myFun });//智能搜索
+		local.search(myValue);
+	};
+	function addDevicemarker() {
+		var marks=[];//标识点数组
+		function addMarker(point, index,deiswork,qyyichang,qygaojing) {
+			var myIcon =null;
+			if(deiswork=="工作中"){
+					myIcon = new BMap.Icon("img/icon_normal.png", new BMap.Size(38, 38), {
+					anchor: new BMap.Size(19, 19)   
+				});
+			}
+			else if(qyyichang=="是"){
+				    myIcon = new BMap.Icon("img/icon_yaoshui1.gif", new BMap.Size(100, 100), {
+					anchor: new BMap.Size(50, 50)
+				});
+			}
+			else if(qygaojing=="是"){
+				myIcon = new BMap.Icon("img/icon_guzhang1.gif", new BMap.Size(100, 100), {
+					anchor: new BMap.Size(50, 50)
+				});
+			}
+			else if(qyyichang=="是"&&qygaojing=="是"){
+				myIcon = new BMap.Icon("img/icon_guzhang1.gif", new BMap.Size(100, 100), {
+					anchor: new BMap.Size(50, 50)
+				});
+			}
+			else if(deiswork!="工作中"&&qyyichang!="是"&&qygaojing!="是"){
+				myIcon = new BMap.Icon("img/icon_shebei.png", new BMap.Size(38, 38), {
+					anchor: new BMap.Size(19, 19)
+				});
+			}
+			var marker = new BMap.Marker(point, { icon: myIcon });
+			map.addOverlay(marker);
+			marks.push(marker);
+			addClickHandler(content,marker);
+			//标识点点击事件
+			function addClickHandler(content,marker){
+					marker.addEventListener("click",function attribute(e) {
+					var p = marker.getPosition();
+					console.log("设备位置：" + p.lng + "," + p.lat);
+					openInfo(content,e);
+				});
+			}
+			
+			function openInfo(content,e){
+				var p = e.target;
+				var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+				var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
+				map.openInfoWindow(infoWindow,point); //开启信息窗口
+			}
+		};
+		// 查询所有设备，并显示
+		var opts=null;
+		var content=null;
+		$.ajax({
+			url: '/b3reportSystem/api/RsDevice/queryRsDeviceList',
+			method: 'POST',
+			contentType:'application/json;charset=utf-8',
+			data: JSON.stringify({page: 1, len: 10,device_status:1}),
+			headers: {
+			token:localStorage.getItem("token"),
+			},
+			context: this,
+			success: function (res) {
+				var iswork=null,qyyichang=null,qygaojing=null,clientname=null,deviceName=null;
+				markinfo=res;
+				var obj = JSON.parse(res);
+				//console.log("queryRsDeviceList",obj);
+				var zhengchang=0,guzhang=0,queyao=0,devicecount=0;
+				for (var i = 0; i < obj.data.list.length; i++) {
+					var data=obj.data.list[i];
+
+					if(obj.data.list[i].hasOwnProperty("last_logid")){       //判断正在工作中（有last_logid字段且值不为空）的设备
+						var lastlogin=obj.data.list[i].last_logid;
+						if(lastlogin!=null && lastlogin!=""){
+							zhengchang++;
+							iswork="工作中";
+						}else{
+							iswork="未工作";
+						};
+					}else{
+							iswork="未工作";
+						};
+
+					//缺药异常或故障处理
+					if(obj.data.list[i].hasOwnProperty("error_log")){       
+						var errorlog=obj.data.list[i].error_log;
+						if(errorlog[0]=='1'){
+							guzhang++;
+							qygaojing="是";
+							if(errorlog[1]=='1'){
+								queyao++;
+								qyyichang="是";
+							}else{
+								qyyichang="否";
+							};
+						}else{
+							qygaojing="否";
+						};
+						if(errorlog[1]=='1'){
+							queyao++;
+							qyyichang="是";
+						}else{
+							qyyichang="否";
+						};
+					}else{
+						qygaojing="否";
+						qyyichang="否";
+					};
+					for(var n=0;n<clientlist.length;n++){
+						var clientId=clientlist[n].clientID;
+						if(clientId==data.client_id){
+							clientname=clientlist[n].clientName;
+							break;
+						};
+					};
+					for(var m=0;m<devicename.length;m++){
+						var deviceId=devicename[m].dicCode;
+						if(deviceId==data.device_type){
+							deviceName=devicename[m].dicValue;
+							break;
+						};
+					};
+				var data_info=[data.device_lon, data.device_lat, "<table class='table table-hover table-bordered'>"+
+				  "<tr><th>设备UUID</th><th>客户</th><th>工作状态</th><th>缺药水异常</th><th>缺药水告警</th></tr>"+
+				  "<tr class='info'><td>"+data.device_uuid+"</td><td>"+clientname+"</td><td>"+iswork+"</td><td>"+qyyichang+"</td><td>"+qygaojing+"</td></tr>"+
+				  "</table>"];
+				    opts={
+					  title:deviceName,
+					  enableMessage:true
+				  	};
+					var point = new BMap.Point(data_info[0], data_info[1]);
+					content=data_info[2];
+					var devicetatus=obj.data.list[i].device_status;//devicetatus=1的数量为设备数
+					addMarker(point, i,iswork,qyyichang,qygaojing);
+					if(devicetatus=="1"){
+						devicecount++;
+					};
+				}
+				$("#zhengchang").html(zhengchang);
+				$("#guzhang").html(guzhang);
+				$("#queyao").html(queyao);
+				$("#devicecount").html(devicecount);
+				
+				if(queyao>0){
+					for(var i=0;i<marks.length;i++){
+						var markicon=marks[i].K.ue.imageUrl;
+						var worklng=marks[i].point.lng;
+						var worklat=marks[i].point.lat;
+						if(markicon=="img/icon_yaoshui.png"){
+							var workpoint = new BMap.Point(worklng,worklat);
+							map.centerAndZoom(workpoint,parseInt(level) );
+							break;
+						}
+					};
+				}
+				else if(guzhang>0){
+					for(var i=0;i<marks.length;i++){
+						var markicon=marks[i].K.ue.imageUrl;
+						var worklng=marks[i].point.lng;
+						var worklat=marks[i].point.lat;
+						if(markicon=="img/icon_guzhang.png"){
+							var workpoint = new BMap.Point(worklng,worklat);
+							map.centerAndZoom(workpoint,parseInt(level) );
+							break;
+						}
+					};
+				}else{
+					map.centerAndZoom(point,parseInt(level));
+				};
+			}
+
+		});
+		
+		//点击工作中按钮
+		var working = document.getElementById("iswork");
+		working.onclick =function(){  
+			//console.log('allmarkers',marks);//拿到地图上标识点的数组
+			for(var i=0;i<marks.length;i++){
+				var markicon=marks[i].K.ue.imageUrl;
+				var worklng=marks[i].point.lng;
+				var worklat=marks[i].point.lat;
+				if(markicon=="img/icon_normal.png"){
+					var workpoint = new BMap.Point(worklng,worklat);
+					map.centerAndZoom(workpoint,parseInt(level));
+					break;
+				}
+			};
+		}  
+		
+		//点击缺药异常按钮
+		var qyunnormal = document.getElementById("qyunnormal");
+		qyunnormal.onclick=function(){
+			for(var i=0;i<marks.length;i++){
+				var markicon=marks[i].K.ue.imageUrl;
+				var worklng=marks[i].point.lng;
+				var worklat=marks[i].point.lat;
+				if(markicon=="img/icon_yaoshui1.gif"){
+					var workpoint = new BMap.Point(worklng,worklat);
+					map.centerAndZoom(workpoint,parseInt(level));
+					break;
+				}
+			};
+		
+		//点击缺药告警按钮		
+		var qyreport = document.getElementById("qyreport");
+		qyreport.onclick=function(){
+			for(var i=0;i<marks.length;i++){
+				var markicon=marks[i].K.ue.imageUrl;
+				var worklng=marks[i].point.lng;
+				var worklat=marks[i].point.lat;
+				if(markicon=="img/icon_guzhuang1.gif"){
+					var workpoint = new BMap.Point(worklng,worklat);
+					map.centerAndZoom(workpoint,parseInt(level));
+					break;
+				}
+			};
+		};
+
+		//点击设备按钮
+		var isdevice= document.getElementById("isdevice");
+		isdevice.onclick=function(){
+			for(var i=0;i<marks.length;i++){
+				var markicon=marks[i].K.ue.imageUrl;
+				var worklng=marks[i].point.lng;
+				var worklat=marks[i].point.lat;
+				if(markicon=="img/icon_shebei.png"){
+					var workpoint = new BMap.Point(worklng,worklat);
+					map.centerAndZoom(workpoint,parseInt(level));
+					break;
+				}
+			};
+		};
+
+		}
+	};
+	
+	addDevicemarker();
+	
+</script>
+
+</html>

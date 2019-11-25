@@ -1,0 +1,78 @@
+@import '~antd/lib/style/themes/default.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-image: url('../assets/bg_phone.png');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 440px 810px;
+}
+
+.content {
+  padding: 32px 0;
+  flex: 1;
+}
+
+@media (min-width: @screen-md-min) {
+  .container {
+    background-image: url('../assets/logobg.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1920px 750px;
+    text-align: center;
+  }
+
+  .content {
+    width: 430px;
+    height: 480px;
+    border-radius: 4px;
+    background: rgba(21, 21, 21, 29%);
+    position: absolute;
+    top: 50%;
+    margin-top: -215px;
+    right: 12%;
+    padding-top: 29px;
+  }
+}
+.copyword {
+  display: block;
+  width: 50%;
+  color: #77797d;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  margin-left: -25%;
+}
+
+.top {
+  text-align: center;
+}
+
+.header {
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  margin-top: 50px;
+  width: 62%;
+}
+
+.title {
+  font-size: 33px;
+  color: @heading-color;
+  font-family: 'Myriad Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+
+.desc {
+  font-size: 18px;
+  color: #77797d;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}

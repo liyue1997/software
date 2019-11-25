@@ -1,0 +1,11 @@
+构造 log流水
+
+SET @row_number = 0;
+Set @daynow=now();
+insert into rs_devicelog
+select UUID(),c.dic_code,(@daynow:=date_sub(@daynow,interval 1 day)) as start_day, (date_sub(@daynow,interval -1 hour)) as end_day,
+d.client_id,d.device_id,d.device_uuid,d.device_type,d.dls_id,d.yw_user_id,
+(@row_number:=@row_number + 1) AS use_time,'',null,'',null from rs_device d
+join t_dic c where dic_type='projecttype';
+
+

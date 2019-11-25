@@ -1,0 +1,31 @@
+.window {
+	background: rgba(0, 0, 0, 1.0);
+}
+
+.imgViewMain {
+	text-align: center;
+	height: 100%;
+}
+
+.x-contents-content {
+	height: 100%;
+	position: absolute;
+}
+
+.img-show {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+}
+
+.tb-img2 {
+	width: 100%;
+}
+
+.carousel-indicators {
+	bottom: 0;
+}

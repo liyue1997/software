@@ -1,0 +1,54 @@
+.lineTwoSpan2
+{
+	left:calc(50% - 15px);
+    left:-moz-calc(50% - 15px);
+    left:-webkit-calc(50% - 15px);
+}
+.lineSpan-bg
+{
+	background:#108EE9!important;
+}
+.rightPlay
+{
+	right:0;
+}
+.play
+{
+	position: absolute;
+	width:30px;
+	height:30px;
+	border:1px solid #108EE9;
+	border-radius:50%;
+	background:#108EE9!important;
+	z-index:-1;
+	animation: btnClick 1s infinite;
+	-webkit-animation: btnClick 1s infinite; /* alternate 反复出现*/	
+}
+@-webkit-keyframes btnClick{
+	from{
+ 		opacity: 1.0;
+ 		transform: scale(0.6,0.6);
+ 		-webkit-transform: scale(0.6,0.6);
+	}
+	to
+	{
+        opacity: 0;
+		transform: scale(2.0,2.0);
+		-webkit-transform: scale(2.0,2.0);
+	}
+}
+@keyframes btnClick{
+	from{
+	    opacity: 1.0;
+ 		transform: scale(0.6,0.6);
+ 		-webkit-transform: scale(0.6,0.6);
+	}
+	to
+	{
+	    opacity: 0;
+		transform: scale(2.0,2.0);
+		-webkit-transform: scale(2.0,2.0);
+	}
+}
+
+

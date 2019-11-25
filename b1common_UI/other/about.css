@@ -1,0 +1,56 @@
+.window,.x-panel,.panel,.x-panel-content
+{
+	background-color:#f1f1f1;
+}
+.panel{ border:0;}
+.panel.panel-default{ margin-top:10px;}
+.x-titlebar
+{
+	background-color:#fff;
+	color:#000;
+	border-bottom:1px solid #b2b2b2;
+}
+
+.panel .btn
+{
+	width:100%;
+	border-radius:0;
+	height:60px;
+	line-height:45px;
+	font-size:16px;
+	color:#139462;
+	border:0;
+}
+.panel .btn:active
+{
+	background-color:#E0E0E0;
+}
+.panel .btn-default
+{
+	background-color:#FFFFFF;
+	
+}
+.otherBtn
+{
+	padding:0 20px;
+}
+.otherBtn .btn
+{
+	background:#FB4747;
+	border-radius:6px;
+	border:0;
+	color:#FFFFFF;
+	height:44px;
+	line-height:30px;
+	width:100%;
+	font-size:16px;
+}
+.btnback{
+	color:#1ca670;
+}
+.finallybtn{
+	margin-top:10px;height:100%;
+}
+.abovebtn{
+	margin-top:10px;
+}

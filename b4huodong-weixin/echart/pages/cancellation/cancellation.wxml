@@ -1,0 +1,30 @@
+<!--pages/cancellation/cancellation.wxml-->
+<view class="header">
+<view class="hexiaoView">
+<input class="hexiaoInput" placeholder="请输入购买的优惠券码" bindblur="coupon" value="{{result}}"></input>
+</view>
+
+<view class="scan" bindtap="scan">
+<image src="../../images/icon_saoma@2x.png" style="width:25px; height:25px;"></image>
+<view style="float: right">扫码验证</view>
+</view>
+
+<view class="hexiao" bindtap="hexiao">
+<image src="../../images/hexiao.png" style="width:25px; height:25px; margin-right:4px"></image>
+<view style="float: right">核销</view>
+</view>
+
+</view>
+<!-- <view style="width:100%;height:50px;background:#E6F3F9"></view> -->
+<view class="hexiaoInfo">
+<i-panel wx:if="{{status}}">
+    <i-input value="{{listData.payMoney}}" title="支付金额:"  disabled/>
+    <i-input value="{{listData.userName}}" title="姓名:"   disabled/>
+    <i-input value="{{listData.userCar}}" title="车牌号:"   disabled/>
+    <i-input value="{{listData.payTime}}" title="支付时间:"   disabled/>
+    <i-input value="{{listData.userPhone}}" type="number:" title="手机号" disabled/>
+    <i-input value="未支付" title="支付状态:" wx:if='{{listData.payStatus == 0}}'   disabled />
+    <i-input value="支付成功" title="支付状态:" wx:elif='{{listData.payStatus == 1}}'   disabled />
+    <i-input value="支付失败" title="支付状态:" wx:elif='{{listData.payStatus == 2}}'   disabled />
+</i-panel>
+</view>

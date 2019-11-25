@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" class="main13 cAJbMJ3" component="$model/UI2/system/components/justep/window/window" design="device:mobile;" xid="window" sysParam="false" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cAJbMJ3" components="$model/UI2/system/components/justep/model/model,$model/UI2/p_common/lib/superInput/superInput,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/menu/menu,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/windowDialog/windowDialog,$model/UI2/system/components/justep/router/router,$model/UI2/system/components/justep/messageDialog/messageDialog,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/button/checkbox,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/output/output,$model/UI2/system/components/justep/popMenu/popMenu,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/button/buttonGroup,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar.o-top.cAJbMJ3{background-color: rgb(75, 115, 164)} .x-titlebar.o-top.cAJbMJ3 span.cAJbMJ3{font-size: 16px} .o-img.cAJbMJ3{width: 40px; height: 40px; border-radius: 40px} .operationImg.cAJbMJ3{width: 30px; height: 30px} .text-black.cAJbMJ3{color: rgb(49, 49, 49)} .media.cAJbMJ3{margin-bottom: 10px} .media-body.cAJbMJ3{vertical-align: middle} .o-name.cAJbMJ3{color: rgb(255, 255, 255); font-size: 16px; background: none; border: none} .o-messageBox1.cAJbMJ3, .o-messageBox2.cAJbMJ3{position: relative} .o-messageBox1.cAJbMJ3{padding-right: 50px} .o-messageBox1.cAJbMJ3 span.msgContent.cAJbMJ3{float: left; padding: 8px 10px; margin-left: 7px; font-size: 18px; border: 1px solid rgb(210, 210, 210); border-radius: 5px; background-color: rgb(250, 250, 250)} .o-messageBox1.cAJbMJ3 .o-icon.cAJbMJ3{width: 8px; height: 14px; position: absolute; left: 0; top: 12px; z-index: 1} .o-messageBox2.cAJbMJ3{padding-left: 50px} .o-messageBox2.cAJbMJ3 span.msgContent.cAJbMJ3{float: right; padding: 8px 10px; margin-right: 7px; font-size: 18px; border: 1px solid rgba(137, 174, 86, 0.8); border-radius: 5px; background-color: rgb(177, 232, 102)} .o-messageBox2.cAJbMJ3 .o-icon.cAJbMJ3{width: 8px; height: 14px; position: absolute; right: 0; top: 12px; z-index: 1} .o-messageBox2.cAJbMJ3 span.photoMsg.cAJbMJ3, .o-messageBox1.cAJbMJ3 span.photoMsg.cAJbMJ3, .o-messageBox2.cAJbMJ3 span.audioMsg.cAJbMJ3, .o-messageBox1.cAJbMJ3 span.audioMsg.cAJbMJ3, .o-messageBox2.cAJbMJ3 span.videoMsg.cAJbMJ3, .o-messageBox1.cAJbMJ3 span.videoMsg.cAJbMJ3{padding: 2px} .video.cAJbMJ3{width: 10em; height: auto} .audio.cAJbMJ3{font-size: 1.5em; margin: 4px 12px; cursor: pointer; color: rgb(47, 164, 231)} .audio.cAJbMJ3 + label.cAJbMJ3{font-size: 14px; cursor: pointer; vertical-align: text-bottom; padding-right: 12px} .audioPlaing.audio.cAJbMJ3{color: rgb(225, 15, 15)} .x-panel-bottom.cAJbMJ3{z-index: 2; background-color: rgb(255, 255, 255)} .o-bottom.cAJbMJ3{height: 48px; padding-top: 3px; margin-bottom: 15px; background-color: rgb(254, 254, 254); border-top: 1px solid rgba(214, 214, 214, 0.6); border-top: 1px solid rgba(214, 214, 214, 0.6)} .o-bottom.cAJbMJ3 .o-input.cAJbMJ3{height: 32px; background: none; border: none; box-shadow: none; border-radius: 0; border-bottom: 1px solid rgb(223, 223, 223); margin-left: 2px} .o-bottom.cAJbMJ3 .o-input.cAJbMJ3:focus{border-bottom: 1px solid rgb(75, 185, 34)} .o-bottom.cAJbMJ3 .x-col-fixed.cAJbMJ3{padding-left: 0; padding-right: 0} .o-bottom.cAJbMJ3 .x-col-fixed.cAJbMJ3 .btn.cAJbMJ3{background-color: rgb(255, 255, 255)} .o-bottom.cAJbMJ3 .o-rightBtn.cAJbMJ3{padding: 0} .o-bottom.cAJbMJ3 .o-rightBtn.cAJbMJ3 .btn.btn-only-icon.cAJbMJ3{font-size: 32px; padding: 0; margin-top: -8px} .o-bottom.cAJbMJ3 .o-rightBtn.cAJbMJ3 .btn.btn-only-label.cAJbMJ3{display: none; padding: 6px; margin-top: 3px; color: rgb(255, 255, 255); font-size: 12px; background-color: rgb(69, 192, 24); border-radius: 3px; width: 40px} .x-fileInput.cAJbMJ3{position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: auto; width: auto} .x-fileInput.cAJbMJ3 &gt; input.cAJbMJ3{opacity: 0; height: 100%; width: 100%} .right-img.cAJbMJ3{z-index: 9999; float: right} .right-text.cAJbMJ3{float: right} .emoji-button-container.cAJbMJ3{margin-bottom: 2px; margin-left: -3px; border-bottom: 1px solid rgb(223, 223, 223); width: 28px} .emoji-button-container.cAJbMJ3 img.cAJbMJ3{width: 26px; height: 26px; margin-top: 4px} .a.cAJbMJ3{width: 190px} .content.cAJbMJ3{margin-top: 17px} .msgContent.cAJbMJ3{width: auto; display: block; white-space: pre-wrap; word-wrap: break-word; word-break: break-all; overflow: hidden; -webkit-touch-callout: none} .x-senderName.cAJbMJ3{margin: 0px 8px; float: left; font-size: smaller} .x-senderTime.cAJbMJ3{margin: 0px 8px; font-size: smaller; float: left} .x-ownSenderMessageTime.cAJbMJ3{margin: 0px 7px; font-size: smaller; float: right} .x-messageTime.cAJbMJ3{margin-right: 8px; font-size: smaller; float: left} .x-file.cAJbMJ3{color: rgb(51, 122, 183); font-size: 40px} .x-rightPhotoState.cAJbMJ3{font-size: 30pt; position: absolute; right: 35px; z-index: 100; top: 35px; color: floralwhite} .x-leftPhotoState.cAJbMJ3{position: absolute; font-size: 30pt; z-index: 100; left: 35px; top: 35px; color: floralwhite} .x-recevied.cAJbMJ3{color: blue} .x-read.cAJbMJ3{color: green} .x-error.cAJbMJ3{color: red} .x-state.cAJbMJ3{padding: 0px 7px; float: right} .x-detail.cAJbMJ3{width: 50px} .o-messageBox1.cAJbMJ3 span.x-touch.cAJbMJ3{background-color: gainsboro} .o-messageBox2.cAJbMJ3 span.x-touch.cAJbMJ3{background-color: darkseagreen} .x-close.cAJbMJ3{height: 100%; margin-top: 5px} .x-display.cAJbMJ3{display: none} .x-attentionNum.cAJbMJ3{position: relative; top: -4px} .x-attention.cAJbMJ3{color: red; height: 10px} .x-fileIcon.cAJbMJ3{font-size: 20px} .x-item-hide.cAJbMJ3{display: none !important} .x-btn-PrScrn.cAJbMJ3{} .x-moreClass.cAJbMJ3{display: none}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onModelConstructDone:modelModelConstructDone;onActive:modelActive;onunLoad:modelUnLoad;onInactive:modelInactive;onLoad:modelLoad;onParamsReceive:modelParamsReceive" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/router/router" style="display:none;position:absolute;;left:215.0px;top:127.0px" xid="router" data-bind="component:{name:'$model/UI2/system/components/justep/router/router'}" data-events="onRoute:routerRoute" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/popMenu/popMenu" class="x-popMenu cAJbMJ3" xid="popMenu" data-bind="component:{name:'$model/UI2/system/components/justep/popMenu/popMenu'}" data-config="{&quot;anchor&quot;:&quot;personal&quot;,&quot;opacity&quot;:0}" __cid="cAJbMJ3"> 
+    <div class="x-popMenu-overlay cAJbMJ3" xid="div3" __cid="cAJbMJ3"/>  
+    <ul component="$model/UI2/system/components/justep/menu/menu" class="x-menu dropdown-menu x-popMenu-content cAJbMJ3" xid="menu1" data-bind="component:{name:'$model/UI2/system/components/justep/menu/menu'}" __cid="cAJbMJ3"> 
+      <li class="x-menu-item cAJbMJ3" xid="item1" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="clearChatBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:clearChatBtnClick" data-config="{&quot;label&quot;:&quot;清除聊天记录&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i3" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span3" __cid="cAJbMJ3" class="cAJbMJ3">清除聊天记录</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item13" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="searchText" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:searchTextClick" data-config="{&quot;label&quot;:&quot;搜索聊天信息&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i20" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span17" __cid="cAJbMJ3" class="cAJbMJ3">搜索聊天信息</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item19" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="searchDoc" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:searchDocClick" data-config="{&quot;label&quot;:&quot;查看所有文档&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i28" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span30" __cid="cAJbMJ3" class="cAJbMJ3">查看所有文档</span> 
+        </a> 
+      </li> 
+    </ul> 
+  </div>  
+  <div xmlns="" component="$model/UI2/system/components/justep/popMenu/popMenu" class="x-popMenu cAJbMJ3" xid="groupPopMenu" data-bind="component:{name:'$model/UI2/system/components/justep/popMenu/popMenu'}" data-config="{&quot;anchor&quot;:&quot;group&quot;,&quot;opacity&quot;:0}" __cid="cAJbMJ3"> 
+    <div class="x-popMenu-overlay cAJbMJ3" xid="div9" __cid="cAJbMJ3"/>  
+    <ul component="$model/UI2/system/components/justep/menu/menu" class="x-menu dropdown-menu x-popMenu-content cAJbMJ3" xid="menu2" data-bind="component:{name:'$model/UI2/system/components/justep/menu/menu'}" __cid="cAJbMJ3"> 
+      <li class="x-menu-item cAJbMJ3" xid="item3" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="groupInfoBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:groupInfoBtnClick" data-config="{&quot;label&quot;:&quot;查看群详细&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i4" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span4" __cid="cAJbMJ3" class="cAJbMJ3">查看群详细</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item4" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:clearChatBtnClick" data-config="{&quot;label&quot;:&quot;清空聊天记录&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i6" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span5" __cid="cAJbMJ3" class="cAJbMJ3">清空聊天记录</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item14" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:searchTextClick" data-config="{&quot;label&quot;:&quot;搜索聊天信息&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i21" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span23" __cid="cAJbMJ3" class="cAJbMJ3">搜索聊天信息</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item20" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:searchDocClick" data-config="{&quot;label&quot;:&quot;查看所有文档&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i29" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span31" __cid="cAJbMJ3" class="cAJbMJ3">查看所有文档</span> 
+        </a> 
+      </li> 
+    </ul> 
+  </div>  
+  <div xmlns="" component="$model/UI2/system/components/justep/popMenu/popMenu" class="x-popMenu cAJbMJ3" xid="optionPopMenu" data-bind="component:{name:'$model/UI2/system/components/justep/popMenu/popMenu'}" data-config="{&quot;anchor&quot;:&quot;optionBtn&quot;,&quot;direction&quot;:&quot;right-bottom&quot;,&quot;opacity&quot;:0}" __cid="cAJbMJ3"> 
+    <div class="x-popMenu-overlay cAJbMJ3" xid="div20" __cid="cAJbMJ3"/>  
+    <ul component="$model/UI2/system/components/justep/menu/menu" class="x-menu dropdown-menu x-popMenu-content cAJbMJ3" xid="menu4" data-bind="component:{name:'$model/UI2/system/components/justep/menu/menu'}" __cid="cAJbMJ3"> 
+      <li class="x-menu-item cAJbMJ3" xid="item18" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="optionDelBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:optionDelBtnClick" data-config="{&quot;label&quot;:&quot;删除&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i27" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span29" __cid="cAJbMJ3" class="cAJbMJ3">删除</span> 
+        </a> 
+      </li> 
+    </ul> 
+  </div>  
+  <span xmlns="" component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog" style="left:25px;top:163px;" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-events="onYes:messageDialogYes" data-config="{&quot;type&quot;:&quot;YesNo&quot;}" __cid="cAJbMJ3" class="cAJbMJ3"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay cAJbMJ3" __cid="cAJbMJ3"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal cAJbMJ3" __cid="cAJbMJ3">  
+      <div class="x-modal-inner cAJbMJ3" __cid="cAJbMJ3"> 
+        <div class="x-modal-title cAJbMJ3" __cid="cAJbMJ3"/>  
+        <div class="x-modal-text cAJbMJ3" __cid="cAJbMJ3"/>  
+        <input class="x-modal-prompt-input cAJbMJ3" type="text" __cid="cAJbMJ3"/> 
+      </div>  
+      <div class="x-modal-buttons cAJbMJ3" __cid="cAJbMJ3"> 
+        <a class="x-modal-button x-modal-button-bold OK cAJbMJ3" value="ok" __cid="cAJbMJ3">确定</a>  
+        <a class="x-modal-button x-modal-button-bold Yes cAJbMJ3" value="yes" __cid="cAJbMJ3">是</a>  
+        <a class="x-modal-button x-modal-button-bold No cAJbMJ3" value="no" __cid="cAJbMJ3">否</a>  
+        <a class="x-modal-button x-modal-button-bold Cancel cAJbMJ3" value="cancel" __cid="cAJbMJ3">取消</a> 
+      </div> 
+    </div> 
+  </span>  
+  <span xmlns="" component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="allMessageDialog" style="left:23px;top:130px;" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-events="onYes:allMessageDialogYes" data-config="{&quot;type&quot;:&quot;YesNo&quot;}" __cid="cAJbMJ3" class="cAJbMJ3"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay cAJbMJ3" __cid="cAJbMJ3"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal cAJbMJ3" __cid="cAJbMJ3">  
+      <div class="x-modal-inner cAJbMJ3" __cid="cAJbMJ3"> 
+        <div class="x-modal-title cAJbMJ3" __cid="cAJbMJ3"/>  
+        <div class="x-modal-text cAJbMJ3" __cid="cAJbMJ3"/>  
+        <input class="x-modal-prompt-input cAJbMJ3" type="text" __cid="cAJbMJ3"/> 
+      </div>  
+      <div class="x-modal-buttons cAJbMJ3" __cid="cAJbMJ3"> 
+        <a class="x-modal-button x-modal-button-bold OK cAJbMJ3" value="ok" __cid="cAJbMJ3">确定</a>  
+        <a class="x-modal-button x-modal-button-bold Yes cAJbMJ3" value="yes" __cid="cAJbMJ3">是</a>  
+        <a class="x-modal-button x-modal-button-bold No cAJbMJ3" value="no" __cid="cAJbMJ3">否</a>  
+        <a class="x-modal-button x-modal-button-bold Cancel cAJbMJ3" value="cancel" __cid="cAJbMJ3">取消</a> 
+      </div> 
+    </div> 
+  </span>  
+  <span xmlns="" component="$model/UI2/system/components/justep/windowDialog/windowDialog" xid="transmitWindowDialog" style="top:46px;left:28px;" data-bind="component:{name:'$model/UI2/system/components/justep/windowDialog/windowDialog'}" data-config="{&quot;activity&quot;:&quot;mainActivity&quot;,&quot;forceRefreshOnOpen&quot;:true,&quot;process&quot;:&quot;/SA/OPM/system/systemProcess&quot;,&quot;showTitle&quot;:true}" __cid="cAJbMJ3" class="cAJbMJ3"> 
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog-overlay cAJbMJ3" __cid="cAJbMJ3"></div>  
+    <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-dialog cAJbMJ3" style="display:none;" showTitle="true" __cid="cAJbMJ3">  
+      <div class="x-dialog-title cAJbMJ3" __cid="cAJbMJ3"> 
+        <button class="close cAJbMJ3" __cid="cAJbMJ3"> 
+          <span __cid="cAJbMJ3" class="cAJbMJ3">×</span> 
+        </button>  
+        <div class="x-dialog-title-text cAJbMJ3" __cid="cAJbMJ3"/> 
+      </div>  
+      <div class="x-dialog-body cAJbMJ3" __cid="cAJbMJ3"/> 
+    </div> 
+  </span>  
+  <div xmlns="" component="$model/UI2/system/components/justep/popMenu/popMenu" class="x-popMenu cAJbMJ3" xid="msgPopMenu" data-bind="component:{name:'$model/UI2/system/components/justep/popMenu/popMenu'}" data-config="{&quot;direction&quot;:&quot;auto&quot;,&quot;dismissible&quot;:false,&quot;opacity&quot;:0}" __cid="cAJbMJ3"> 
+    <div class="x-popMenu-overlay cAJbMJ3" xid="div6" __cid="cAJbMJ3" data-bind="event:{click:$model._callModelFn.bind($model, 'msgPopMenuHideClick')}"/>  
+    <ul component="$model/UI2/system/components/justep/menu/menu" class="x-menu dropdown-menu x-popMenu-content cAJbMJ3" xid="menu3" data-bind="component:{name:'$model/UI2/system/components/justep/menu/menu'}" __cid="cAJbMJ3"> 
+      <li class="x-menu-item cAJbMJ3" xid="item6" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="copyBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},css:{'x-display' : isText}" data-events="onClick:copyBtnClick" data-config="{&quot;label&quot;:&quot;复制&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i10" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span9" __cid="cAJbMJ3" class="cAJbMJ3">复制</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item5" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="deleteMsgBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:deleteMsgBtnClick" data-config="{&quot;label&quot;:&quot;删除&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i9" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span8" __cid="cAJbMJ3" class="cAJbMJ3">删除</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item10" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="saveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},css:{'x-item-hide' : $model.imageItemHideForApp.get()}" data-events="onClick:saveToAlbumBtnClick" data-config="{&quot;label&quot;:&quot;保存到相册&quot;}" __cid="cAJbMJ3"> 
+          <i __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3">保存到相册</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item11" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="saveBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},css:{'x-item-hide' : $model.imageItemHideForBrowser.get()}" data-events="onClick:saveBtnClick" data-config="{&quot;label&quot;:&quot;下载&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i14" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span13" __cid="cAJbMJ3" class="cAJbMJ3">下载</span> 
+        </a> 
+      </li>  
+      <li class="x-menu-item cAJbMJ3" xid="item15" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="moreBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:moreBtnClick" data-config="{&quot;label&quot;:&quot;更多&quot;}" __cid="cAJbMJ3"> 
+          <i xid="i22" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+          <span xid="span24" __cid="cAJbMJ3" class="cAJbMJ3">更多</span> 
+        </a> 
+      </li> 
+    </ul> 
+  </div>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full x-cards pc2UVjmq-iosstatusbar cAJbMJ3" xid="panel" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cAJbMJ3"> 
+    <div class="x-panel-top cAJbMJ3" xid="top1" style="z-index:1;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cAJbMJ3"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar o-top cAJbMJ3" xid="titleBar1" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cAJbMJ3"> 
+        <div class="x-titlebar-left  cAJbMJ3" xid="left1" style="white-space:nowrap;" __cid="cAJbMJ3" data-bind="event:{click:$model._callModelFn.bind($model, 'closeOrCancelClick')}"> 
+          <div xid="cancelMoreStateDiv" class="x-moreClass cAJbMJ3" __cid="cAJbMJ3" data-bind="if:$model.more.get()"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-close cAJbMJ3" xid="cancel" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-close&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cAJbMJ3"> 
+              <i xid="i23" class="icon-android-close icon-close cAJbMJ3" __cid="cAJbMJ3"/>  
+              <span xid="span25" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+            </a> 
+          </div>  
+          <div xid="div17" __cid="cAJbMJ3" class="cAJbMJ3" data-bind="ifnot:$model.more.get()"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-close cAJbMJ3" xid="closeBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;icon-arrow-left-c&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cAJbMJ3"> 
+              <i xid="i1" class="icon-arrow-left-c cAJbMJ3" style="font-size:larger;" __cid="cAJbMJ3"/>  
+              <span xid="span1" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+            </a> 
+          </div>  
+          <div component="$model/UI2/system/components/justep/output/output" class="form-control input-sm o-name cAJbMJ3" xid="name" data-bind="component:{name:'$model/UI2/system/components/justep/output/output'},text:status" __cid="cAJbMJ3"/> 
+        </div>  
+        <div class="x-titlebar-title  cAJbMJ3" xid="title1" style="text-align: center;" __cid="cAJbMJ3"> 
+          <div component="$model/UI2/system/components/justep/output/output" class="form-control input-sm o-name cAJbMJ3" xid="typing" style="padding-top: 3px;text-align:-webkit-right;" data-bind="component:{name:'$model/UI2/system/components/justep/output/output'},text:typingText" __cid="cAJbMJ3"/> 
+        </div>  
+        <div class="x-titlebar-right  cAJbMJ3" xid="right1" __cid="cAJbMJ3"> 
+          <div class="empty cAJbMJ3" __cid="cAJbMJ3"/>  
+          <div xid="div19" __cid="cAJbMJ3" class="cAJbMJ3" data-bind="ifnot:$model.more.get()"> 
+            <a component="$model/UI2/system/components/justep/button/button" style="display:none;" class="btn btn-link btn-only-icon x-detail cAJbMJ3" xid="personal" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},visible:false" data-events="onClick:personalClick" data-config="{&quot;icon&quot;:&quot;icon-person&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cAJbMJ3"> 
+              <i xid="i2" class="icon-person cAJbMJ3" __cid="cAJbMJ3"/>  
+              <span xid="span2" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+            </a>  
+            <a component="$model/UI2/system/components/justep/button/button" style="display:none;" class="btn btn-link btn-only-icon x-detail cAJbMJ3" xid="group" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},visible:false" data-events="onClick:groupClick" data-config="{&quot;icon&quot;:&quot;icon-person-stalker&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cAJbMJ3"> 
+              <i xid="i5" class="icon-person-stalker cAJbMJ3" __cid="cAJbMJ3"/>  
+              <span xid="span6" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+            </a> 
+          </div>  
+          <div xid="div18" class="x-moreClass cAJbMJ3" __cid="cAJbMJ3" data-bind="if:$model.more.get()"> 
+            <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link cAJbMJ3" xid="optionBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:optionBtnClick" data-config="{&quot;label&quot;:&quot;选项&quot;}" __cid="cAJbMJ3"> 
+              <i xid="i24" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+              <span xid="span26" __cid="cAJbMJ3" class="cAJbMJ3">选项</span> 
+            </a> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content cAJbMJ3" xid="msgListContent" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'},event:{touchend:$model._callModelFn.bind($model, 'msgListContentTouchend')}" __cid="cAJbMJ3"> 
+      <div class="x-scroll cAJbMJ3" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="msgScrollView" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" data-events="onPullDown:msgScrollViewPullDown" data-config="{&quot;autoPullUp&quot;:false,&quot;pullDownLabel&quot;:&quot;&quot;,&quot;pullDownMoveLabel&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+        <div class="x-content-center x-pull-down cAJbMJ3" xid="div5" __cid="cAJbMJ3"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down cAJbMJ3" xid="i7" __cid="cAJbMJ3"/>  
+          <span class="x-pull-down-label cAJbMJ3" xid="span15" __cid="cAJbMJ3">加载更多...</span> 
+        </div>  
+        <div class="x-scroll-content cAJbMJ3" xid="scrollHeight" __cid="cAJbMJ3"> 
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cAJbMJ3" xid="msgList" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-events="onAfterRender:msgListAfterRender" data-config="{&quot;data&quot;:&quot;messageData&quot;,&quot;disableInfiniteLoad&quot;:true,&quot;disablePullToRefresh&quot;:true}" __cid="cAJbMJ3"> 
+            <ul class="x-list-template hide cAJbMJ3" xid="listTemplateUl1" style="margin:5px;" __cid="cAJbMJ3" data-bind="foreach:{data:$model.foreach_msgList($element),afterRender:$model.foreach_afterRender_msgList.bind($model,$element)}"> 
+              <li xid="li1" __cid="cAJbMJ3" class="cAJbMJ3"> 
+                <div __cid="cAJbMJ3" class="cAJbMJ3" data-bind="if:val('fStyle') === 'service'"> 
+                  <div class="text-info text-center cAJbMJ3" __cid="cAJbMJ3" data-bind="html:ref('fContent')"/> 
+                </div>  
+                <div __cid="cAJbMJ3" class="cAJbMJ3" data-bind="if:val('fStyle') !== 'service'"> 
+                  <div class="media cAJbMJ3" __cid="cAJbMJ3" data-bind="if:val('isOut') != true,event:{click:$model._callModelFn.bind($model, 'mediaClick')}"> 
+                    <div xid="div2" class="media-left cAJbMJ3" style="padding:0px;" __cid="cAJbMJ3"> 
+                      <div component="$model/UI2/system/components/justep/row/row" class="x-row x-row-center cAJbMJ3" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cAJbMJ3"> 
+                        <div class="x-col x-col-fixed cAJbMJ3" xid="col1" style="width:auto;padding:0px;" __cid="cAJbMJ3" data-bind="if:$model.more.get()"> 
+                          <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cAJbMJ3" xid="checkbox1" checkedValue="1" uncheckedValue="0" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;1&quot;,&quot;disabled&quot;:false,&quot;uncheckedValue&quot;:&quot;0&quot;}" data-bind="component:{ref:ref(&quot;fChecked&quot;),name:'$model/UI2/system/components/justep/button/checkbox'}" __cid="cAJbMJ3"> 
+                            <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cAJbMJ3" class="cAJbMJ3"></input>  
+                            <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cAJbMJ3" class="cAJbMJ3"></label> 
+                          </span> 
+                        </div>  
+                        <div class="x-col cAJbMJ3" xid="col2" __cid="cAJbMJ3" data-bind="event:{click:$model._callModelFn.bind($model, 'contactInfo')}"> 
+                          <img alt="" class="o-img cAJbMJ3" xid="image6" __cid="cAJbMJ3" data-bind="attr:{src:$model.getImageUrl(val('fImg'))}"/> 
+                        </div> 
+                      </div> 
+                    </div>  
+                    <div xid="div1" class="media-body o-messageBox1 cAJbMJ3" __cid="cAJbMJ3"> 
+                      <div xid="div12" __cid="cAJbMJ3" class="cAJbMJ3" data-bind="ifnot:$model.isGroupChat"> 
+                        <div xid="div13" class="x-senderTime cAJbMJ3" __cid="cAJbMJ3" data-bind="text:val(&quot;fSenderTime&quot;)"/>  
+                        <div xid="div11" class="x-attention cAJbMJ3" __cid="cAJbMJ3" data-bind="if:val(&quot;fIsOwnSet&quot;)"> 
+                          <i xid="i17" class="icon-heart cAJbMJ3" __cid="cAJbMJ3"/>  
+                          <span xid="span18" class="x-attentionNum cAJbMJ3" style="top:-2px;" __cid="cAJbMJ3" data-bind="text:&quot;+&quot;+val(&quot;fAttentionNum&quot;)"/> 
+                        </div> 
+                      </div>  
+                      <div __cid="cAJbMJ3" class="cAJbMJ3" data-bind="if:$model.isGroupChat"> 
+                        <div xid="senderName" class="x-senderName cAJbMJ3" __cid="cAJbMJ3" data-bind="text:val(&quot;fSender&quot;)"/>  
+                        <div xid="messageTime" class="x-messageTime cAJbMJ3" style="display:none;" __cid="cAJbMJ3" data-bind="text:val(&quot;fSenderTime&quot;)"/>  
+                        <span xid="span21" class="x-messageTime cAJbMJ3" __cid="cAJbMJ3" data-bind="text:val(&quot;fSenderTime&quot;)"/>  
+                        <div xid="div10" class="x-attention cAJbMJ3" __cid="cAJbMJ3" data-bind="if:val(&quot;fIsOwnSet&quot;)"> 
+                          <i xid="i16" class="icon-heart cAJbMJ3" __cid="cAJbMJ3"/>  
+                          <span xid="span19" class="x-attentionNum cAJbMJ3" style="top:-2px;;" __cid="cAJbMJ3" data-bind="text:&quot;+&quot; + val(&quot;fAttentionNum&quot;)"/> 
+                        </div> 
+                      </div>  
+                      <div __cid="cAJbMJ3" class="cAJbMJ3" data-bind="if:val(&quot;fStyle&quot;)===&quot;photo&quot;&amp;&amp;!val(&quot;fileUrl&quot;)"> 
+                        <div class="icon-loading-a x-leftPhotoState cAJbMJ3" __cid="cAJbMJ3"/> 
+                      </div>  
+                      <div xid="senderText" style="position:relative;clear:left" __cid="cAJbMJ3" class="cAJbMJ3"> 
+                        <img src="@justepContextPath@/v_5569_nol_zh_CNs_desktopd_pc/p_common/base/img/tb1.png" alt="" xid="image" class="o-icon cAJbMJ3" __cid="cAJbMJ3"/>  
+                        <span xid="other" class="msgContent cAJbMJ3" oncontextmenu="return false;" __cid="cAJbMJ3" data-bind="html:ref('fContent'),css:{photoMsg:val('fStyle') === 'photo',audioMsg:val('fStyle') === 'audio',videoMsg:val('fStyle') === 'video',&quot;x-touch&quot;: $model.row_touch.get()===$object},touchcancel:touchEnd,event:{touchstart:$model._callModelFn.bind($model, 'touchStart'),touchmove:$model._callModelFn.bind($model, 'touchMove'),touchend:$model._callModelFn.bind($model, 'touchEnd'),mouseup:$model._callModelFn.bind($model, 'rightClick')}"/> 
+                      </div> 
+                    </div> 
+                  </div>  
+                  <div class="media cAJbMJ3" __cid="cAJbMJ3" data-bind="if:val('isOut'),event:{click:$model._callModelFn.bind($model, 'mediaClick')}"> 
+                    <div xid="div5" class="media-body text-right o-messageBox2 cAJbMJ3" __cid="cAJbMJ3"> 
+                      <div xid="div14" class="x-ownSenderMessageTime cAJbMJ3" __cid="cAJbMJ3" data-bind="text:val(&quot;fSenderTime&quot;)"/>  
+                      <i class="x-state cAJbMJ3" __cid="cAJbMJ3" data-bind="css:{'icon-loading-c':val(&quot;fState&quot;)===&quot;pending&quot;,'icon-checkmark':val(&quot;fState&quot;)===&quot;sent&quot;||val(&quot;fState&quot;)===&quot;received&quot;||val(&quot;fState&quot;)===&quot;read&quot;,'x-recvied':val(&quot;fState&quot;)===&quot;recevied&quot;,'x-read':val(&quot;fState&quot;)===&quot;read&quot;,'icon-alert x-error':val(&quot;fState&quot;)===&quot;error&quot;}"/>  
+                      <div xid="div8" class="x-attention cAJbMJ3" __cid="cAJbMJ3" data-bind="if:val(&quot;fIsOwnSet&quot;)"> 
+                        <i xid="i18" class="icon-heart cAJbMJ3" style="float:right;" __cid="cAJbMJ3"/>  
+                        <span xid="span20" class="x-attentionNum cAJbMJ3" __cid="cAJbMJ3" data-bind="text:val(&quot;fAttentionNum&quot;)+&quot;+&quot;"/> 
+                      </div>  
+                      <div __cid="cAJbMJ3" class="cAJbMJ3" data-bind="if:val(&quot;fStyle&quot;)===&quot;photo&quot;&amp;&amp;!val(&quot;fileUrl&quot;)"> 
+                        <div class="icon-loading-a x-rightPhotoState cAJbMJ3" __cid="cAJbMJ3"/> 
+                      </div>  
+                      <div style="position:relative;clear:right;" __cid="cAJbMJ3" class="cAJbMJ3"> 
+                        <img src="@justepContextPath@/v_5569_nol_zh_CNs_desktopd_pc/p_common/base/img/tb2.png" alt="" xid="image3" class="o-icon cAJbMJ3" __cid="cAJbMJ3"/>  
+                        <span xid="me" class="text-left msgContent cAJbMJ3" oncontextmenu="return false;" __cid="cAJbMJ3" data-bind="html:ref('fContent'),css:{photoMsg:val('fStyle') === 'photo',audioMsg:val('fStyle') === 'audio',videoMsg:val('fStyle') === 'video',&quot;x-touch&quot;: $model.row_touch.get()===$object},touchcancel:touchEnd,event:{mouseup:$model._callModelFn.bind($model, 'rightClick'),touchmove:$model._callModelFn.bind($model, 'touchMove'),touchstart:$model._callModelFn.bind($model, 'touchStart'),touchend:$model._callModelFn.bind($model, 'touchEnd')}"/> 
+                      </div> 
+                    </div>  
+                    <div xid="div4" class="media-right cAJbMJ3" __cid="cAJbMJ3"> 
+                      <div component="$model/UI2/system/components/justep/row/row" class="x-row x-row-center cAJbMJ3" xid="row2" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cAJbMJ3"> 
+                        <div class="x-col cAJbMJ3" xid="col4" __cid="cAJbMJ3"> 
+                          <img alt="" class="o-img cAJbMJ3" xid="image1" __cid="cAJbMJ3" data-bind="attr:{src:$model.getImageUrl(val(&quot;fImg&quot;))}"/> 
+                        </div>  
+                        <div class="x-col x-col-fixed cAJbMJ3" xid="col5" style="width:auto;padding:0px;" __cid="cAJbMJ3" data-bind="if:$model.more.get()"> 
+                          <span component="$model/UI2/system/components/justep/button/checkbox" class="x-checkbox cAJbMJ3" xid="checkbox2" checkedValue="1" uncheckedValue="0" data-config="{&quot;checked&quot;:false,&quot;checkedValue&quot;:&quot;1&quot;,&quot;disabled&quot;:false,&quot;uncheckedValue&quot;:&quot;0&quot;}" data-bind="component:{ref:ref(&quot;fChecked&quot;),name:'$model/UI2/system/components/justep/button/checkbox'}" __cid="cAJbMJ3"> 
+                            <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="checkbox" __cid="cAJbMJ3" class="cAJbMJ3"></input>  
+                            <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cAJbMJ3" class="cAJbMJ3"></label> 
+                          </span> 
+                        </div> 
+                      </div> 
+                    </div> 
+                  </div> 
+                </div> 
+              </li> 
+            </ul> 
+          </div> 
+        </div>  
+        <div class="x-content-center x-pull-up cAJbMJ3" xid="div7" style="display:none;" __cid="cAJbMJ3"> 
+          <span class="x-pull-up-label cAJbMJ3" xid="span16" __cid="cAJbMJ3">加载更多...</span> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cAJbMJ3" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" data-config="{&quot;height&quot;:58}" __cid="cAJbMJ3"/>  
+    <style __cid="cAJbMJ3" class="cAJbMJ3">.x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: 58px;}.x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-bottom {height: 58px;}.iosstatusbar .x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2UVjmq-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div>  
+  <div xmlns="" component="$model/UI2/p_common/lib/superInput/superInput" xid="superinput" class="x-superinput cAJbMJ3" data-bind="component:{name:'$model/UI2/p_common/lib/superInput/superInput'}" data-events="onSend:okBtnClick;onFinishRecVoice:superInputFinishRecVoice" __cid="cAJbMJ3"> 
+    <div class="x-flex x-superinput-area cAJbMJ3" xid="superinputArea" __cid="cAJbMJ3"> 
+      <div class="x-superinput-left cAJbMJ3" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-btn-attachment cAJbMJ3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;glyphicon glyphicon-paperclip&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+          <i class="glyphicon glyphicon-paperclip cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3"/> 
+        </a> 
+      </div>  
+      <div xid="prScrn" class="x-superinput-left x-item-hide x-btn-prScrn cAJbMJ3" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon  cAJbMJ3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;iconfont icon-jianqie&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+          <i class="iconfont icon-jianqie cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3"/> 
+        </a> 
+      </div>  
+      <div class="x-flex1 x-input-area cAJbMJ3" style="overflow:auto" __cid="cAJbMJ3"> 
+        <div class="x-input-content cAJbMJ3" contenteditable="true" __cid="cAJbMJ3"/>  
+        <div class="x-voice-info hide cAJbMJ3" __cid="cAJbMJ3"> 
+          <i class="x-voice-recording icon-loading-b cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span class="x-voice-recording-time cAJbMJ3" __cid="cAJbMJ3">正在录音...</span>  
+          <span class="x-voice-info-text cAJbMJ3" __cid="cAJbMJ3"> 
+            <i class="icon-arrow-left-a cAJbMJ3" __cid="cAJbMJ3"/>滑过来取消录音
+          </span> 
+        </div> 
+      </div>  
+      <div class="x-superinput-right cAJbMJ3" xid="emojiRightBtn" __cid="cAJbMJ3"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-btn-emoji cAJbMJ3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;iconfont icon-jianpan2&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+          <i class="iconfont icon-jianpan2 cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3"/> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-btn-voice cAJbMJ3" style="margin-top:-6px" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;iconfont icon-voice&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+          <i class="iconfont icon-voice cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3"/> 
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon x-btn-send hide cAJbMJ3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;iconfont icon-right&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cAJbMJ3"> 
+          <i class="iconfont icon-right cAJbMJ3" __cid="cAJbMJ3"/>  
+          <span __cid="cAJbMJ3" class="cAJbMJ3"/> 
+        </a> 
+      </div> 
+    </div>  
+    <div class="x-superinput-emoji x-flex x-flex-column x-emoji-hide cAJbMJ3" xid="superinputEmoji" __cid="cAJbMJ3"> 
+      <div class="x-superinput-emoji-contents x-flex1 cAJbMJ3" __cid="cAJbMJ3"> 
+        <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cAJbMJ3" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;routable&quot;:false}" __cid="cAJbMJ3"> 
+          <div class="x-contents-content active cAJbMJ3" xid="attachment" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cAJbMJ3"> 
+            <div class="x-superinput-attachment container-fluid  cAJbMJ3" __cid="cAJbMJ3"> 
+              <div class="row grid cAJbMJ3" __cid="cAJbMJ3"> 
+                <div class="col cell col-xs-3 col-md-2 text-center cAJbMJ3" __cid="cAJbMJ3"> 
+                  <div class="x-fileInput cAJbMJ3" __cid="cAJbMJ3"> 
+                    <input type="file" multiple="true" xid="photoInput" accept="image/*,doc/-" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+                  </div>  
+                  <i class="iconfont icon-chakantupian x-file cAJbMJ3" __cid="cAJbMJ3"/>  
+                  <h5 class="text-muted text-center cAJbMJ3" __cid="cAJbMJ3">图片</h5> 
+                </div>  
+                <div class="col cell col-xs-3 col-md-2 text-center cAJbMJ3" __cid="cAJbMJ3"> 
+                  <div class="x-fileInput cAJbMJ3" __cid="cAJbMJ3"> 
+                    <input type="file" multiple="false" xid="audioInput" accept="audio/*,doc/-" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+                  </div>  
+                  <i class="iconfont icon-shengyin5 x-file cAJbMJ3" __cid="cAJbMJ3"/>  
+                  <h5 class="text-muted text-center cAJbMJ3" __cid="cAJbMJ3">声音</h5> 
+                </div>  
+                <div class="col cell col-xs-3 col-md-2 text-center cAJbMJ3" __cid="cAJbMJ3"> 
+                  <div class="x-fileInput cAJbMJ3" __cid="cAJbMJ3"> 
+                    <input type="file" multiple="false" xid="videoInput" accept="video/*,doc/-" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+                  </div>  
+                  <i class="iconfont icon-shipin1 x-file cAJbMJ3" __cid="cAJbMJ3"/>  
+                  <h5 class="text-muted text-center cAJbMJ3" __cid="cAJbMJ3">视频</h5> 
+                </div>  
+                <div class="col cell col-xs-3 col-md-2 text-center cAJbMJ3" __cid="cAJbMJ3"> 
+                  <div class="x-fileInput cAJbMJ3" __cid="cAJbMJ3"> 
+                    <input type="file" multiple="false" xid="fileInput" accept="*/*" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+                  </div>  
+                  <i class="iconfont icon-wenjianjia x-file cAJbMJ3" __cid="cAJbMJ3"/>  
+                  <h5 class="text-muted text-center cAJbMJ3" __cid="cAJbMJ3">文件</h5> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <div class="x-superinput-emoji-title cAJbMJ3" __cid="cAJbMJ3"> 
+        <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified cAJbMJ3" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}" __cid="cAJbMJ3"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cAJbMJ3" xid="attachmentBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;附件&quot;,&quot;target&quot;:&quot;attachment&quot;}" __cid="cAJbMJ3"> 
+            <i xid="i8" __cid="cAJbMJ3" class="cAJbMJ3"/>  
+            <span xid="span7" __cid="cAJbMJ3" class="cAJbMJ3"/> 
+          </a> 
+        </div> 
+      </div> 
+    </div> 
+  </div>  
+  <div xmlns="" xid="pswp" class="pswp cAJbMJ3" tabindex="-1" role="dialog" aria-hidden="true" __cid="cAJbMJ3"> 
+    <div class="pswp__bg cAJbMJ3" __cid="cAJbMJ3"/>  
+    <div class="pswp__scroll-wrap cAJbMJ3" __cid="cAJbMJ3"> 
+      <div class="pswp__container cAJbMJ3" __cid="cAJbMJ3"> 
+        <div class="pswp__item cAJbMJ3" __cid="cAJbMJ3"/>  
+        <div class="pswp__item cAJbMJ3" __cid="cAJbMJ3"/>  
+        <div class="pswp__item cAJbMJ3" __cid="cAJbMJ3"/> 
+      </div>  
+      <div class="pswp__ui pswp__ui--hidden cAJbMJ3" __cid="cAJbMJ3"> 
+        <div class="pswp__top-bar cAJbMJ3" __cid="cAJbMJ3"> 
+          <div class="pswp__counter cAJbMJ3" __cid="cAJbMJ3"/>  
+          <button class="pswp__button pswp__button--close cAJbMJ3" title="关闭" __cid="cAJbMJ3"/>  
+          <button class="pswp__button pswp__button--zoom cAJbMJ3" title="放大/缩小" __cid="cAJbMJ3"/>  
+          <div class="pswp__preloader cAJbMJ3" __cid="cAJbMJ3"> 
+            <div class="pswp__preloader__icn cAJbMJ3" __cid="cAJbMJ3"> 
+              <div class="pswp__preloader__cut cAJbMJ3" __cid="cAJbMJ3"> 
+                <div class="pswp__preloader__donut cAJbMJ3" __cid="cAJbMJ3"/> 
+              </div> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap cAJbMJ3" __cid="cAJbMJ3"> 
+          <div class="pswp__share-tooltip cAJbMJ3" __cid="cAJbMJ3"/> 
+        </div>  
+        <button class="pswp__button pswp__button--arrow--left cAJbMJ3" title="Previous (arrow left)" __cid="cAJbMJ3"/>  
+        <button class="pswp__button pswp__button--arrow--right cAJbMJ3" title="Next (arrow right)" __cid="cAJbMJ3"/>  
+        <div class="pswp__caption cAJbMJ3" __cid="cAJbMJ3"> 
+          <div class="pswp__caption__center cAJbMJ3" __cid="cAJbMJ3"/> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div>

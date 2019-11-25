@@ -1,0 +1,74 @@
+.btn-need,.btn-need:focus{
+	width:100%;
+
+	background-color:#f5a623;
+	font-size:22px;
+	color:#FFFFFF;
+
+	font-weight:bolder;
+}
+
+.pinfo{
+	height:100%;
+}
+
+.row1
+{
+	padding:0px;
+}
+.col1
+{
+	padding:1px;
+}
+.headImgDiv
+{
+	background:#FFFFFF;
+	border-radius:50%;
+	width:59px;
+	height:59px;
+	margin:0px ;
+	padding:1px;
+	float:right;
+	
+}
+.headImgDiv img
+{
+	border-radius:50%;
+	width:56px;
+	height:56px;
+	float:right;
+}
+
+.row2
+{
+	
+}
+.siji{
+	color: #000000;
+	font-size: 16px;
+	padding: 1px;
+}
+.chepai{
+	color: #F6A623;
+	font-size: 16px;
+	padding: 1px;
+}
+.status{
+	color: #000000;
+	
+	padding: 20px 1px 1px 1px;
+}
+.status1{
+	color: #000000;
+	
+	font-size: 16px;
+	padding: 20px 1px 1px 1px;
+}
+
+.btn-cancle,.btn-cancle:focus{
+	
+	font-size:22px;
+	
+	padding:0px;
+
+}

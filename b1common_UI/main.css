@@ -1,0 +1,84 @@
+.btn-need,.btn-need:focus{
+	width:70%;    
+	background-color:#1ca670;	
+	color:#FFFFFF;
+	border-radius:49px;
+	margin-left:15%;height:50px;
+}
+.x-panel-bottom2{
+	position:absolute;
+	bottom:50px;
+	z-index:9999;
+	width:100%;
+}
+.pinfo{
+	height:100%;
+	background-color:white;margin:15px;padding-left:8px;padding-right:8px;
+}
+.row1
+{
+	 padding-top:5px; 
+}
+.col1
+{
+	padding:0px;
+	padding-top:3px;
+}
+.headImgDiv
+{
+	background:#FFFFFF;
+	border-radius:50%;
+	width:59px;
+	height:59px;
+	margin:0px ;
+	padding:1px;
+	float:right;	
+}
+.headImgDiv img
+{
+	border-radius:50%;
+	width:56px;
+	height:56px;
+	float:right;
+}
+.row2
+{	
+}
+.siji{
+	color: #000000;
+	font-size: 18px;
+	padding: 1px;
+}
+.chepai{
+	color: #1ca670;
+	font-size: 16px;
+	padding: 1px;
+}
+.status{
+	color: #000000;	
+	padding: 20px 1px 1px 1px;
+}
+.status1{
+	color: #000000;	
+	font-size: 16px;
+	padding: 20px 1px 1px 1px;
+}
+.btn-cancle,.btn-cancle:focus{	
+	/* font-size:22px; */
+}
+/* .winDia2 .x-dialog .x-dialog-body {
+	
+	padding:10px;
+}
+.winDia2 .x-dialog {
+	border-radius: 0px;
+	border: 0;
+} */
+.winDia2 .x-dialog {
+	border-radius: 0px;
+	border: 0;z-index: 9999;
+}
+
+.winDia2 .x-dialog .x-dialog-body {
+	padding: 0;z-index: 9999;
+}

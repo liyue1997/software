@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+		<script type="text/javascript" src="js/xxwxshare.js" ></script>
+		<title>分享</title>
+	</head>
+	<body>
+		1111222
+		<script>
+			function initshare() {
+				console.log("shareready");
+				wx.config({
+					debug: true,
+					appId: "wx3394377d7e06a7cc",
+					timestamp: "1572859112",
+					nonceStr: "6q7sEZ1NDwKoBrhVgYBqEEaWrLLZwt9h",
+					signature: "6471ad78a817b847fde9e0a638a59bdeac7f80bf",
+					jsApiList: ["updateTimelineShareData", "updateAppMessageShareData"],
+				});
+				wx.ready(function() {
+					console.log("wx.ready");
+					var shareData = {
+						title: "双11促销",
+						desc: "丰田活动",
+						link: "http://www.xinxingtech.com.cn/huodong/huodong3.html?a=1_b=2",
+						imgUrl: "http://www.xinxingtech.com.cn/huodong/img/1024.png",
+						success: function() {
+							// alert('分享成功');
+						},
+						cancel: function() {
+							// alert('分享失败');  
+						}
+					};
+					// 分享到朋友圈
+					wx.updateTimelineShareData(shareData);
+					// 分享给朋友   
+					wx.updateAppMessageShareData(shareData);
+				});
+			}
+			initshare()
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		window.serverUrl="http://www.xinxingtech.com.cn/";
+		var code='11';
+		alert('aa');
+		$.ajax({
+				url:window.serverUrl+"b4huodong/app/auth?command=wxloginbycode&code="+code,
+				type:"get",
+				async: false,
+				success:function(data){
+					alert(data);
+					document.getElementById("data").innerHTML=data;
+					/*var obj=JSON.parse(data);
+					console.log(obj.Data);
+					$.cookie('Openid','obj.Data',{expires: 7, path: '/'});*/
+					
+					window.location.href =window.serverUrl+"/huodong/huodong.html?shopid=1&huodongid=2&fromuserid=3&userid=4";
+				},
+				 error: function (XMLHttpRequest, textStatus, errorThrown) {
+//              $("#p_test").innerHTML = "there is something wrong!";
+	                  alert("请求失败");
+	                  alert(XMLHttpRequest.status);
+	                  alert(XMLHttpRequest.readyState);
+	                  alert(textStatus);
+                }
+				
+			});
+	</script>
+</html>

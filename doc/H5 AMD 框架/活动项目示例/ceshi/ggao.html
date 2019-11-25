@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta name="format-detection" content="telephone=yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<title></title>
+		<!--符合AMD规范，可被外部访问的方法、css、元素id 等都 必须xx_Dshow 开头 -->
+		<!--<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>-->
+		<!--<script type="text/javascript" src="js/xx_Dshow-1.0.js" ></script>-->
+		<link rel="stylesheet" href="css/xx_Dshowhuodong.css" />
+		<script src="lib/dist/require.js" data-main="xx_requireconfig.js"></script>
+		<style>
+			* {
+				font-family: "微软雅黑";
+			}
+			
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div id="xx_PicsDy"></div>
+		<div id="xx_ShopInfo"></div>
+		<div id="xx_HuodongInfo"></div>
+		<!--<div id="gg" style="width: 100%;"></div>
+		<div id="info" style="width: 100%;"></div>
+		<div id="biaoge" style="width: 100%;"></div>-->
+		<div id="carousel" class="kui-carousel" kui-anim="fade">
+			<div class="kui-carousel-item">
+				<div style="position: relative;">
+					<img style="width: 100%;height: auto;" src="https://b1common-1259797882.cos.ap-shanghai.myqcloud.com/HdHuodong/c5d6d568-192c-440b-a6c1-756c48d2fbe6.jpg" alt="这里是第一场图片">
+				</div>
+				<div>
+					<img style="width: 100%;height: auto;" src="https://b1common-1259797882.cos.ap-shanghai.myqcloud.com/HdHuodong/fe32a0e3-5944-4148-a0e4-74786595a390.jpg">
+				</div>
+				<div>
+					<img style="width: 100%;height: auto;" src="https://b1common-1259797882.cos.ap-shanghai.myqcloud.com/HdHuodong/c5d6d568-192c-440b-a6c1-756c48d2fbe6.jpg" alt="这里是第一场图片">
+				</div>
+			</div>
+			<div class="kui-carousel-pagePation"></div>
+		</div>
+		<div id="xx_Dshowformbox">
+			<form>
+				<div class="xx_Dshowform">
+					<label>门店名:</label>
+					<span id="xx_Dshowshopname"></span>
+				</div>
+				<div class="xx_Dshowform">
+					<label>门店地址:</label>
+					<span id="xx_Dshowshopaddress"></span>
+					<img id="xx_Dshowlocationicon" src="img/dingwei.png" />
+				</div>
+				<div class="xx_Dshowform">
+					<label>服务电话:</label>
+					<span id="xx_Dshowshoptel"></span>
+					<a id="xx_Dshowshoptela" href="tel:02585326545"><img src="img/dianhua.png" /></a>
+				</div>
+				<div class="xx_Dshowform">
+					<label>姓名:</label>
+					<input type="text" class="" id="xx_DshowUsernameinput" placeholder="姓名（必填）">
+				</div>
+				<div class="xx_Dshowform">
+					<label>车牌号:</label>
+					<span id="xx_Dshowchepainum" style="display: none;"></span>
+					<div id="xx_Dshowcarinput" id="xx_DshowCarinput"></div>
+				</div>
+				<div class="xx_Dshowform">
+					<label>手机号码:</label>
+					<input type="text" class="" id="xx_DshowPhoneinput" placeholder="手机号（必填）">
+				</div>
+				<button id="xx_Dshowjoinbtn" class="xx_Dshowformbtn" type="button">立即报名</button>
+			</form>
+		</div>
+		<div id="msgtable"></div>
+		<div id="xx_creat_hd">
+			<b id="xx_creat_hdbtn">我也要创建活动</b>
+		</div>
+		<div id="creat_hdmodel">
+			<div class="fixregisterbox" id="fixregisterbox">
+					<form>
+					<h4>活动申请信息登记</h4>
+					<div class="form-group">
+						<label>公司名称：</label><span id="warningmsg1"></span>
+						<input type="text" id="InputCompany" placeholder="请输入公司名称">
+					</div>
+					<div class="form-group">
+						<label>公司地址：</label><span id="warningmsg2"></span>
+						<input type="text" id="InputAddress" placeholder="请输入公司地址">
+					</div>
+					<div class="form-group">
+						<label>联系人姓名：</label><span id="warningmsg3"></span>
+						<input type="text" id="InputUsername" placeholder="请输入联系人姓名">
+					</div>
+					<div class="form-group">
+						<label>联系电话：</label><span id="warningmsg4"></span>
+						<input type="text" id="InputUserphone" placeholder="请输入联系电话">
+					</div>
+					<div style="text-align: center;">
+						<button type="button" id="xx_regist_box">提交</button>
+						<button type="button" id="xx_close_box">取消</button>
+					</div>
+					</form>
+			</div>
+		</div>
+		<div style="height: 150px;"></div>
+		<!--<script>
+			var guangao = new guangao.Show("gg");  
+						guangao.addimg("");
+						guangao.addimg("");
+						guangao.addimg("");
+						guangao.settime(1000);
+						guangao.run();
+		</script>-->
+		<script>
+			require(["ggao"]);
+		</script>
+	</body>
+
+</html>

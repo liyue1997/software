@@ -1,0 +1,25 @@
+http://web.mingnengtech.com/huodong/index.html?shopid=&huodongid=&fromuserid=
+微信授权，从return.html，进入到 index.html，再跳转huodong.html
+
+登录成功 ，会返回 userid，会返回 活动模板 huodong_module: huodong.html
+
+http://web.mingnengtech.com/huodong/huodong.html?shopid=&huodongid=&fromuserid=&userid=
+
+根据huodongid\shopid 获取 海报、标题、副标题、是否需要支付、支付金额、音乐
+根据huodongid 获取已经报名用户列表
+根据huodongid\userid 获取 用户报名信息，报名状态：未报名，已报名，已支付，已核销
+
+活动 状态：未开始、已结束、进行中
+
+1：海报、标题、副标题、是否需要支付、支付金额、音乐 可以先固定
+图片、音乐文件 要上传 腾讯云 oss服务里面
+
+2：点击报名按钮，先检查表单信息，上传服务器，开始支付
+
+3：分享 标题，副标题，图片
+
+4：table 显示，更多
+
+5：音乐？
+
+http://www.xinxingtech.com.cn/huodong/huodong1.html?shopid=op201910300004&huodongid=hd201910310035&fromuserid=&userid=USER201910310075

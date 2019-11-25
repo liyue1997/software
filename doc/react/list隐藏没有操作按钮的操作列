@@ -1,0 +1,15 @@
+现在 操作按钮 是封装再 operation 内处理的,封装不合理
+
+只能在 render 内 根据用户类型来写死
+
+const listConfig = {  前面加 
+import db from '../../utils/db';
+
+    var usertoken= db.get('currentUser'); 
+    if (!usertoken.extendInfo)
+       return (<div>你已经退出</div>);
+    if(usertoken.extendInfo.userType === 'shop'){
+      columns.shift();
+     }
+    
+    删除第一列

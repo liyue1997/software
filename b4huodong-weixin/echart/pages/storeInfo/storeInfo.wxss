@@ -1,0 +1,105 @@
+/* pages/storeInfo/storeInfo.wxss */
+.navigation{
+  height: 60px;
+  background: white;
+  text-align: center;
+  line-height: 90px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.head{
+  background-color: white;
+  height: 100px;
+  font-size: 17pt;
+  font-weight: bolder
+}
+.head image{
+  float: left;
+  padding-top: 20px
+}
+.headtext{
+  float: left;
+  padding-top: 33px;
+  padding-left: 10px;
+}
+.pic{
+  width: 50pt;
+  height: 50pt;
+  margin-left: 15px;
+}
+.header { 
+  font-size: 20px;
+  text-align: center;
+  color: blue
+}
+.mendianInfo {
+  border: 0px solid darkgray;
+  width: 100%;
+  height: 100%;
+  background: white;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+page {
+  background: rgb(247,247,251)
+}
+.tr {
+  display: flex;
+  width: 95%;
+  height: 3rem;
+  align-items: center;
+  border-bottom: 1px solid rgb(247,247,251);
+  margin: 0 auto
+}
+.status {
+  display: flex;
+  width: 90%;
+  height: 3rem;
+  align-items: center;
+  border-bottom: 1px solid #E6F3F9;
+  margin: 0 auto;
+  background: white;
+  margin-top: 10px
+}
+.td {
+    width:25%;
+    text-align: right;
+    margin-right: 20px;
+}
+.td span{
+  color: red;
+}
+.input {
+    width:75%;
+}
+.textarea {
+  width: 75%;
+  height: 40px;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.btn-save {
+background:white;
+color:  #3f88e7;
+margin-top: 40px;
+}
+
+/* .btn-edit {
+background: #4E4E72;
+color: white;
+margin-top: 130px;
+width: 90%
+} */

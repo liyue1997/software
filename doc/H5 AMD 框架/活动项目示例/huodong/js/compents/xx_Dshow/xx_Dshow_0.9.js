@@ -1,0 +1,109 @@
+define(function(require) {
+	var $ = require("jquery"),
+	template = require('text!compents/xx_Dshow/xx_Dshow_0.9.html');
+	require('css!compents/xx_Dshow/xx_Dshow-1.0.css');
+	//https://www.cnblogs.com/daxiaohaha/p/11325467.html
+	//图片轮播工具，适用于广告等
+	var xx_Dshow = function() {
+
+	};
+	var options = {
+		elem: '#carousel',
+		width: '100%',
+		height: 'auto',
+		anim: 'default', //切换方式 ; default 左右，fade 淡入
+		autoplay: true, //开启轮播
+		delay: 1000, //延时
+		idx: 0, //播放序号
+		pagePation: 'insider', //分页
+		trigger: 'click',
+		piclist: ["https://b1common-1259797882.cos.ap-shanghai.myqcloud.com/HdHuodong/c5d6d568-192c-440b-a6c1-756c48d2fbe6.jpg"]
+	};
+	var ELEM_NAME = ['kui-carousel', '.kui-carousel-item', 'kui-show', '.kui-carousel-pagePation', 'kui-this'];
+
+	xx_Dshow.prototype.getjsversion = function() {
+		return '0.9';
+	};
+	//option.elem ?
+
+	xx_Dshow.prototype.init = function(option) {
+		var self = this;
+		self.option = $.extend({}, options, option);
+		//加载模板
+		$(self.option.root).html(template);
+		//		console.log("root",$(self.option.root));
+		//		console.log("template",template);
+		//海报数量
+		for(var i = 0; i < self.option.piclist.length; i++) {
+			var xx_Dshowpicbox = '<div class="kui-carousel-itempicbox"><img src=' + self.option.piclist[i] + '></div>'
+			if(i == 0) {
+				$(ELEM_NAME[1]).append(xx_Dshowpicbox);
+				$(".kui-carousel-itempicbox").css("position", "relative");
+			} else
+				$(ELEM_NAME[1]).append(xx_Dshowpicbox);
+		}
+		//容器
+		self.$dom = $(self.option.elem);
+		self.carousel_list = self.$dom.find(ELEM_NAME[1] + ' >*');
+		//限制序号取值范围
+		self.option.idx = self.option.idx < self.carousel_list.length ? self.option.idx : 0;
+		//设置切换类型
+		self.$dom.attr('kui-anim', self.option.anim);
+		//设置样式
+		self.$dom.css({
+			width: self.option.width,
+			height: self.option.height
+		})
+		//分页
+		self.PagePation();
+		self.autoplay();
+		return this;
+	};
+
+	xx_Dshow.prototype.autoplay = function() {
+		var self = this;
+		if(!self.option.autoplay) return;
+		self.Timer = setInterval(_setIntervalfn, self.option.delay);
+		self.carousel_list.on('mouseover', function() {
+			clearInterval(self.Timer);
+		})
+		self.carousel_list.on('mouseout', function() {
+			self.Timer = setInterval(_setIntervalfn, self.option.delay);
+		})
+
+		function _setIntervalfn() {
+			//console.log("idx",self.option.idx);
+			self.option.idx += 1;
+			if(self.option.idx >= self.carousel_list.length) {
+				self.option.idx = 0;
+			}
+			self.activeIndex();
+		}
+	};
+
+	xx_Dshow.prototype.PagePation = function() {
+		var self = this;
+		if($.inArray(self.option.pagePation, ['insider', 'outsider']) == -1) return;
+		self.$dom.attr('kui-pagePation', self.option.pagePation);
+		$.each(self.carousel_list, function(i) {
+			$('<a href="javascript:;" class="' + (i == self.option.idx ? ELEM_NAME[4] : '') + '"></a>').appendTo(ELEM_NAME[3]);
+		})
+		self.carousel_page = self.$dom.find(ELEM_NAME[3] + '>*');
+		//console.log("carousel_page",self.carousel_page);
+		self.activeIndex();
+		self.carousel_page.on('click', function() {
+			self.option.idx = $(this).index();
+			self.activeIndex();
+		})
+	};
+
+	xx_Dshow.prototype.activeIndex = function() {
+		var self = this;
+		self.carousel_list.removeClass(ELEM_NAME[2]);
+		self.carousel_list.eq(self.option.idx).addClass(ELEM_NAME[2]);
+		self.carousel_page.removeClass(ELEM_NAME[4]);
+		self.carousel_page.eq(self.option.idx).addClass(ELEM_NAME[4]);
+	};
+
+	return new xx_Dshow();
+});

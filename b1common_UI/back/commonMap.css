@@ -1,0 +1,61 @@
+.BMapLabel
+{
+	 max-width:inherit;
+   color:red;
+}
+.x-titlebar
+{
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.btn-select
+{
+	background-color:#FFFFFF;
+	
+}
+.x-titlebar-right .btn {
+	color: #FFFFFF;
+	font-size: 24px;
+	padding: 3px 12px;
+}
+
+.popOverMain {
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+	display: none;
+}
+
+.popOverMain .popOverMark {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.popOverMain .mainContent {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.popOverMain .mainContent .popContent {
+	background: #FFFFFF;
+	padding-bottom: 10px;
+}
+
+.popOverMain .mainContent .popClose {
+	padding: 30px 10px 10px 10px;
+	background: #FFFFFF;
+	font-size: 30px;
+	text-align: right;
+}
+/*弹出浮层,阻止窗口滚动*/
+.noscroll,.noscroll body {
+	overflow: hidden;
+}
+
+.noscroll body {
+	position: relative;
+}

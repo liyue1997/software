@@ -1,0 +1,44 @@
+.x-panel
+{
+	background:#FFFFFF;
+}
+.btnMain
+{
+	padding:10px;
+	border-bottom:1px solid #E8E8E8;
+	margin-bottom:10px;
+}
+.btn
+{
+	color:#FFFFFF;
+	margin-right:20px;
+}
+.btn.btnaddFile
+{
+	background:#5BBD5A;
+}
+.btn.btnuploadFile
+{
+	background:#0067CA;
+}
+.btn.btnCancel
+{
+	background:#E6E6E6;
+	width:100%;
+	height:48px;
+	border-radius:0;
+	line-height:32px;
+	color:#000;
+}
+.btn.btnCancel:hover
+{
+	color:#000!important;
+}
+a:hover
+{
+	color:#FFFFFF!important;
+}
+.fileRow
+{
+	border-bottom:1px solid #E8E8E8;
+}

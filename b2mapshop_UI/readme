@@ -1,0 +1,60 @@
+//bcommon
+require("cordova!cordova-plugin-device"); //设备许可
+require("cordova!jpush-phonegap-plugin"); //jpush
+
+//
+require("cordova!de.appplant.cordova.plugin.background-mode"); //保持后台运行
+require("cordova!cordova-plugin-geolocation"); //定位
+require("cordova!phonegap-plugin-launchnavigator"); //导航
+require("cordova!plugins.imagePicker"); //照片
+require("cordova!navigator.weixin"); //微信
+
+
+问题：
+1：地图导航  
+  安卓
+   肯德基(南京南站) 高德地图 可以直接定位，百度地图 搜索 南京南站，搜狗地图 搜索肯德基
+  肯德基 南京南站 高德地图搜索，百度地图直接定位到合肥，搜狗地图搜索
+ 百度地图、搜狗地图  可以直接返回app，高德地图 不行
+ 
+ 试试看  dest：肯德基 南京南站   加上 出发地，解决百度地图定位到合肥的问题
+ 
+2：微信分享
+   打包失败
+ 要找到正确的key，填写到微信
+ 
+ 
+   
+3：选择照片上传
+上传 腾讯云
+https://cloud.tencent.com/document/product/436/11459
+找示范代码
+ok
+
+4：聊天功能
+铛铛？自己写？。。。
+
+5：首页效果
+效果未定，要找 jquery 的动态效果 
+
+6：网络不好，会卡死
+可能要用异步模式
+
+7：git 排除 curcheck
+ok
+
+8：苹果打包
+需要研究
+
+9：少商家客户端
+。。
+
+10:百度地图，
+服务端定位失败
+
+
+
+11、只有首页需要侧滑列表，组队界面左右滑动切换的是筛选条件
+12、gif背景图
+
+

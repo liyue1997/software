@@ -1,0 +1,39 @@
+<!--pages/HDDZinfo/HDDZinfo.wxml-->
+<view class="HdDzlistInfo">
+<view class="head">
+<view class="HdDzmoneyword">实付金额</view>
+<view class="HdDzmoney"><input value="¥{{listData.payRealmoney}}" disabled bindtap="money"></input></view>
+</view>
+
+<view class="body">
+<view class="HdDzinfo"><text>人员数量</text><input class="input" value="{{listData.userCount}}" disabled></input></view>
+<view class="HdDzinfo"><text>支付金额</text><input class="input" value="{{listData.payMoney}}" disabled></input></view>
+<view class="HdDzinfo"><text>支付费用</text><input class="input" value="{{listData.payFee}}" disabled></input></view>
+<view class="HdDzinfo"><text>应付金额</text><input class="input" value="{{listData.payNeedmoney}}" disabled></input></view>
+<view class="HdDzinfo"><text>实付金额</text><input class="input" value="{{listData.payRealmoney}}" disabled></input></view>
+<view class="HdDzinfo"><text>付款时间</text><input class="input" value="{{listData.payTime}}" disabled></input></view>
+<view class="HdDzinfo"><text>付款人员</text><input class="input" value="{{listData.payUser}}" disabled></input></view>
+<view class="HdDzinfo"><text>付款单据号</text><input class="input" value="{{listData.payOrder}}" disabled></input></view>
+<view class="HdDzinfo"><text>付款方式</text><input class="input" value="{{listData.payType}}" disabled></input></view>
+<view class="HdDzinfo"><text>结账单号</text><input class="input" value="{{listData.jzOrderId}}" disabled></input></view>
+<view class="HdDzinfo"><text>备注</text><input class="input" value="{{listData.payrDemo}}" disabled></input></view>
+<view class="HdDzinfo"><text>创建时间</text><input class="input" value="{{listData.createDate}}" disabled></input></view>
+</view>
+
+
+
+</view>
+<!-- <i-panel>
+    <i-input value="{{listData.jzOrderId}}" title="结账单号:"  disabled/>
+    <i-input value="{{listData.userCount}}" title="人员数量:"   disabled/>
+    <i-input value="{{listData.payMoney}}" title="支付金额:" disabled/>
+    <i-input value="{{listData.payFee}}" title="支付费用:" disabled/>
+    <i-input value="{{listData.payNeedmoney}}" title="应付金额:" disabled/>
+    <i-input value="{{listData.payRealmoney}}" title="实付金额:" disabled/>
+    <i-input value="{{listData.payTime}}" title="付款时间:" disabled/>
+    <i-input value="{{listData.payUser}}" title="付款人员:" disabled/>
+    <i-input value="{{listData.payOrder}}" title="付款单据号:" disabled/>
+    <i-input value="{{listData.payType}}" title="付款方式:" disabled/>
+    <i-input value="{{listData.payrDemo}}" title="备注:" disabled/>
+    <i-input value="{{listData.createDate}}" title="创建时间:" disabled/>
+</i-panel> -->

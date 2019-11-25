@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>	
+		<h1 style="text-align: center;">正在获取授权，等待跳转</h1>
+	</body>
+	<script>
+		//获取url中的code值
+		function getUrlParam(name){
+			//var reg=new RegExp("(^|&)"+name+"([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			//alert(window.location);
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");//构造一个含有目标参数的正则表达式对象
+			var r=window.location.search.substr(1).match(reg);//匹配目标参数
+			if(r != null) return unescape(r[2]); return null;//返回参数值
+		}
+		//微信授权 获取code
+		function start(){
+			//alert("return");
+			var code=getUrlParam('code');
+			var app=getUrlParam('app');
+			
+			if (code == null || code == "") {
+				alert("登录失败");
+				window.location.href = app;
+			} else{
+				//this.getOpenId(code);
+				//alert(app);				
+				window.location.href = app+"&rcode="+code;
+			}
+		}
+		
+		start();
+	</script>
+</html>

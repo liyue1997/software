@@ -1,0 +1,73 @@
+input[type="button"],input[type="submit"],input[type="reset"],input[type="text"]
+	{
+	-webkit-appearance: none;
+	border: 0;
+}
+
+.form-control,textarea {
+	-webkit-appearance: none;
+	outline: none;
+	resize: none;
+}
+/*弹出层顶部*/
+.layer-alert .layer-alert-top {
+	background: #E1E1E1;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+
+.layer-alert .layer-alert-top .layer-alert-leftTop {
+	text-align: left;
+	margin-left: 10px;
+	cursor: pointer
+}
+
+.layer-alert .layer-alert-top .layer-alert-rightTop {
+	float: right;
+	margin-right: 10px;
+	cursor: pointer
+}
+
+.layer-alert .layer-alert-content {
+	width: 100%;
+}
+
+.layer-alert .layer-alert-content .layer-alert-input {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 10px;
+}
+/*性别选择*/
+.layer-alert .layer-alert-content2 {
+	background: #4C4C4C;
+	width: 100%;
+}
+
+.layer-alert .layer-alert-button {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #E1E1E1;
+	background: #FFFFFF;
+}
+
+.layer-alert .layer-alert-button:active {
+	background: #F0F0F0;
+}
+
+.layer-alert .layer-alert-btnCancel {
+	margin: 10px 0 0 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #FFFFFF;
+	color: #108EE9;
+}
+
+.layer-alert .layer-alert-btnCancel:active {
+	background: #F0F0F0;
+}

@@ -1,0 +1,35 @@
+登录: http://www.xinxingtech.com.cn/b4huodong-web/
+用户名：xinxing
+密码：123456
+
+1： 增加门店
+    坐标：http://api.map.baidu.com/lbsapi/getpoint/index.html
+
+2：在门店编辑内可以获得 注册链接，通过微信发送给门店用户
+http://www.xinxingtech.com.cn/shop/index.html?shopid=op15728285660032
+
+3：门店用户 点击 链接，授权，进入系统，并 填写用户信息
+
+4：后台管理员，设置用户 激活状态 为激活（是）
+     门店用户  就可以操作后续功能
+
+5：管理员 建立活动
+     获得活动推广链接
+http://www.xinxingtech.com.cn/huodong/index.html?huodongid=hd15728295990061&shopid=op15728285660032&fromuser=xinxing
+
+shopoFPue5kVlCPDt2fPgnQF8oi-CtzY
+ 
+
+<div id="haibaobox" class="box-1">
+<ul>
+<li>
+<img src="img/t1.jpg" alt="这里是第一场图片" />
+</li>
+<li style="display: none;">
+<img src="img/img1.png" alt="这里是第三张图片" />
+</li>
+<li style="display: none;">
+<img src="img/img2.png" alt="这里是第一场图片" />
+</li>
+</ul>
+</div>

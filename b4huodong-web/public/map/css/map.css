@@ -1,0 +1,76 @@
+#container{
+	 height:100%;
+	 width: 100%;
+} 
+#inputbox{
+	margin-top: 40px;
+	width: 64%;
+	height:30px;
+	position: absolute;
+	z-index: 40;
+	left: 50%;
+	margin-left: -32%;
+}
+#searchResultPanel{
+	border:1px solid #C0C0C0;
+	width:150px;
+	height:auto; 
+	display:none;
+}
+.machinestate{
+	margin:0;
+	line-height:1.5;
+	font-size:13px;
+	text-indent:2em;
+}
+.machinetitle{
+	margin:0 0 5px 0;
+	padding:0.2em 0;
+}
+.machineimg{
+	float:right;
+	margin:4px;
+	width:40px;
+	height:40px;
+}
+.searchinput :focus{
+	box-shadow:0 0 15px rgba(82,168,236,.6);
+}
+.statebtns{
+	margin-top:20px;
+}
+.btnnormal,.btnguzhang,.btnyaoshui,.btncount{
+	border:none;
+	width:135px;
+	height:40px;
+	text-align: right;
+}
+.btnnormal{
+	background:140px 40px url('../img/normal.png');
+	background-position: -25px center;
+}
+.btnguzhang{
+	background:140px 40px url('../img/guzhang.png');
+	background-position: -25px center;
+}
+.btnyaoshui{
+	background:140px 40px url('../img/yaoshui.png');
+	background-position: -25px center;
+}
+.btncount{
+	background:140px 40px url('../img/shebei.png');
+	background-position: -25px center;
+}
+.tangram-suggestion{
+	z-index: 60;
+}
+@media screen and (max-width: 450px) {
+   .inputdiv,.qpbtn,.tcqpbtn{
+      display: none;
+	}
+	#inputbox{
+		margin-top: 0;
+		margin-left: 0;
+		left: 0;
+	}
+  }

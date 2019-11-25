@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"核销",
+  "navigationBarBackgroundColor": "#3D89E8",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-divider": "../../dist/divider/index"
+  },
+  "navigationBarTextStyle": "white"
+}

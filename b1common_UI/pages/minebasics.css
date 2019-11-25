@@ -1,0 +1,78 @@
+.window,.x-panel,.panel,.x--content
+{
+	background-color:#f1f1f1;
+}
+.x-titlebar
+{
+	background-color:#fff;
+	color:#000;
+	border-bottom:1px solid #b2b2b2;
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}
+.panel {
+	margin-top:10px;
+	border-top:1px solid #E1E1E1;
+}
+
+.panel.panel-default {
+	margin-bottom: 10px;
+}
+.panel .x-row .x-row
+{
+	padding:0;
+	margin:0;
+	line-height:30px;
+	font-size:16px;
+	
+	border-bottom:1px solid #E1E1E1;
+}
+.panel .x-row .x-row:last-child
+{
+	padding:0;
+	margin:0;
+	line-height:30px;
+	font-size:16px;
+	
+	border-bottom:0;
+}
+.panel:nth-child(1) .x-row:nth-child(6)
+{
+	border-bottom:0;
+}
+.x-row x-col:nth-child(1)
+{
+	margin-left:10px;
+}
+.x-row:active
+{
+	background:#E1E1E1;
+}
+
+.x-panel {
+	background: #EFEFF4;
+}
+.houseDiv,.carDiv,.moneyCardDiv,.otherMoneyDiv
+{
+	display:none;
+}
+.imgPicLink
+{
+	border-radius:50%;
+	width:60px; 
+	height:60px;
+}
+.btnback{
+	color:#1ca670;
+}
+.mainrow{
+	padding-bottom:0;background:#fff;padding-left:20px;padding-right:20px;
+}
+.minorrow{
+	padding-bottom:0;margin-top:10px;background:#fff;padding-left:20px;padding-right:20px;
+}
+.assitrow{
+	margin-top:10px;background:#fff;padding-left:20px;padding-right:20px;
+}

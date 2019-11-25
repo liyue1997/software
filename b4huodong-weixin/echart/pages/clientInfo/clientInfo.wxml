@@ -1,0 +1,39 @@
+<!-- <view class="navigation">
+客户信息
+</view> -->
+
+<view class="head">
+<image src="{{userheadpic}}" class="pic"></image>
+<view class="headtext">
+客户信息
+</view>
+</view>
+
+<form bindsubmit="formSubmit">
+<view class="clientInfo">
+    <view class="tr">
+      <view class="td">
+      <span>*</span>
+      用户姓名:
+      </view>
+      <input class="input" name="userName" value="{{listData.userName}}" data-name="userName" placeholder="请输入"></input>
+    </view>
+    <view class="tr">
+      <view class="td">用户工号:</view>
+      <input class="input" name="userNumber" value="{{listData.userNumber}}" placeholder="请输入"></input>
+    </view>
+    <view class="tr">
+      <view class="td">用户手机号:</view>
+      <input class="input" name="userPhone" value="{{listData.userPhone}}" placeholder="请输入"></input>
+    </view>
+    <view class="tr">
+      <view class="td">用户电话:</view>
+      <input class="input" name="userTel" value="{{listData.userTel}}" placeholder="请输入"></input>
+    </view>
+    <view class="tr">
+      <view class="td">用户QQ号:</view>
+      <input class="input" name="userQq" value="{{listData.userQq}}" placeholder="请输入"></input>
+    </view>
+</view>
+<button  class="btn-save" form-type="submit" bindtap='save'>修改信息</button>
+</form>

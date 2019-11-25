@@ -1,0 +1,6 @@
+#tmp files
+.cache
+.release
+**/.cache
+**/.release
+ 

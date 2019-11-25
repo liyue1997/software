@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cMVZ7B3" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cMVZ7B3" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/scrollView/scrollView,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-titlebar-title.cMVZ7B3{font-size: 17px} .talklist.cMVZ7B3{width: 95%; margin: 5px auto; background: rgb(255, 255, 224); border-radius: 10px} .talkname.cMVZ7B3, .lastfrom.cMVZ7B3, .unreadcount.cMVZ7B3, .lastmsg.cMVZ7B3{color: rgb(0, 0, 0)} .unreadcount.cMVZ7B3{text-align: center; display: inline-block; color: rgb(255, 255, 255); border-radius: 50%; background: red; width: 20px; height: 20px} .lastmsg.cMVZ7B3, .lastfrom.cMVZ7B3{color: rgb(139, 126, 102)} .talkname.cMVZ7B3{font-weight: bold; font-size: 16px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; display: inline-block; width: 100%} .headimg.cMVZ7B3{border-radius: 50%; width: 40px; height: 40px}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onActive:modelActive;onLoad:modelLoad" __cid="cMVZ7B3" class="cMVZ7B3"></div>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcFjiEni-iosstatusbar cMVZ7B3" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cMVZ7B3"> 
+    <div class="x-panel-top top cMVZ7B3" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMVZ7B3"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cMVZ7B3" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;会话列表&quot;}" __cid="cMVZ7B3"> 
+        <div class="x-titlebar-left cMVZ7B3" __cid="cMVZ7B3"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cMVZ7B3" xid="backBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;img:$model/UI2/b2mapshop_UI/img/nav_icon_fanhui.png&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cMVZ7B3"> 
+            <img src="$model/UI2/b2mapshop_UI/img/nav_icon_fanhui.png" xid="image3" style="width:20px;" __cid="cMVZ7B3" class="cMVZ7B3"/>
+            <span __cid="cMVZ7B3" class="cMVZ7B3"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cMVZ7B3" __cid="cMVZ7B3">会话列表</div>  
+        <div class="x-titlebar-right  cMVZ7B3" __cid="cMVZ7B3">
+          <div class="empty cMVZ7B3" __cid="cMVZ7B3"/>
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content  x-scroll-view cMVZ7B3" xid="content1" _xid="C8929F3F402000011EFDFD70437C16C4" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cMVZ7B3"> 
+      <div class="x-scroll cMVZ7B3" component="$model/UI2/system/components/justep/scrollView/scrollView" xid="scrollView1" data-bind="component:{name:'$model/UI2/system/components/justep/scrollView/scrollView'}" __cid="cMVZ7B3"> 
+        <div class="x-content-center x-pull-down container cMVZ7B3" xid="div1" __cid="cMVZ7B3"> 
+          <i class="x-pull-down-img glyphicon x-icon-pull-down cMVZ7B3" xid="i1" __cid="cMVZ7B3"/>  
+          <span class="x-pull-down-label cMVZ7B3" xid="span1" __cid="cMVZ7B3">下拉刷新...</span>
+        </div>  
+        <div class="x-scroll-content cMVZ7B3" xid="div2" __cid="cMVZ7B3"> 
+          <div class="x-list cMVZ7B3" component="$model/UI2/system/components/justep/list/list" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;talklist&quot;,&quot;limit&quot;:8}" __cid="cMVZ7B3"> 
+            <div class="x-list-template hide cMVZ7B3" xid="listTemplateDiv1" bind-foreach="{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" __cid="cMVZ7B3"> 
+              <div xid="talklistdiv" class="talklist cMVZ7B3" __cid="cMVZ7B3"> 
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cMVZ7B3" xid="row1" style="height:100%;width:100%;" bind-click="row1Click" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cMVZ7B3"> 
+                  <div class="x-col x-col-20 cMVZ7B3" xid="col1" __cid="cMVZ7B3"> 
+                    <img src=" " alt="" xid="headimg" class="headimg cMVZ7B3" bind-attr-src=" val(&quot;headimg&quot;)" __cid="cMVZ7B3"/>
+                  </div>  
+                  <div class="x-col cMVZ7B3" xid="col2" __cid="cMVZ7B3">
+                    <span xid="span4" bind-text="val(&quot;talkName&quot;)" class="talkname cMVZ7B3" __cid="cMVZ7B3">会话名</span>  
+                    <span xid="lastfrom" bind-text="val(&quot;lastFrom&quot;)" class="lastfrom cMVZ7B3" __cid="cMVZ7B3">最近一条信息发送者：</span>:
+                    <span xid="lastmsg" bind-text="val(&quot;lastMsg&quot;)" class="lastmsg cMVZ7B3" __cid="cMVZ7B3">最近一条消息</span> 
+                  </div>  
+                  <div class="x-col x-col-10 cMVZ7B3" xid="col3" style="text-align:right;" __cid="cMVZ7B3">
+                    <span xid="unread" class="unreadcount cMVZ7B3" bind-text="val(&quot;unreadcount&quot;)" __cid="cMVZ7B3">未读消息数</span>
+                  </div> 
+                </div> 
+              </div>
+            </div> 
+          </div> 
+        </div>  
+        <div class="x-content-center x-pull-up cMVZ7B3" xid="div4" __cid="cMVZ7B3"> 
+          <span class="x-pull-up-label cMVZ7B3" xid="span2" __cid="cMVZ7B3">加载更多...</span>
+        </div> 
+      </div>
+    </div>  
+    <style __cid="cMVZ7B3" class="cMVZ7B3">.x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcFjiEni-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>
+  </div> 
+</div>

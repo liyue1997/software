@@ -1,0 +1,30 @@
+1.权限相关表 ts 开头
+  ts_opr 系统操作表
+  ts_module 系统模块表
+  ts_module_role 模块角色表
+  ts_menu_module 菜单表
+  ts_role 角色表
+  ts_subsys 子系统表
+  ts_sys_role_menu_tree  静态菜单表
+  ts_user 登录用户表
+  
+  t_user 老用户表、tc_opr 老操作表 这两个表设计不规范，后期移除
+ 
+ 2.基础表 t 开头
+   t_dic 字典表
+   t_comkey 业务key分配表
+   t_log_opr 操作日志表
+   t_log_sql sql日志表
+   t_yzm  验证码
+   t_comkey  业务键值
+   t_picture 图片
+   
+   
+   comkey、log_sql、opr_log 老系统遗留表，设计不规范，后期移除
+   
+ 3. 手机端表
+   app_device  用户设备表
+   app_ver     应用版本表
+ 
+x.代码自动生成表 v开头
+  vtablecolumns  系统数据库结构表

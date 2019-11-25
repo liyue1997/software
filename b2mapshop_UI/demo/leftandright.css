@@ -1,0 +1,13 @@
+.x-panel-bottom2{
+	position:absolute;
+	bottom:0px;
+	z-index:9999;
+	width:100%;
+}
+.pinfo{
+	height:100%;
+	background-color:white;
+	/*
+	margin:15px;padding-left:8px;padding-right:8px;
+	*/
+}

@@ -1,0 +1,27 @@
+.x-panel{background:#252330;height:100%;width:100%;}
+.list-group-item{border:none;background:#252330;}
+.registBtn{
+	color:#FFFFFF;
+	width:270px;
+	height:45px;
+	background:url("./img/btn_denglu.png");
+	background-size:270px 45px;;
+	font-size:16px;
+}
+.input-group{width:80%;margin-left:auto;margin-right:auto;}
+.input-group-addon{color:#FFFFFF;background:transparent;border-style:none none none none;font-size:17px;}
+.titleh2{margin-left:28px;letter-spacing:2px;margin-top:0;color:#FFFFFF;}
+.titleh5{color:#FFFFFF;margin-left:28px;letter-spacing:2px;margin-top:10px;}
+.weixindiv{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.span6{color:#FFFFFF;vertical-align:-4px;}
+.titleh4{color:#FFFFFF;font-size:15px;left:28px;position:relative;margin-top:20px;}
+.btnyzm{width:80px;height:30px;float:right;background-color:transparent;float:right;float:right;padding:5px 3px 5px 3px;border:1px solid #FFFFFF;}
+.btnyzm:hover{background:transparent;border:1 solid #FFFFFF;}
+.input-group{width:90%;}
+input:focus{outline:none;box-shadow:none;}
+.inputphone,.inputyzm,.inputpasswordfirst,.inputpasswordsecond{font-size:15px;background-color:#252330;border-style:none;color:#FFFFFF;}

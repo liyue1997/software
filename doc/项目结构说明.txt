@@ -1,0 +1,20 @@
+1. 项目 必须有编号 和 名称
+   比如 b1common 通用项目 （其中数字 1 每个项目依次增长，不重复，叫 项目代码）
+   项目主目录为编号
+
+2. 项目主目录下，一般建立 doc、server、web、wex5、run  3个子目录，分别存放文档、后台代码、web前端代码、wex5 代码、编译后可运行程序
+    比如 b1common 通用项目 下，应建立 b1common_doc \ b1common_server \ b1common_web \ b1common_wex5 \b1common_run 等子目录
+    b1common_run 应该按 版本存放经过测试的运行版本
+    
+3. 所有项目目前只存在 master 一个分支
+   项目每个里程碑，应该打上标签 git tag命令
+
+4. 数据库结构 应该 按里程碑版本 存放在 doc 目录下
+
+部署访问路径（假设部署在192.168.50.220）：
+1. web后台
+http://192.168.50.220/b1common_server/
+
+2.web前台
+http://192.168.50.220/commonweb/
+

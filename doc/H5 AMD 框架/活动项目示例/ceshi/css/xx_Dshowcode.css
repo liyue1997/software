@@ -1,0 +1,63 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* 二维码长按保存图片 */
+
+img.QRCode {
+	-webkit-touch-callout: default;
+}
+
+#make128code {
+	width: 90%;
+	height: 50%;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	margin: -25% 0 0 -45%;
+}
+
+#codebox {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	top: 50%;
+	left: 50%;
+	margin: -25% 0 0 -50%;
+}
+
+#ean {
+	width: 100%;
+	height: 100%;
+}
+
+#codeMsg {
+	-webkit-touch-callout: all;
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#textmsg {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#tagMsg {
+	font-size: 15px;
+	text-align: center;
+}
+
+#make128code {
+	height: 150px;
+}

@@ -1,0 +1,62 @@
+.text-white{ color:#FFFFFF;}
+.text-success{ color:#32bd60;}
+
+.cehua{
+	width:32px;
+	height:32px;
+	border-radius:50%;
+}
+.msg,.scanner,.share{
+	width:22px;
+	height:22px;
+	margin-left:10px;
+}
+.x-titlebar{ height:100%; background-color:rgba(0, 0, 0, 0.3); font-family:"微软雅黑"; border:0;}
+.x-titlebar .btn i{ font-size:20px;}
+
+.x-panel-top { z-index:100;}
+.x-panel >.x-panel-content{ top:0 !important;}
+.x-panel .no-iosstatusbar  >.x-panel-content{ top:-20px!important; }
+
+ 
+.x-bgImg{ background: url('xinxing/xinxingbg.gif') no-repeat center top; background-size:cover; font:0.75em 'microsoft yahei';}
+.x-img2{ height:60px;transform: rotate(20deg);}
+
+.x-list{ margin-top:25%;}
+/*
+.x-list .col-xs-6{ margin-bottom:30px; padding-left:0px; padding-right:0px;}
+.x-list .col-xs-6 > div{ margin:0 auto; width:90px; height:90px; border-radius:65px; padding-top:15px; position:absolute;}
+.x-list .col-xs-6:nth-child(1) > div{  left:40%; top:20px;}
+.x-list .col-xs-6:nth-child(2) > div{ right:40%; top:20px;}
+.x-list .col-xs-6:nth-child(3) > div{ left:10%; top:100px;}
+.x-list .col-xs-6:nth-child(4) > div{  right:10%; top:100px;}
+.x-list .col-xs-6:nth-child(5) > div{  left:40%; top:180px;}
+.x-list .col-xs-6:nth-child(6) > div{ right:40%; top:180px;}
+.centerimg {position:absolute;left:32%;margin-top:30%;transform: rotate(20deg);}
+*/
+.centerimg {position:absolute;display:none;}
+
+.infopanel{width:96%;height:20%;background-color:#2B2B39;left:2%;position:absolute;bottom:10px;border-radius:5px;display:none;}
+
+.ftitle{font-family:黑体;font-size:19px;color:#FFFFFF}
+.fcontent{font-family:黑体;font-size:14px;color:#FFFFFF}
+.fcontentred{font-family:黑体;font-size:13px;color:red}
+.fcontentgreen{font-family:黑体;font-size:13px;color:green}
+
+.canyu{font-family:黑体;font-size:15px;color:#FFFFFF;width:88px;height:28px;display:block;background:url("./img/btn_canyu.png");background-size:88px 28px;}
+
+
+.licircle{position:absolute;}
+.shakebtn{border:none;}
+.tip {
+	color:#FFFFFF;
+	display:block;
+	background:#f00;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	top:-6px;
+	right:-38px;
+	position:relative;
+}
+.notip{display:none;}

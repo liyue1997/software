@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>双11购物狂欢节</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="format-detection" content="telephone=no, email=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="shortcut icon" href="http://weixin.iwpark.com/attachment/images/global/g5kazGKr4T8U2A8ytTwL4YZ66222K5.png">
+		<link rel="stylesheet" type="text/css" href="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/css/common.min.css?v=201801071">
+		<link rel="stylesheet" type="text/css" href="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/css/mui.ext.css?v=201802106">
+		<link rel="stylesheet" type="text/css" href="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/css/detail.css?v=201801148">
+		<link rel="stylesheet" href="css/hdstyles.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/registform.css" />
+		<script type="text/javascript" src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+		<script type="text/javascript" src="js/wxhd.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/registhd.js" ></script>
+		<script src="https://unpkg.com/gcoord/dist/gcoord.js"></script> 
+		<!--<script type="text/javascript" src="js/vconsole.min.js"></script>-->
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				font-family: "微软雅黑";
+				font-size: 14px;
+			}
+			
+			ul,
+			li {
+				list-style: none;
+			}
+			
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div style="display:none" class="top11" id="m_popUp">
+			<div class="all" style="font-size:14px;">
+			</div>
+			<div class="st1">
+				<div style="float: right;opacity: 0.75;color: #000000;"></div>
+				<div class="m_guide" style="margin-top: 30px;background-color:#ffffff; text-align: center;">
+					<img src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/static/img/shangditu.png" style="width:100%">
+					<div style="width: 100%; display: inline-block; margin-top: -145px; color: #EFF647;font-size: 17px;">邀请车友立得现金红包</div>
+					<div style="width: 100%; display: inline-block; margin-top: -100px; color: #ffffff;font-size: 25px; font-weight: 600;">每天可领取10个</div>
+					<div style="width: 100%; display: inline-block; margin-top: -60px; color: #ffffff;font-size: 13px;">点击右上角三个点，推荐给车友</div>
+					<img style="width: 13%; position: absolute;  margin-top: 8.5%;" src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/static/img/qian.png">
+					<div style="margin-left: 15%; display: inline-block; margin-top: 20px; color: #A4A4A4;font-size: 13px;">每成功邀请1位车友参与</div>
+					<div style="margin-left:5%; display: inline-block;margin-bottom: 20px; color: #000000;font-size: 13px;">您可以获得元奖励</div>
+				</div>
+				<div class="st1" style="position: absolute;margin-top: 260px; text-align:center"><span style="display: block; margin: auto;" class="close1">
+		            <img src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/static/img/gianbu.png" style="width:15%"></span></div>
+			</div>
+		</div>
+
+		<div class="mui-content">
+			<div class="box">
+				<div id="haibaobox" class="box-1">
+					<ul id="moveimgul">
+						<li>
+							<img src="img/img2.png" alt="这里是第一场图片" />
+						</li>
+					</ul>
+				</div>
+				<div class="box-2">
+					<ul>
+					</ul>
+				</div>
+				<div class="box-3">
+					<span class="prev"> &lt;</span>
+					<span class="next"> &gt; </span>
+				</div>
+			</div>
+			<div style="position: relative;"></div>
+			<form id="formid" action="./index.php" name="myform" method="post" onsubmit="return checkUser();">
+				<div style="margin-top: 10px;" class="mui-content1">
+					<div style="background-color:#fff" class="mui-input-group">
+						<div  class="mui-input-row">
+							<label>门店名：</label>
+							<div>
+								<div id="shopname" style="color: #000; width: 53%;  height: 45px; vertical-align: middle; display: table-cell;">南京帕博平价汽车</div>
+							</div>
+						</div>
+						<div class="mui-input-row">
+							<label>门店地址：</label>
+								<div id="shopaddress" style="color: #000;float: left;  width: 53%;  height: 45px; vertical-align: middle; display: table-cell;"> 江苏省南京市建邺区江东中路222号奥体中心55号柱帕博平价汽车用品旗舰店总部</div>
+							
+								<img src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/dingwei.png" onclick="weixinlocation()" style="width: 30px;  height: 30px; margin-top: 5px;  float: right;margin-right:  0.8rem;">
+							
+						</div>
+						<div class="mui-input-row">
+							<label>服务电话：</label>
+								<p id="shoptelp" style="  color: #5390FF;   float: left; margin-top: 10px;  width: 53%; color:#000">025-66091111</p>
+							<a id="shoptel" href="tel:02566098628">
+								<img src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/dianhua.png" style="width: 25px;  height: 25px; margin-top: 5px;  float: right;margin-right:  0.8rem;">
+							</a>
+						</div>
+						<input type="hidden" name="dingdan" id="dingdan" value="dingdan20191028103359140278">
+						<input type="hidden" name="shareurl" id="shareurl" value="http://qcbm.juekebao.cn/app/index.php?i=5&amp;c=entry&amp;aid=28&amp;logout=1&amp;do=index&amp;m=lemon_writeoffsign&amp;wxref=mp.weixin.qq.com&amp;from=message&amp;isappinstalled=0&amp;wxref=mp.weixin.qq.com">
+						<input type="hidden" name="feename" id="feename" value="帕博奥体店十一周年庆9.9元抢网红伞或应急包、洗车等七重好礼！">
+						<input type="hidden" name="distinguish" id="distinguish" value="">
+						<input type="hidden" name="type" id="type" value="0">
+						<div class="mui-input-row">
+							<label>姓名:</label>
+							<input type="text" name="chexing" id="chexing" placeholder="姓名(必填)" value="">
+						</div>
+						<div class="mui-input-row">
+							<label>车牌号：</label>
+							<style type="text/css">
+								* {
+									margin: 0;
+									padding: 0;
+									list-style: none;
+									border: 0;
+									box-sizing: border-box;
+								}
+								
+								.clearfix:after {
+									content: ".";
+									display: block;
+									font-size: 0;
+									height: 0;
+									clear: both;
+									visibility: hidden;
+								}
+								
+								.clearfix {
+									display: inline-table;
+								}
+								
+								*html .clearfix {
+									height: 1%;
+								}
+								
+								.clearfix {
+									display: block;
+								}
+								
+								*+html .clearfix {
+									min-height: 1%;
+								}
+								
+								.che_tit {
+									text-align: center;
+									padding: 20px;
+								}
+								
+								.ul_pro {
+									background-color: #CED3D9;
+									text-align: center;
+									padding: 4px 2px;
+									font-size: 14px;
+								}
+								
+								.ul_pro li {
+									float: left;
+									width: 11.11%;
+									padding: 2px;
+									box-sizing: border-box;
+								}
+								
+								.ul_pro .li_close {
+									float: right;
+									width: 22.22%;
+								}
+								
+								.ul_pro .li_close span {
+									background-color: #ACB3BB;
+								}
+								
+								.ul_pro .li_clean {
+									float: right;
+									width: 22.22%;
+								}
+								
+								.ul_pro li span {
+									display: block;
+									background-color: #fff;
+									border-radius: 4px;
+									box-shadow: 2px 2px 2px #888888;
+									/* max-width:48px; margin:0 auto; */
+									line-height: 32px;
+									padding-top: 2px;
+								}
+								
+								.ul_pro li span:active {
+									background-color: #4DA9F2;
+									color: #fff;
+								}
+								
+								.ul_input {
+									width: 350px;
+									margin: 0 auto;
+								}
+								
+								.ul_input li {
+									float: left;
+									width: 8%;
+									text-align: center;
+									margin-left: 5px
+								}
+								
+								.ul_input li span {
+									display: block;
+									background-color: #fff;
+									border: 1px solid #ccc;
+									border-radius: 4px;
+									width: 30px;
+									margin: 0 auto;
+									height: 30px;
+									line-height: 30px;
+									margin-top: 5px;
+								}
+								
+								.ul_keybord {
+									background-color: #CED3D9;
+									text-align: center;
+									padding: 4px 2px;
+									font-size: 14px;
+								}
+								
+								.ul_keybord li {
+									float: left;
+									width: 10%;
+									padding: 2px;
+									box-sizing: border-box;
+								}
+								
+								.ul_keybord .ikey20 {
+									margin-left: 5%;
+								}
+								
+								.ul_keybord .li_w {
+									width: 11.11%;
+								}
+								
+								.ul_keybord .li_close {
+									float: right;
+									width: 22.22%;
+								}
+								
+								.ul_keybord .li_close span {
+									background-color: #ACB3BB;
+								}
+								
+								.ul_keybord .li_clean {
+									float: right;
+									width: 22.22%;
+								}
+								
+								.ul_keybord li span {
+									display: block;
+									background-color: #fff;
+									border-radius: 4px;
+									box-shadow: 2px 2px 2px #888888;
+									/* max-width:48px; margin:0 auto; */
+									line-height: 32px;
+									padding-top: 2px;
+								}
+								
+								.ul_keybord li span:active {
+									background-color: #4DA9F2;
+									color: #fff;
+								}
+							</style>
+
+							<div class="">
+								<input name="chepai" id="chepai" class="car_input1" hidden="hidden" value="">
+								<div class="car_input" id="car_inputboxs">
+									<ul class="clearfix ul_input">
+										<li class="input_pro" style="margin-left: 0px "><span></span></li>
+										<li class="input_pp input_zim"><span></span></li>
+										<li class="input_pp"><span></span></li>
+										<li class="input_pp"><span></span></li>
+										<li class="input_pp"><span></span></li>
+										<li class="input_pp"><span></span></li>
+										<li class="input_pp"><span></span></li>
+									</ul>
+								</div>
+							</div>
+							<div id="jp_pro"></div>
+							<script type="text/javascript" src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/js/jquery.min.js"></script>
+							<script src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/js/layer.js" type="text/javascript"></script>
+							<script src="http://qcbm.juekebao.cn/addons/lemon_writeoffsign/template/mobile/style/js/index.js" type="text/javascript"></script>
+						</div>
+						<div class="mui-input-row">
+							<label>手机号码:</label>
+							<input type="number" name="mobile" id="mobile" placeholder="手机号码 (必填)" pattern="[0-9]*" value="">
+						</div>
+						<input type="hidden" value="" name="tjopenid">
+						<!-- 添加的表单 -->
+						<p></p>
+					</div>
+				</div>
+			</form>
+			<footer style="width: 84%;  margin-left: 8%;  margin-bottom: 20px;  margin-top: 20px;  border-radius: 50px; " class="mui-bar mui-bar-tab">
+				<a style="text-decoration:none;">
+					<span id="joinNowbtn" onclick="joinNow()" style="border-radius: 50px; background:rgb(249,192,39);top:0px;height: 49px!important;font-size: large!important;" class="mui-btn mui-gradient-danger mui-btn-block">立即报名</span>
+				</a>
+			</footer>
+			<div style="border: 1px solid #000000; height: 40px; background-color:#000000;text-align: center; color: #fff;  line-height: 40px;">
+				已登记领取<label style="color: red;" id="paynumbers">0</label>份
+			</div>
+			<style type="text/css">
+				.trpo td {
+					border: 1px solid #CCCCCC;
+				}
+			</style>
+			<table style="width: 100%; text-align: center; line-height: 40px; " id="table_a">
+				<tbody>
+					<tr class="trpo">
+						<td>序号</td>
+						<td>车牌号码</td>
+						<td>报名状态</td>
+						<td>报名时间</td>
+					</tr>
+				</tbody>
+			</table>
+			<input type="hidden" value="1" id="page">
+			<div id="gengduo" style=" height: 30px; text-align: center; color:#707070;  line-height: 30px; border-radius: 5px;  display: none;" onclick="gengduo()">
+				查看更多
+			</div>
+			<div id="creat_hd" style=" height: 30px; text-align: center; color:#707070;  line-height: 30px; border-radius: 5px;  margin-top: 10px;">
+				<b>我也要创建活动</b>
+			</div>
+			<div class="hdformdiv">
+				<div class="fixregisterbox" id="fixregisterbox">
+					<form >
+						<h4>活动申请信息登记</h4>
+						<div class="form-group">
+							<label for="InputCompany">公司名称：</label><span id="warningmsg1"></span>
+							<input type="text"  id="InputCompany" placeholder="请输入公司名称">
+						</div>
+						<div class="form-group">
+							<label for="InputAddress">公司地址：</label><span id="warningmsg2"></span>
+							<input type="text"  id="InputAddress" placeholder="请输入公司地址">
+						</div>
+						<div class="form-group">
+							<label for="InputUsername">联系人姓名：</label><span id="warningmsg3"></span>
+							<input type="text" id="InputUsername" placeholder="请输入联系人姓名">
+						</div>
+						<div class="form-group">
+							<label for="InputUserphone">联系电话：</label><span id="warningmsg4"></span>
+							<input type="text" id="InputUserphone" placeholder="请输入联系电话">
+						</div>
+						<div style="text-align: center;">
+							<button type="button" class="btn btn-info" onclick="upregistinfo()">提交</button>
+						    <button type="button" class="btn btn-danger close_formbox">取消</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div style="   height: 30px;  width: 100%;     z-index: 999;     text-align: center;line-height: 32px; font-size: 15px; margin-top: 10px;color: #707070; ">
+				技术支持:
+				<a style="color: #707070; font-size: 15px; " id="kuaixin">心星科技</a>
+			</div>
+			<div class="mui-input-row" style="text-align: center;z-index: 999; ">
+				<a href="tel:02566098628" style="color: #707070; font-size: 14px; ">联系我们:
+					<img src="img/tell@2x.png" style="width: 20px;  height: 20px; vertical-align: middle;">
+				</a>
+				<a href="tel:16651684038" style="color: #707070; font-size: 14px; margin-left: 5%;">
+					<img src="img/phone@2x.png" style="width: 20px;  height: 20px; vertical-align: middle;">
+				</a>
+				<a href="javascript:;" style="color: #707070; font-size: 14px; margin-left: 5%;">
+					<img id="alertweixin" src="img/wx@2x.png" style="width: 20px;  height: 20px; vertical-align: middle;">
+				</a>
+			</div>
+			<div class="fulled">
+				<div class="fix-box">
+					<p class="close">X关闭</p>
+					<img src="img/vxerweima@2x.png" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//弹出微信
+				$("#alertweixin").on("click", function(event) {
+					event.preventDefault();
+					$(".fulled").fadeIn();
+				})
+				$(".close").on("click", function(event) {
+					if($(event.target).is(".close") || $(event.target).is(".fix-box")) {
+						event.preventDefault();
+						$(".fulled").hide();
+					}
+				})
+				$(document).keyup(function(event) {
+					if(event.which == "27") {
+						$(".fulled").fadeOut();
+					}
+				});
+				alertregistform();
+			})
+//			var vConsole = new VConsole();
+
+			function getUrlParam(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //构造一个含有目标参数的正则表达式对象
+				var r = window.location.search.substr(1).match(reg); //匹配目标参数
+				if(r != null) return unescape(r[2]);
+				return null; //返回参数值
+			}
+			window.serverUrl = "http://www.xinxingtech.com.cn/";
+			var huodongid, shopid, userid;
+			var huohb, huotitle, usercar, huoname, huostatus, huosubtitle, paystatus, payorder, shopaddress, shoptel, shopname;
+			var chexing = document.getElementById('chexing');
+			var phone = document.getElementById("mobile");
+			var chepai = document.getElementById("car_inputboxs").getElementsByTagName("span");
+			$(function() {
+				huodongid = getUrlParam('huodongid');
+				shopid = getUrlParam('shopid');
+				userid = getUrlParam('userid');
+				$.ajax({
+					url: window.serverUrl + "b4huodong/app/huodong?command=gethuodonguser&userid=" + userid + "&huodongid=" + huodongid +
+						"&shopid=" + shopid,
+					type: "get",
+					async: false,
+					success: function(data) {
+						var info = data.data;
+						console.log(info);
+						huohb = info.HuodongHb;
+						huotitle = info.HuodongTitle;
+						usercar = info.UserCar; //车牌
+						usercartype = info.UserName; //姓名
+						shopname = info.ShopFullname;
+						localStorage.setItem("shopfullname",shopname)
+						huoname = info.HuodongName;
+						localStorage.setItem("huotitle", huotitle);
+						huostatus = info.HuodongStatus;
+						userphone = info.UserPhone; //手机
+						huosubtitle = info.HuodongSubtitle;
+						localStorage.setItem("huosubtitle", huosubtitle);
+						shoplat=info.ShopLat;
+						localStorage.setItem("shoplat",shoplat);
+						shoplon=info.ShopLon;
+						localStorage.setItem("shoplon",shoplon);
+						paystatus = info.PayStatus;
+						payorder = info.PayOrder;
+						shoptel = info.ShopTel; //门店电话
+						shopaddress = info.ShopAddress; //门店地址
+						localStorage.setItem("shopaddress",shopaddress)
+						document.getElementById("shopname").innerText = shopname;
+						document.getElementById("shopaddress").innerText = shopaddress;
+						document.getElementById("shoptel").href = "tel:" + shoptel;
+						document.getElementById("shoptelp").innerText = shoptel;
+						var joinNowbtn = document.getElementById("joinNowbtn");
+						console.log("paystatus", paystatus);
+						if(paystatus == "1") { //已支付
+							joinNowbtn.innerText = "已报名,点击展示核销码";
+							joinNowbtn.style.background = "rgb(63,136,231)";
+							localStorage.setItem("paystatus", paystatus);
+							console.log("paystatus", paystatus);
+							localStorage.setItem("payorder", payorder);
+							chexing.value = usercartype;
+							phone.value = userphone;
+						} else if(paystatus == "3") { //已核销
+							joinNowbtn.innerText = "已核销";
+							joinNowbtn.style.background = "rgb(63,136,231)";
+							joinNowbtn.setAttribute("disabled", false);
+							chexing.value = usercartype;
+							phone.value = userphone;
+						} else if(huostatus == "0") { //活动未开始
+							joinNowbtn.innerText = "活动尚未开始";
+							joinNowbtn.style.background = "rgb(173,173,174)";
+							joinNowbtn.setAttribute("disabled", false);
+						} else if(huostatus == "2") { //活动已结束
+							joinNowbtn.innerText = "活动已结束";
+							joinNowbtn.style.background = "rgb(173,173,174)";
+							joinNowbtn.setAttribute("disabled", false);
+						} else if(huostatus == "3") {
+							joinNowbtn.innerText = "活动已取消";
+							joinNowbtn.style.background = "rgb(173,173,174)";
+							joinNowbtn.setAttribute("disabled", false);
+							chexing.value = usercartype;
+							phone.value = userphone;
+						} else if(huostatus == "4") {
+							joinNowbtn.innerText = "已核算";
+							joinNowbtn.style.background = "rgb(173,173,174)";
+							joinNowbtn.setAttribute("disabled", false);
+						} else {
+							localStorage.setItem("paystatus", "0");
+						}
+						if(huoname == "" || huoname == null) {
+							document.getElementsByTagName("title")[0].innerText = "双11购物狂欢节"
+						} else
+							document.getElementsByTagName("title")[0].innerText = huotitle;
+						var haibao = huohb.split('.jpg').join('.jpg|') //分割海报地址
+						var haibaoarr = haibao.split('|');
+						console.log("haibaoarr", haibaoarr)
+						var haibaoimg = "<li style='display:none'><img src=''/></li>";
+						var imglist = document.getElementById("haibaobox").getElementsByTagName("ul"); //.getElementsByTagName("img");
+						if(haibaoarr.length > 1) {
+							for(var n = 0; n < haibaoarr.length - 2; n++) {
+								$("#moveimgul").append(haibaoimg);
+							}
+							for(var j = 0; j < haibaoarr.length - 1; j++) {
+								var imgsrc = document.getElementById("haibaobox").getElementsByTagName("img");
+								imgsrc[j].src = haibaoarr[j];
+							}
+						}
+
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert("请求失败");
+						//alert(XMLHttpRequest.status);
+						//alert(XMLHttpRequest.readyState);
+						//alert(textStatus);
+					}
+				});
+			})
+			window.onload = function() {
+				initChepai();
+				initlocation();
+				/*initshare();*/
+				gengduo();
+
+				function $(param) {
+					if(arguments[1] == true) {
+						return document.querySelectorAll(param);
+					} else {
+						return document.querySelector(param);
+					}
+				}
+				var $box = $(".box");
+				var $box1 = $(".box-1 ul li", true);
+				var $box2 = $(".box-2 ul");
+				var $box3 = $(".box-3");
+				var $length = $box1.length;
+
+				var str = "";
+				for(var i = 0; i < $length; i++) {
+					if(i == 0) {
+						str += "<li class='on'>" + (i + 1) + "</li>";
+					} else {
+						str += "<li>" + (i + 1) + "</li>";
+					}
+				}
+				$box2.innerHTML = str;
+				var current = 0;
+				var timer;
+				timer = setInterval(go, 2800);
+
+				function go() {
+					for(var j = 0; j < $length; j++) {
+						$box1[j].style.display = "none";
+						$box2.children[j].className = "";
+					}
+					if($length == current) {
+						current = 0;
+					}
+					$box1[current].style.display = "block";
+					$box2.children[current].className = "on";
+					current++;
+				}
+
+				for(var k = 0; k < $length; k++) {
+					$box1[k].onmouseover = function() {
+						clearInterval(timer);
+					}
+					$box1[k].onmouseout = function() {
+						timer = setInterval(go, 2800);
+					}
+				}
+				for(var p = 0; p < $box3.children.length; p++) {
+					$box3.children[p].onmouseover = function() {
+						clearInterval(timer);
+					};
+					$box3.children[p].onmouseout = function() {
+						timer = setInterval(go, 2800);
+					}
+				}
+
+				for(var u = 0; u < $length; u++) {
+					$box2.children[u].index = u;
+					$box2.children[u].onmouseover = function() {
+						clearInterval(timer);
+						for(var j = 0; j < $length; j++) {
+							$box1[j].style.display = "none";
+							$box2.children[j].className = "";
+						}
+						this.className = "on";
+						$box1[this.index].style.display = "block";
+						current = this.index + 1;
+					}
+					$box2.children[u].onmouseout = function() {
+						timer = setInterval(go, 2800);
+					}
+				}
+
+				$box3.children[0].onclick = function() {
+					back();
+				}
+				$box3.children[1].onclick = function() {
+					go();
+				}
+
+				function back() {
+					for(var j = 0; j < $length; j++) {
+						$box1[j].style.display = "none";
+						$box2.children[j].className = "";
+					}
+					if(current == 0) {
+						current = $length;
+					}
+					$box1[current - 1].style.display = "block";
+					$box2.children[current - 1].className = "on";
+					current--;
+				}
+			}
+
+			function showdiv(divid) {
+				alert(divid);
+				$("#" + divid).show();
+			}
+		</script>
+		<script>
+			//用于去除alert的url
+			window.alert = function(name) {
+				var iframe = document.createElement("IFRAME");
+				iframe.style.display = "none";
+				iframe.setAttribute("src", 'data:text/plain,');
+				document.documentElement.appendChild(iframe);
+				window.frames[0].window.alert(name);
+				iframe.parentNode.removeChild(iframe);
+			}
+		</script>
+		<script src="js/chepai.js" type="text/javascript"></script>
+<!--		<script src="js/xxwxshare.js" type="text/javascript"></script>-->
+		<script src="js/xxwxlocation.js" type="text/javascript"></script>
+	</body>
+
+</html>

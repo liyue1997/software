@@ -1,0 +1,22 @@
+.xingkong{
+	/*background-image:url(images/xingkongbg2.png);*/
+	background-image:url(xinxing/xinkongbg3.png);
+	background-repeat:no-repeat;
+	
+    background-size:cover;
+    overflow-x:hidden;
+}
+
+
+.x-titlebar {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}
+
+.btn-select {
+	background-color: #FFFFFF;
+}

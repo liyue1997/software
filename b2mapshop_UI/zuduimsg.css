@@ -1,0 +1,26 @@
+.btn{background:transparent;border:0;height:20px;width:20%;border-width:20px;font-size:13px;}
+.btn:focus{background:transparent;color:#ED3BB9 !important;font-weight:bold !important;font-size:14px;}
+.btn.active {color:#ED3BB9;font-weight:bold;}
+.x-row{margin:0;padding:0;}
+.x-col{margin:0;}
+.card{width:97%;height:25%;margin:0 auto;background:#2B2B39;margin-bottom:10px;border-radius:5px;padding:16px 10px 16px 10px;}
+.shopImg{width:70px;height:70px;border-radius:5px;}
+.event{color:#FFFFFF;font-size:17px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.shopname{color:#FFFFFF;font-size:12px;margin-top:10px;}
+.tag{color:#FFFFFF;font-size:12px;}
+.time{color:#FE291F;font-size:12px;}
+.event,.shopname{margin-left:10px;}
+.touxiang{border-radius:50%;width:22px;height:22px;}
+.fcontentred{font-family:黑体;font-size:13px;color:red}
+.fcontentgreen{font-family:黑体;font-size:13px;color:green}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+.x-panel-top{background:url("./img/nav_bg.png");}
+.title{
+	margin-top:8px;
+	color:#FFFFFF;
+	font-size:17px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.divtop{
+	width:94%;
+	height:30%;
+	margin:0 auto;
+	background:#2B2B38;
+	border-radius:5px;
+	margin-top:10px;
+}
+.backtoshop{margin-top:8px;}
+.discounttitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.btn1,.btn2{
+	color:#FFFFFF;
+	border:0;
+	width:57px;
+	height:27px;
+}
+.btn1{
+	background:url("./img/btn_jiaru.png");
+	background-size:57px 27px;
+	margin-right:19px;
+}
+.btn2{
+	background:url("./img/btn_quxiao.png");
+	background-size:57px 27px;
+}
+.talk{
+	margin:0;
+	width:100%;
+	border-radius:16px;
+	height:32px;
+	border:0;
+}
+.icon{margin-top:3px;}
+.timered{color:#FF362C}
+.touxiang{border-radius:50%;width:22px;height:22px;}
+input:focus{outline:none;box-shadow:none;}
+.join{width:57px;height:27px;border:0;background:url("./img/btn_jiaru.png");background-size:57px 27px;color:#FFFFFF;font-size:15px;}

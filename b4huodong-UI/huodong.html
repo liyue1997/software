@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/wxcss.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>活动</title>
+	    <script type="text/javascript" src="js/wxhd.js" ></script>
+	    <script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+	    <script type="text/javascript" src="js/bootstrap.js" ></script>
+	</head>
+	<body>
+		<div>
+			<h4 id="hdtitle">活动</h4>
+			<div class="huodongroll">
+				<div class="tab-content">
+					<div class="tab-pane active" id="zero">
+				        <p>活动列表</p>
+				    </div>
+				    <div class="tab-pane fade" id="first">
+				        <p>核销</p>
+				    </div>
+				    <div class="tab-pane fade" id="second">
+				        <p>门店信息</p>
+				    </div>
+				</div>
+			</div>
+			<footer id="bottommenu">
+					<ul  class="nav nav-tabs">
+						<li class="active" id="hdicon">
+							<a class="navbar-brand" href="#zero" data-toggle="tab">
+								<img id="icon_huodong" class="tags" src="img/tab_icon_huodong@2x.png"/>
+								活动列表
+							</a>
+						</li>
+						<li id="hxicon">
+							<a class="navbar-brand" href="#first" data-toggle="tab">
+								<img id="icon_hexiao" class="tags" src="img/tab_icon_hexiao@2x.png" />
+								核销
+							</a>
+						</li>
+						<li id="shopicon">
+							<a class="navbar-brand" href="#second" data-toggle="tab">
+								<img id="icon_mendian" class="tags" src="img/tab_icon_mendian@2x.png"/>
+								门店信息
+							</a>
+						</li>
+					</ul>
+			</footer>
+		</div>
+
+	</body>
+	<script>	
+		var hdlist="<div class='hdbox'>"+
+							 "<p class='hdmsg'></p>"+
+							 "<span class='nowprice'>￥9.9</span>"+
+							 "<span class='oldprice'>￥209</span>"+
+							 "<span class='havesell'>已售302</span>"+
+							 "<button class='joinbtn'></button>"
+						 "</div>"
+		function gethuodong(){
+			
+		}
+		
+		//支付
+		/*function wxpaytest(){
+			$.post("https://api.mch.weixin.qq.com/pay/unifiedorder",{openid:openid},function(re){
+					function onBridgeReady(){
+						WeixinJSBridge.invoke(
+					      	'getBrandWCPayRequest', re.data,function(res){
+							      	alert(JSON.stringify(res));
+								      if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+								      //doit 这里处理支付成功后的逻辑，通常为页面跳转
+								      // 使用以上方式判断前端返回,微信团队郑重提示：
+						            //res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
+						            alert("支付成功！");
+							      }
+	      					}); 
+					}
+			});	
+		}
+		if (typeof WeixinJSBridge == "undefined"){
+		   if( document.addEventListener ){
+		       document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+		   }else if (document.attachEvent){
+		       document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+		       document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+		   }
+		}else{
+		   onBridgeReady();
+		}*/
+	</script>
+</html>

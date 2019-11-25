@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/wxcss.css" />-->
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<title>活动即将开始</title>
+	</head>
+	<body>
+		<div id="wxbox">
+		</div>
+		
+	</body>
+	<script>
+		var openid;
+		var huodongid;
+		var shopid;
+		var fromuser;
+		var Appid="wx3394377d7e06a7cc";
+		window.serverUrl="http://www.xinxingtech.com.cn/";
+		//获取url中的code值
+		function getUrlParam(name){
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");//构造一个含有目标参数的正则表达式对象
+			var r=window.location.search.substr(1).match(reg);//匹配目标参数
+			if(r != null) return unescape(r[2]); return null;//返回参数值
+		}
+		//微信授权 获取code
+		function wxauthor(){
+			//alert("ceshi 1.0");
+			var code=getUrlParam('rcode');
+			 huodongid=getUrlParam('huodongid');
+			 shopid=getUrlParam('shopid');
+			 fromuser=getUrlParam('fromuser');
+			var Local=window.serverUrl+"return.html?app=huodong/index.html?v=1";
+
+			//https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect 若提示“该链接无法访问”，请检查参数是否填写错误，是否拥有scope参数对应的授权作用域权限。
+			var url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='+Appid+'&redirect_uri='+encodeURIComponent(Local)+'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+			//alert(Local);
+			if (code == null || code == "") {
+				localStorage.setItem('huodongid',huodongid);
+				localStorage.setItem('shopid',shopid);
+				localStorage.setItem('fromuser',fromuser);
+				window.location.href = url;
+			} else{
+				//this.getOpenId(code);
+				//window.location.href = "http://web.mingnengtech.com/"+getUrlParam('huodong');
+				huodongid=localStorage.getItem('huodongid');
+				shopid=localStorage.getItem('shopid');
+				fromuser=localStorage.getItem('fromuser');
+				//alert("shopid"+shopid);
+				getOpenId(code,huodongid,shopid,fromuser);
+				//alert("登录成功");
+				//document.getElementById("openid").innerHTML=code;
+			}
+		}
+		
+		//发送code 从后台获取openid
+		function getOpenId(code,huodongid,shopid,fromuser){
+
+//			 huodongid=getUrlParam('huodongid');
+//			 shopid=getUrlParam('shopid');
+//			 fromuser=getUrlParam('fromuser');
+            //alert(huodongid);
+			$.ajax({
+				url:window.serverUrl+"b4huodong/app/huodong?command=wxloginbycode&code="+code+"&huodongid="+huodongid
+				    +"&shopid="+shopid+"&fromuser="+fromuser,
+				type:"get",
+				async: false,
+				success:function(data){
+					//alert(data);
+					//document.getElementById("data").innerHTML=data;
+					//var infos=JSON.parse(data);
+					/*var obj=JSON.parse(data);
+					console.log(obj.Data);
+					$.cookie('Openid','obj.Data',{expires: 7, path: '/'});*/
+					//shopid="+a+"&huodongid="+b+"&fromuserid="+c+"&
+					var userid=data.userid;
+					var huodongmoudle=data.moudle;
+					var token=data.token;
+					//alert(token);
+					//alert(huodongmoudle);
+			        localStorage.setItem("userid", userid);		
+			        localStorage.setItem("token", token);		
+					window.location.href =window.serverUrl+huodongmoudle+"?huodongid="+huodongid
+				        +"&shopid="+shopid+"&fromuser="+fromuser+"&userid="+userid;
+				},
+				 error: function (XMLHttpRequest, textStatus, errorThrown) {
+	                  alert("请求失败");
+	                  //alert(XMLHttpRequest.status);
+	                  //alert(XMLHttpRequest.readyState);
+	                  //alert(textStatus);
+               }
+			});
+		}
+		wxauthor();
+	</script>
+</html>

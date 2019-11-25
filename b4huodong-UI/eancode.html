@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>核销码</title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="dist/ean13.js"></script>
+		<script type="text/javascript" src="dist/jquery-ean13.js"></script>
+		<script type="text/javascript" src="js/qrcode.js"></script>
+		<script type="text/javascript" src="js/jquery.qrcode.js"></script>
+		<script type="text/javascript" src="js/wxhd.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/JsBarcode.all.js" ></script>
+		<script type="text/javascript" src="js/JsBarcode.all.min.js" ></script>
+		<script type="text/javascript" src="js/JsBarcode.code128.min.js" ></script>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+	</head>
+	<style>
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#codebox {
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			top: 50%;
+			left: 50%;
+			margin: -25% 0 0 -50%;
+		}
+		
+		#ean {
+			width: 100%;
+			height: 100%;
+		}
+		/* 二维码长按保存图片 */
+		
+		img.QRCode {
+			-webkit-touch-callout: default;
+		}
+		
+		img {
+			width: 90%;
+			height: 50%;
+			position: absolute;
+			top: 60%;
+			left: 50%;
+			margin: -25% 0 0 -45%;
+		}
+		#codeMsg{
+			-webkit-touch-callout: all;
+			-webkit-user-select: all;
+			-moz-user-select: all;
+			-ms-user-select: all;
+			user-select: all;
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		#textmsg{
+			text-align: center;
+			color: red;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		#tagMsg{
+			font-size: 15px;
+			text-align: center;
+		}
+		#make128code{
+			height: 150px;
+		}
+	</style>
+
+	<body>
+		<button class="btn btn-primary" onclick="goback()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>返回</button>
+		<!--<div id="codebox">
+			<canvas id="ean"></canvas>
+		</div>-->
+		<img id="make128code"/>
+		<p id="textmsg">核销码是您享受服务的凭据<br>长按将图片保存到本地</p>
+		<p id="codeMsg"></p>
+		<p id="tagMsg">长按可复制核销码数字到剪贴板</p>
+	</body>
+	<script>
+		/*function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+			if(r != null) return unescape(r[2]);
+			return null; //返回参数值201911020054
+		}
+		var codenumber = getUrlParam('PayOrder');
+		document.getElementById('codeMsg').innerText=codenumber;
+		console.log("codenumber",codenumber)
+		var options = {
+			number: true,
+			prefix: true,
+			onSuccess: function() {
+				document.getElementById("textmsg").style.display = "block";
+			}
+		}
+		new EAN13(document.getElementById("ean"), codenumber, options);
+		var mycanvas1 = document.getElementsByTagName('canvas')[0];
+		mycanvas1.style.display = 'none'
+		var img = convertCanvasToImage(mycanvas1);
+		$('#codebox').append(img);
+
+		function convertCanvasToImage(canvas) {
+			var image = new Image();
+			image.src = canvas.toDataURL("image/png");
+			console.log("image.src",image.src);
+			return image;
+		}*/
+		var codenumber = getUrlParam('PayOrder');
+		document.getElementById('codeMsg').innerText=codenumber;
+		var barcode = document.getElementById("make128code"),
+        str = codenumber,
+        options = {
+        	width: 2,
+        	textAlign:"center",
+            format: "CODE128",
+            displayValue: true,
+            fontSize: 18
+        };
+    JsBarcode(barcode, codenumber, options); //原生
+		
+	</script>
+</html>

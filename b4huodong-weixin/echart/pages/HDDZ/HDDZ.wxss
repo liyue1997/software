@@ -1,0 +1,42 @@
+/* pages/HDDZ/HDDZ.wxss */
+page {
+  background: rgb(247,247,251)
+}
+.HdDzlist{
+  background: white;
+  height: 120px;
+  width: 100%;
+  border-top: 1px solid #EBEDEE;
+}
+.button{
+  width: 40%;
+}
+.dingdan{
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 20px;
+  font-weight: 500;
+}
+.huodong{
+  font-size: 14px;
+  color: #8C8C8D;
+  padding-top: 5px;
+  padding-left: 20px;
+}
+.HdDztime{
+  font-size: 14px;
+  color: #8C8C8D;
+  padding-left: 20px;
+}
+.HdDzmoney{
+  float: right;
+  width: 85px;
+  color: #E05C06;
+  font-size: 22px;
+  margin-top: -75px;
+}
+.getMore{
+  width: 100%;
+  text-align: center;
+  color: gray;
+}

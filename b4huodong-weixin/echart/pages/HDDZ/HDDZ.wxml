@@ -1,0 +1,10 @@
+<!--pages/HDDZ/HDDZ.wxml-->
+<view class="HdDzlist" wx:key="key" wx:for="{{listData}}" bindtap="handleClick" data-id="{{item.jz_order_id}}">
+  <view class="dingdan"><input value="订单号: {{item.jz_order_id}}" disabled></input></view>
+  <view class="huodong"><input value="{{item.huodong_name}}" disabled></input></view>
+  <view class="HdDztime"><input value="{{item.pay_time}}" disabled></input></view>
+  <view class="HdDzmoney"><input value="¥{{item.pay_realmoney}}" disabled></input></view>
+</view>
+<view class="getMore" bindtap="getMore" wx:if='{{!noMoreStatus}}'>加载更多</view>
+<view class="getMore" wx:if='{{noMoreStatus}}'>没有更多数据</view>
+

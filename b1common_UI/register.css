@@ -1,0 +1,218 @@
+.x-titlebar
+{
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.x-panel-content,.x-panel-content div
+{
+	background:#FFFFFF;
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}
+.form-control {
+	border: 0;
+	border-radius: 0;
+	color: #999;
+}
+.form-control:focus {
+	box-shadow: none;
+	border-color: #efefef;
+}
+.btnSendSms
+{
+	background:#139462;
+	border-radius:10px;
+	border:0;
+	color:#FFFFFF;
+}
+.tb-tabs {
+	padding-bottom:0px;
+	background-color: #efefef;
+	border-bottom: 1px solid #D6D6D6;
+}
+
+.tb-tabs a.btn {
+	color: #666;
+	background-color: #fff;
+}
+
+.tb-tabs .btn.active {
+	border-bottom: 2px solid #108EE9;
+	color: #108EE9;
+}
+
+.regTitlePanel
+{
+	margin-top:10px;
+}
+.regTitleContent
+{
+	width:80%;
+	margin: 0 auto;
+	
+	padding:15px 0;
+}
+.withLineDiv{
+	width: 100%;
+	font-size: 14px;
+	color: #ABABAB;
+	position: relative;	
+	margin-top:5%;
+}
+.withLineDiv span
+{
+	width:24px;
+	height:24px;
+	background:#E8E8E8;
+	color:#FFFFFF;
+	border-radius:50%;
+	z-index:999;
+	text-align:center;
+	line-height:24px;
+}
+.lineSpan
+{
+	position: absolute;
+}
+.line:after{
+	content: "";
+	border-top: 2px solid #E8E8E8;
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 12px;
+	right: 0px;  
+}
+.lineTwoSpan
+{
+	position: absolute;
+}
+.lineThreeSpan
+{
+	position: absolute;
+	right:0;
+}
+
+.inputPhone
+{
+	border-bottom:1px solid #E8E8E8;
+	height:44px;
+}
+.codeDiv,.submitCodeDiv 
+{
+	margin-top:20px;
+	text-align:center;
+	padding:0 20px;
+}
+.codeDiv .btnCode,.submitCodeDiv .btnsubmitCode,.regDiv .btnReg
+{
+	height:44px;
+	width:100%;
+	line-height:29px;
+}
+
+.treatyDiv
+{
+	margin-top:10px;
+	text-align:center;
+	bottom:0;
+}
+.treatyLink
+{
+	border-bottom:1px solid #48c997;
+	color:#48c997;
+}
+
+.inputCode
+{
+	height:44px;
+	border-bottom:1px solid #E8E8E8;
+}
+.CodeRow
+{
+	border:0;
+	height:46px;	
+	padding:0;
+	margin:0;
+	margin-bottom:10%;margin-top:15%;padding-right:10%;padding-left:10%;
+}
+.CodeRow .x-col
+{
+	padding:0;
+	margin:0;
+}
+
+.password
+{
+	border-bottom:1px solid #E8E8E8;
+}
+.x-hint 
+{
+	margin-top:80%!important;
+}
+.x-hint .x-hint-top
+{
+	top:100px!important;
+}
+
+.QQDiv
+{
+	margin-top:10px;
+	margin-bottom:15%;padding-right:10%;padding-left:10%;
+}
+.QQDiv .x-row
+{
+	padding:0;
+	margin:0;
+	border-bottom:1px solid #E8E8E8;
+	border-top:1px solid #E8E8E8;
+}
+.QQDiv .x-row .x-col
+{
+	padding:0;
+}
+
+.lineSpan-bg
+{
+	background:#48c997!important;
+}
+.play
+{
+	border:1px solid #48c997;
+	background:#48c997!important;
+}
+.btnReg,.btnCode,.btnsubmitCode{
+	border:#48c997;border:0;letter-spacing:5px;font-size:16px;border-radius:49px;background-color:#48c997;color:#fff;
+}
+.btnReg:hover,.btnCode:hover,.btnsubmitCode:hover
+{
+	opacity:0.8;
+}
+.x-checkbox input[type="checkbox"]:checked + label:before
+{
+	background:#48c997;
+	border:0;
+}
+.bannerimg{
+	margin-bottom:5%;width:100%;height:30%;
+}
+.row2{
+	margin-bottom:10%;margin-top:15%;padding-right:10%;padding-left:10%;
+}
+.row3{
+	margin-bottom:5%;margin-top:15%;padding-right:10%;padding-left:10%;
+}
+.pwdone{
+	width:15px;height:22px;
+}
+.row4{
+	padding-right:10%;padding-left:10%;
+}
+.pwdtwo{
+	width:20px;height:20px;
+}
+.qqimg{
+	width:19px;height:22px;
+}

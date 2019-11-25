@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/HdDz/HdDz",
+    "pages/storeInfo/storeInfo",
+    "pages/cancellation/cancellation",
+    "pages/clientInfo/clientInfo",
+    "pages/HdDzInfo/HdDzInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Parking",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "borderStyle": "white",
+    "color": "#000000",
+    "selectedColor": "#9999FF",
+    "list": [
+      {
+        "pagePath": "pages/HdDz/HdDz",
+        "text": "对账单",
+        "iconPath": "/images/tab_icon_huodong@2x.png",
+        "selectedIconPath": "/images/tab_icon_huodong_press@2x.png"
+      },
+      {
+        "pagePath": "pages/cancellation/cancellation",
+        "text": "核销",
+        "iconPath": "/images/tab_icon_hexiao@2x.png",
+        "selectedIconPath": "/images/tab_icon_hexiao_press@2x.png"
+      },
+      {
+        "pagePath": "pages/storeInfo/storeInfo",
+        "text": "门店信息",
+        "iconPath": "/images/tab_icon_mendian@2x.png",
+        "selectedIconPath": "/images/tab_icon_mendian_press@2x.png"
+      },
+      {
+        "pagePath": "pages/clientInfo/clientInfo",
+        "text": "客户信息",
+        "iconPath": "/images/icon_yonghu@2x.png",
+        "selectedIconPath": "/images/icon_yonghu_press@2x.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,5 @@
+部署到 nginx
+
+需要修改ng的MIME配置，将.w映射成text/html
+
+3.8版本，打包出来得index.html 有问题，需要手工修改

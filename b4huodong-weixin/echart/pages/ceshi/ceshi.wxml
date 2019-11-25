@@ -1,0 +1,3 @@
+<!--pages/ceshi/ceshi.wxml-->
+<text>pages/ceshi/ceshi.wxml</text>
+  <input bindblur="watchPassWord1" bindinput="watchPassWord1" type='text' value="{{listData.pw}}" class="weui-input" placeholder="请输入密码" />

@@ -1,0 +1,6 @@
+.setImg{border-radius:50%;width:40px;height:40px;margin-right:10px;}
+.title{color:#FFFFFF;font-size:15px;}
+.form-group{color:#FFFFFF;border-bottom:1px solid #252330;padding:0;margin:0;height:50px;}
+.x-edit{background:transparent;color:#FFFFFF;font-size:16px;height:50px;line-height:50px;}
+input:focus{outline:none;box-shadow:none;}
+.control-label{font-weight:normal;}

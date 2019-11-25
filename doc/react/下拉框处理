@@ -1,0 +1,129 @@
+list.js
+
+在  state = {
+    增加
+    dicZone: [],
+  };
+  在componentDidMount 增加
+  const { dispatch} = this.props;
+    dispatch({
+      type: 'base/queryData',
+      params: {
+        columnOrder: 'asc',
+        columnProp: 'zone_code',
+        len: 200,
+        page: 1,
+        queryMap: {},
+        url: "/api/RsZone/queryRsZoneList"
+      },
+      callback: data => {
+        this.setState({
+          
+          dicZone: data.data.list
+        })
+      },
+    });
+    
+    在GRID中转换
+     render() {
+     增加
+     const { dicZone}= this.state;
+    const datadicZone= this.state.dicZone;
+    
+     {
+        title: '区域编码',
+        // dataIndex: 'zone_code', 
+        width: 150,
+        sorter: false,
+        render: (text, record) => {
+          if (!datadicZone) return (<span>{record.zone_code}</span>);
+          const temp = datadicZone.find(item => item.zone_code === record.zone_code)
+          if (!temp) return (<span>{record.zone_code}</span>);
+          return (
+            <span>{temp.zone_code}{temp.zone_name}</span>
+          )
+        }
+      },
+      
+      查询条件
+      
+      <FormItem {...formItemLayout} label='区域'>
+                {getFieldDecorator('zone_code', { initialValue: this.props.list.queryMap.zone_code, })
+                  (<Select showSearch allowClear placeholder='区域'>
+                    {datadicZone && datadicZone.map(item => {
+                     //  console.log(item)
+                      return (
+                        <Option
+                          value={item.zone_code}
+                        >
+                          {item.zone_code}{item.zone_name}
+                        </Option>
+                      )
+                    })}
+                  </Select>)
+                }
+              </FormItem>
+              </Col>
+      
+      info.js  数据字典
+      state = {} 要加  dicdlsName:[],
+      componentDidMount() {} 要加 
+               //请求区域下拉框
+            const { dicZone } = this.state; //只有查询的需要,数据字典不需要
+            dispatch({
+              type: 'base/queryData',
+              params: {
+                columnOrder: 'asc',
+                columnProp: 'zone_code',
+                len: 200,
+                page: 1,
+                queryMap: {},
+                url: '/api/RsZone/queryRsZoneList',
+              },
+              callback: data => {
+                this.setState({
+                  dicZone: data.data.list,
+                });
+              },
+            });
+             //客户等级
+            dispatch({
+              type: 'base/getByDicType',
+              payload: { dicType: 'clientlevel' },
+              callback: data => {
+                this.setState({
+                  dicLevel: data.data,
+                });
+              },
+            });
+      render() {} 加     const { dicdevicestatus,dicdevicetype } = this.state;  //只有数据字典要写
+                const datadiczone = this.state.diczone;
+                const datadicclient = this.state.dicclient;
+                const datadicdls = this.state.dicdls;
+      
+      
+      <FormItem {...formItemLayout} label="客户等级">
+                  {getFieldDecorator('clientLevel', {
+                    initialValue: info.clientLevel || newInfo.clientLevel,
+                  })(
+                    <Select showSearch allowClear placeholder="客户等级">
+                      {datadicLevel &&
+                        datadicLevel.map(item => {
+                          return <Option value={item.dicCode}>{item.dicValue}</Option>;
+                        })}
+                    </Select>
+                  )}
+                </FormItem>
+       <FormItem {...formItemLayout} label="代理商">
+                  {getFieldDecorator('dlsId', {
+                    initialValue: info.dlsId || newInfo.dlsId,
+                  })(
+                    <Select showSearch allowClear placeholder="代理商">
+                      {dicName &&
+                        dicName.map(item => {
+                          return <Option value={item.dls_id}>{item.dls_name}</Option>;
+                        })}
+                    </Select>
+                  )}
+                </FormItem>
+      

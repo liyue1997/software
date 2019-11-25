@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cBRzINj" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cBRzINj" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cBRzINj" class="cBRzINj"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcIjq2I3-iosstatusbar cBRzINj" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cBRzINj"> 
+    <div class="x-panel-top cBRzINj" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cBRzINj"/>  
+    <div class="x-panel-content cBRzINj" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cBRzINj"> 
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cBRzINj" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;label&quot;:&quot;登录&quot;}" __cid="cBRzINj"> 
+        <i xid="i1" __cid="cBRzINj" class="cBRzINj"/>  
+        <span xid="span1" __cid="cBRzINj" class="cBRzINj">登录</span> 
+      </a>  
+      <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cBRzINj" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:OpenChartClick" data-config="{&quot;label&quot;:&quot;打开聊天会话&quot;}" __cid="cBRzINj"> 
+        <i xid="i3" __cid="cBRzINj" class="cBRzINj"/>  
+        <span xid="span6" __cid="cBRzINj" class="cBRzINj">打开聊天会话</span> 
+      </a>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cBRzINj" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cBRzINj"> 
+        <div class="x-col x-col-67 cBRzINj" xid="col1" __cid="cBRzINj"> 
+          <input component="$model/UI2/system/components/justep/input/input" class="form-control cBRzINj" xid="sendtext" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" __cid="cBRzINj"/> 
+        </div>  
+        <div class="x-col x-col-33 cBRzINj" xid="col3" __cid="cBRzINj"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cBRzINj" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;label&quot;:&quot;发送&quot;}" __cid="cBRzINj"> 
+            <i xid="i2" __cid="cBRzINj" class="cBRzINj"/>  
+            <span xid="span2" __cid="cBRzINj" class="cBRzINj">发送</span> 
+          </a> 
+        </div> 
+      </div>  
+      <div xid="div1" __cid="cBRzINj" class="cBRzINj"> 
+        <ul component="$model/UI2/system/components/justep/list/list" class="x-list x-list-template hide cBRzINj" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'},foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}" data-config="{&quot;data&quot;:&quot;messagedata&quot;}" __cid="cBRzINj"> 
+          <div component="$model/UI2/system/components/justep/row/row" class="x-row cBRzINj" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cBRzINj"> 
+            <div class="x-col cBRzINj" xid="col7" __cid="cBRzINj"> 
+              <span xid="span3" __cid="cBRzINj" class="cBRzINj" data-bind="text:val(&quot;fromwho&quot;)">发送人</span> 
+            </div>  
+            <div class="x-col cBRzINj" xid="col8" __cid="cBRzINj"> 
+              <span xid="span4" __cid="cBRzINj" class="cBRzINj" data-bind="text:val(&quot;msgcontent&quot;)">消息</span> 
+            </div>  
+            <div class="x-col cBRzINj" xid="col9" __cid="cBRzINj"> 
+              <span xid="span5" __cid="cBRzINj" class="cBRzINj" data-bind="text:val(&quot;msgtype&quot;)">消息类型</span> 
+            </div> 
+          </div> 
+        </ul> 
+      </div> 
+    </div>  
+    <div class="x-panel-bottom cBRzINj" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cBRzINj"/>  
+    <style __cid="cBRzINj" class="cBRzINj">.x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcIjq2I3-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>

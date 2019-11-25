@@ -1,0 +1,14 @@
+.x-titlebar-title{
+	font-size:17px;
+}
+.talklist{
+	width:95%;
+	margin:5px auto;
+	background:#FFFFE0;
+	border-radius:10px;
+}
+.talkname,.lastfrom,.unreadcount,.lastmsg{color:#000000;}
+.unreadcount{text-align:center;display:inline-block;color:#FFFFFF;border-radius:50%;background:red;width:20px;height:20px;}
+.lastmsg,.lastfrom{color:#8B7E66;}
+.talkname{font-weight:bold;font-size:16px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:inline-block;width:100%;}
+.headimg{border-radius:50%;width:40px;height:40px;}

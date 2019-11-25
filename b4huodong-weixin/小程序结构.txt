@@ -1,0 +1,31 @@
+1. 入口
+   APP.js
+2. 登录
+   appauth .login
+
+3. 菜单\权限
+
+4. info 界面
+已经初步优化
+
+5. list 界面
+还要优化
+
+6. 功能界面
+
+7. 函数包
+   appauth  登录\菜单\权限
+   webjs    get\post\图片
+   ttool    工具(日期\手机号规则)
+
+8. 变量处理
+   全局   统一定义在 appconst.js里面
+   缓存   var userid = wx.getStorageSync('userid');
+   传参   url: '../HDDZinfo/HDDZinfo?id=' + id,
+
+
+问题:
+1:json 怎么动态操作
+2:app.js globalData 怎么使用
+3:全局变量,比如 var rootDocment = 'https://www.xinxingtech.com.cn/b4huodong/';  怎么样一处定义,到处可访问
+4:

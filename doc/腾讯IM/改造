@@ -1,0 +1,80 @@
+1. 自动登录  ok 改login。vue
+   登录界面不要给用户看到
+   
+2. 侧栏 不要  直接改index.vue
+
+3. 会话 传入 群组id "GroupId":"testgroup"
+https://webim.tim.qq.com/v4/group_open_http_svc/get_joined_group_list?websdkappid=537048168&v=1.7.3&platform=10&a2=feb18ec4658638ac7fb6ece1d3c26f01a93f89c28d700bfad346aad2e5dbdbeaf2caf409e43842f961aa3c8fec8cbf1542fc46eced098d83b78f96d2ecdafc13f85248aae709fc72&tinyid=144115214605086719&sdkappid=1400259159&contentType=json&accounttype=76159300
+{"ActionStatus":"OK","ErrorCode":0,"ErrorInfo":"","GroupIdList":[{"FaceUrl":"","GroupId":"testgroup","Name":"测试群","NextMsgSeq":9,"SelfInfo":{"JoinTime":1568788562,"MsgFlag":"AcceptNotNotify","Role":"Owner"},"Type":"ChatRoom"}],"TotalCount":1}
+
+发起群组会话：
+tim-js.js?e23e:1 TIM 11:09:52.746:undefined - Code: [2999]; 
+message: 接口调用时机不合理，等待 SDK 处于 ready 状态后再调用（监听 TIM.EVENT.SDK_READY 事件） getConversationProfile
+
+        const conversationID = `GROUP${'testgroup'}`
+        this.$store.dispatch('checkoutConversation', conversationID)
+
+系统通知：
+const SystemConversationID = '@TIM#SYSTEM'
+this.$store.dispatch('checkoutConversation', SystemConversationID)
+
+
+传递当前的用户id 和 群组id 给 IM系统：
+    群组id 必须是存在的
+
+创建群组：
+    this.tim.createGroup(this.getOptions()).then(() => {
+        this.closeCreateGroupModel()
+      })
+      
+    let promise = tim.createGroup({
+  type: TIM.TYPES.GRP_PRIVATE,
+  name: 'WebSDK',
+  memberList: [{userID: 'user1'}, {userID: 'user2'}] // 如果填写了 memberList，则必须填写 userID
+});
+promise.then(function(imResponse) { // 创建成功
+  console.log(imResponse.data.group); // 创建的群的资料
+}).catch(function(imError) {
+  console.warn('createGroup error:', imError); // 创建群组失败的相关信息
+});
+
+
+用户创建拼团，后台 调用 api 生成一个新的群组
+用户点聊天，前端 http://192.168.0.252:8081/index.html?groupid=13&userid=xx1&creategroup=0& 直接进入
+
+其他用户 点击拼团，后台 调用 api 把用户拉入该群组
+用户点聊天 ，前端 http://192.168.0.252:8081/index.html?groupid=13&userid=xx1&creategroup=0& 直接进入
+
+后台 生成sign 有问题,失效时间不能太大
+new TLSSigAPIv2(appid,appkey).genSig(user,180*86400)
+
+
+用户名称、头像处理
+public static void addUser(String userid,String username,String faceurl){
+        //https://console.tim.qq.com/v4/im_open_login_svc/account_import?sdkappid=88888888&identifier=admin&usersig=xxx&random=99999999&contenttype=json
+        String url=urlhead+"im_open_login_svc/account_import?"+getAppid()+getAdminSign()+getRadom()+"&contenttype=json";//
+        //+getContenttype(groupid,groupname,owerid,faceurl);
+        String content=getUserContenttype(userid,username,faceurl);
+        System.out.println(url);
+        System.out.println(content);
+        doPost(url,content);
+    }
+
+用户注册、修改时，后台 将名称和头像传递给腾讯云
+public static void addUser(String userid,String username,String faceurl){
+        //https://console.tim.qq.com/v4/im_open_login_svc/account_import?sdkappid=88888888&identifier=admin&usersig=xxx&random=99999999&contenttype=json
+        String url=urlhead+"im_open_login_svc/account_import?"+getAppid()+getAdminSign()+getRadom()+"&contenttype=json";//
+        //+getContenttype(groupid,groupname,owerid,faceurl);
+        String content=getUserContenttype(userid,username,faceurl);
+        System.out.println(url);
+        System.out.println(content);
+        doPost(url,content);
+    }
+
+
+
+
+
+
+
+

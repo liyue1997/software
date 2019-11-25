@@ -1,0 +1,26 @@
+主服务器 192.168.50.99 在会议室，用户名 administrator/qazwsx!@#
+
+虚拟机1：
+
+	Liunx地址：192.168.50.220；
+	用户名：root；密码：123456；
+	Contos7 安装在192.168.50.99VMware Workstation Pro（dev）
+
+	Mysql：
+		IP：192.168.50.220
+		端口：3306
+		用户名：root；密码：root123；
+		安装路径：/etc
+	Redis：
+		IP：192.168.50.220
+		端口：6379
+		安装路径：/etc
+	Nginx：
+		IP：192.168.50.220
+		端口：80
+		安装路径：/etc/nginx
+
+虚拟机2：
+            Liunx地址：192.168.50.218；
+
+           git http://192.168.50.218/users/sign_in 

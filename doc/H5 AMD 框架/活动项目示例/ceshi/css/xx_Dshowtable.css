@@ -1,0 +1,23 @@
+#xx_Dshowtable{
+	padding: 0;
+	margin-top: 15px;
+	width: 100%;
+	border-collapse: collapse;
+	line-height: 30px;
+}
+#xx_Dshowtable, #xx_Dshowtable tr th, #xx_Dshowtable tr td{
+	text-align: center;
+	border: 1px solid #ACB3BB;
+}
+#xx_Dshowthead tr th{
+	font-size: 15px;
+}
+#msgtable p{
+	text-align: center;
+	font-size: 15px;
+	padding: 5px auto;
+	color: #888888;
+}
+#xx_Dshowtbody tr td:nth-child(3){
+	color: red;
+}

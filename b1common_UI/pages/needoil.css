@@ -1,0 +1,148 @@
+.x-panel-content
+{
+	background:#FFFFFF;
+	height:100%;
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}
+.x-titlebar
+{
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.header
+{
+   padding:0px 0 12px 0;background-color:#efeff4;
+}
+.head-sculpture
+{
+	width:80px;
+	margin:0 auto;
+	height:80px;
+	border-radius:50%;
+	padding:20px;
+	background:#333;
+}
+.head-sculpture img
+{
+	width:100%;
+}
+.loginInfo
+{
+	padding-top:10%;border-top:1px solid #c8c7cc;
+	padding-left:20px;
+	text-weight:no
+}
+.loginInfo .form-control {
+	border: 0;
+	border-radius: 0;
+	color: #999;border-bottom:1px solid #efefef;
+	width:100%;
+}
+
+.loginInfo .form-control:focus {
+	box-shadow: none;
+	border-bottom:1px solid #efefef;
+	width:100%;
+}
+
+.loginInfo .x-row {
+	padding: 0;
+	margin: 0;
+}
+.loginInfo .x-col {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.rowDiv {
+
+}
+.rowDiv label
+{
+	margin-bottom:0;
+	font-weight:normal;
+	font-size:16px;
+}
+
+.acc-login
+{
+	padding:20px;
+	padding-left:10%;padding-right:10%;
+}
+.acc-login .btnLogin
+{
+	border:#48c997;border:0;letter-spacing:5px;font-size:20px;border-radius:49px;background-color:#48c997;color:#fff;
+}
+.acc-register
+{
+	padding:0px 20px 20px 20px;
+}
+.acc-register .btnReg
+{
+	background:#48c997;
+	border-radius:6px;
+	border:1px solid #48c997;
+	color:#fff;
+}
+.acc-register .btnReg:active
+{
+	background-color:#000;
+	color:#FFFFFF;
+}
+button
+{
+	height:44px;
+	line-height:38px;
+	width:100%;
+	font-size:16px;
+}
+button:active
+{
+	opacity:0.5;
+}
+.forget-password
+{
+	text-align:center;
+	color:#48c997;
+}
+.x-panel .x-panel-bottom
+{
+	height:70px;
+}
+.spntext
+{
+	font-size:medium;
+	color:#1ca670;
+	line:32px;
+}
+.spncaption
+{
+	font-size:18px;
+	color:#000000;
+	line:32px;
+}
+.spndesc
+{
+	font-size:16px;
+	color:#000000;
+	line:24px;
+}
+.closebtn{
+	color:#139462;
+}
+.div2{
+	font-weight:bold;text-align:right;margin-top:15px;margin-right:5px;
+}
+.leftcol{
+	width:130px;padding-left:25px;
+}
+.spntextprice
+{
+	font-size:medium;
+	color:#1ca670;
+	line:32px;
+	border-bottom:1px solid #1ca670;
+}

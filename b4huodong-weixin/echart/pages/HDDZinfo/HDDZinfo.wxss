@@ -1,0 +1,40 @@
+/* pages/HDDZinfo/HDDZinfo.wxss */
+.HdDzlistInfo{
+  margin-bottom: 30px;
+  background: white;
+  height: 600px;
+}
+.head{
+  margin: 0 auto;
+  width: 80%;
+  height: 150px;
+  border-bottom: 1px solid #EBEDEE;
+  text-align: center;
+}
+.HdDzmoneyword{
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+.HdDzmoney{
+  font-size: 26px;
+}
+.input{
+  float: left;
+  margin-top: 10px;
+}
+.HdDzinfo{
+  margin-left: 40px;
+  margin-top: 8px;
+}
+.HdDzinfo text{
+  color: #8C8C8D;
+  margin-right: 50px;
+  width: 80px;
+  float: left;
+  margin-top: 10px;
+}
+page {
+  background: rgb(247,247,251)
+}

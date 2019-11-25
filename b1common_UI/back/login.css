@@ -1,0 +1,110 @@
+.x-panel-content
+{
+	background:#FFFFFF;
+}
+/*澶撮儴img*/
+.x-titlebar
+{
+	background-color:#FFFFFF;
+}
+.header
+{
+   padding:0px 0 20px 0;
+}
+.head-sculpture
+{
+	width:80px;
+	margin:0 auto;
+	height:80px;
+	border-radius:50%;
+	padding:20px;
+	background:#333;
+}
+.head-sculpture img
+{
+	width:100%;
+}
+
+/*鐧婚檰淇℃伅*/
+.loginInfo
+{
+	padding-left:20px;
+	text-weight:no
+}
+.loginInfo .form-control {
+	border: 0;
+	border-radius: 0;
+	color: #999;
+}
+
+.loginInfo .form-control:focus {
+	box-shadow: none;
+	border-color: #efefef;
+}
+
+.loginInfo .x-row {
+	padding: 0;
+	margin: 0;
+}
+.loginInfo .x-col {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.rowDiv {
+	border-bottom: 1px solid #E5E5E5;
+}
+.rowDiv label
+{
+	margin-bottom:0;
+	font-weight:normal;
+	font-size:16px;
+}
+/*鐧婚檰鍜屾敞鍐屾寜閽�*/
+.acc-login
+{
+	padding:20px;
+}
+.acc-login .btnLogin
+{
+	background:#f5a623;
+	border-radius:6px;
+	border:0;
+	color:#FFFFFF;
+}
+.acc-register
+{
+	padding:0px 20px 20px 20px;
+}
+.acc-register .btnReg
+{
+	background:#4cd964;
+	border-radius:6px;
+	border:1px solid #4cd964;
+	color:#fff;
+}
+.acc-register .btnReg:active
+{
+	background-color:#000;
+	color:#FFFFFF;
+}
+button
+{
+	height:44px;
+	line-height:38px;
+	width:100%;
+	font-size:16px;
+}
+button:active
+{
+	opacity:0.5;
+}
+.forget-password
+{
+	text-align:center;
+	color:#f5a623;
+}
+.x-panel .x-panel-bottom
+{
+	height:70px;
+}

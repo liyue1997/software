@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<script type="text/javascript" src="js/qrcode.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.4.1.js" ></script>
+		<script type="text/javascript" src="js/jquery.qrcode.js"></script>
+		<script type="text/javascript" src="js/jquery.qrcode.min.js" ></script>
+		<link rel="stylesheet" href="css/wxcss.css" />
+		<title>二维码</title>
+	</head>
+	<style>
+		/* 二维码长按保存图片 */
+		img.QRCode{
+		    -webkit-touch-callout:default;
+		}
+
+	</style>
+	<body>
+		<div id="codebox"></div>
+		<p style="text-align: center;margin-top: 50%;">长按核销码保存</p>
+	</body>
+	<script>
+		 /*var qrcode = new QRCode(
+		 	document.getElementById("codebox"), 
+		 	{
+			     width : 200,
+			     height : 200
+			 }) 
+			 var url = "78526431525";
+			 qrcode.makeCode(url.replace("invitation","main"));*/
+			var url = "78526431525";
+			$('#codebox').qrcode({
+	            render    : "canvas",
+	            text    : url,
+	            width : 200,               //二维码的宽度
+	            height : 200,              //二维码的高度
+	            correctLevel: 0,
+	            background : "#ffffff",       //二维码的后景色
+	            foreground : "#000000",        //二维码的前景色
+	            src: 'img/tab_icon_hexiao_press@2x.png'             //二维码中间的图片
+       	});
+        var mycanvas1=document.getElementsByTagName('canvas')[0];
+        mycanvas1.style.display = 'none'
+        var img=convertCanvasToImage(mycanvas1);
+        $('#codebox').append(img);
+        function convertCanvasToImage(canvas) {
+            var image = new Image();
+            image.src = canvas.toDataURL("image/png");
+            return image;
+        }
+	</script>
+</html>

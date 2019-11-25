@@ -1,0 +1,1 @@
+var rootDocment = 'https://www.xinxingtech.com.cn/b4huodong/';

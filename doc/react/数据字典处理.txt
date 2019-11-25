@@ -1,0 +1,100 @@
+1:请求后台
+api.js
+增加
+// 请求数据字典数据
+export async function getByDicType(params) {
+  return requestModels(`${SERVER_ADDR}/api/TDic/getByDicType`, {
+    method: 'POST',
+    body: params
+  });
+}
+
+base.js
+//调用service层 getByDicType方法请求数据
+    *getByDicType({ payload, callback }, { call }) {
+      const data = yield call(getByDicType, payload);
+      if (callback && typeof callback === 'function') {
+        if (data) {
+          callback(data);
+        }
+      }
+    },
+2:编辑界面
+info.js
+再state中新建空数组
+  state = {
+    dichandlestatus: []
+  };
+
+componentDidMount() 下面加上
+    //请求用户类型下拉框
+    const { dispatch } = this.props;
+    
+    dispatch({
+      type: 'base/getByDicType',
+      payload: { dicType: 'handlestatus' },
+      callback: data => {
+        // console.log(data)
+        this.setState({
+          dichandlestatus: data
+        })
+
+      },
+    })
+
+render() 下面加上
+    const dichandlestatus = this.state.dichandlestatus.data;
+
+查询表格里面加上
+
+          <FormItem {...formItemLayout} label="处理状态">
+            {getFieldDecorator('handleStatus', {
+              initialValue: info.handleStatus || newInfo.handleStatus,
+            })(
+              <Select showSearch allowClear placeholder="处理状态">
+                {dichandlestatus &&
+                  dichandlestatus.map(item => {
+                    return <Option value={item.dicCode}>{item.dicValue}</Option>;
+                  })}
+              </Select>
+            )}
+          </FormItem>
+现在查询用的是 value,以后应该改成key
+
+3:list.js
+3.1 查询条件中的下拉框处理
+跟 info.js处理是一样的,不同的是 下拉框初始化不一样
+     <Col {...formItemGrid}>  
+              <FormItem {...formItemLayout} label="处理状态">
+            {getFieldDecorator('handle_status', {
+              initialValue: this.props.list.queryMap.handle_status,
+            })(
+              <Select showSearch allowClear placeholder="处理状态">
+                {dichandlestatus &&
+                  dichandlestatus.map(item => {
+                    return <Option value={item.dicCode}>{item.dicValue}</Option>;
+                  })}
+              </Select>
+            )}
+          </FormItem>
+              </Col>
+
+
+3.2 gird中的字典翻译处理
+3.2.1 利用本页面的stats里缓存,进行前端翻译
+      {
+        title: '处理状态',
+        width: 150,
+        sorter: false,
+        render: (text, record) => {
+          if (!dichandlestatus) return <span>{record.handle_status}</span>;
+          const temp = dichandlestatus.find(item => item.dicCode === record.handle_status);
+          if (!temp) return <span>{record.handle_status}</span>;
+          return <span>{temp.dicValue}</span>;
+        },
+      },
+
+
+3.2.2 登录的时候获取所有的数据字典,缓存在application里,然后每个页面进行翻译
+
+

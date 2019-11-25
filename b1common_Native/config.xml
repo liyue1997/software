@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.xx.b1common" version="1.0.0">  
+  <name>演示项目</name>  
+  <description>演示项目</description>  
+  <author email="" href=""></author>  
+  <content src="http://192.168.50.212:8080/index.html"/>  
+  <access origin="*"/>  
+  <access origin="sms:*" launch-external="yes"/>  
+  <access origin="tel:*" launch-external="yes"/>  
+  <allow-intent href="http://*/*"/>  
+  <allow-intent href="https://*/*"/>  
+  <allow-intent href="tel:*"/>  
+  <allow-intent href="sms:*"/>  
+  <allow-intent href="mailto:*"/>  
+  <allow-intent href="geo:*"/>  
+  <platform name="android"> 
+    <allow-intent href="market:*"/> 
+  </platform>  
+  <platform name="ios"> 
+    <allow-intent href="itms:*"/>  
+    <allow-intent href="itms-apps:*"/>  
+    <hook src="hooks/xcode8.js" type="before_compile"/> 
+  </platform>  
+  <preference name="AppendUserAgent" value="x5app/1.0.0"/>  
+  <allow-navigation href="*"/>  
+  <!-- 背景色 -->  
+  <preference name="BackgroundColor" value="0xffffffff"/>  
+  <preference name="AllowInlineMediaPlayback" value="true"/>  
+  <!-- 屏幕方向 default, all, portrait, landscape -->  
+  <preference name="Orientation" value="default"/>  
+  <preference name="SplashScreen" value="screen"/>  
+  <preference name="SplashScreenDelay" value="10000"/>  
+  <plugin name="cordova-plugin-whitelist" spec="1"/> 
+</widget>

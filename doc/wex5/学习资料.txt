@@ -1,0 +1,5 @@
+1. 安卓 弹出软键盘导致界面变形
+http://docs.wex5.com/wex5-app-question-list-2055/
+这是  android:windowSoftInputMode 输入框的弹出模式造成的
+只需修改  Native/templates/platforms/android/AndroidManifest.xml 中的android:windowSoftInputMode  就好了
+修改为android:windowSoftInputMode=”adjustPan|stateHidden”

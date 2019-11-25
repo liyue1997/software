@@ -1,0 +1,13 @@
+.x-radio{color:#000000;margin-left:10px;}
+.tip {
+	color:#FFFFFF;
+	display:block;
+	background:#f00;
+	border-radius:50%;
+	width:20px;
+	height:20px;
+	top:5px;
+	right:5px;
+	position:absolute;
+}
+.notip{display:none;}

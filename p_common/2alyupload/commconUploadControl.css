@@ -1,0 +1,53 @@
+.x-titlebar
+{
+	background-color:#12B7F5;
+}
+.x-panel
+{
+	background-color:#EFEFF4;
+}
+.ffff
+{
+  background-image: url(bk.jpg);
+  background-color: #000000;
+
+}
+.x-card-border
+{
+	border:0;
+}
+.x-attachment
+{
+	padding:0;
+	margin-top:10px;
+}
+/*条目*/
+.x-attachment-item
+{
+	margin-left:8px;
+	margin-top:5px;
+	width:70px;
+	height:70px;
+}
+.x-item-upload
+{
+	background-size:70px;
+	/*background-image:url(http://test-img111.oss-cn-shanghai.aliyuncs.com/1480046253000.png);*/
+
+}
+.x-item-remove
+{
+		background-size:70px;
+
+}
+/*上传的文件*/
+.x-item-other
+{
+	background-size:200%;
+	background-position:50% 50%;
+}
+/*删除按钮*/
+.x-remove-barget
+{
+	top:-10px;
+}

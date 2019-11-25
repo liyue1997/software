@@ -1,0 +1,124 @@
+.x-panel-content
+{
+	background:#FFFFFF;
+}
+.x-titlebar
+{
+	background-color:#FFFFFF;
+}
+.header
+{
+   padding:0px 0 20px 0;
+}
+.head-sculpture
+{
+	width:80px;
+	margin:0 auto;
+	height:80px;
+	border-radius:50%;
+	padding:20px;
+	background:#333;
+}
+.head-sculpture img
+{
+	width:100%;
+}
+.loginInfo
+{
+	height:25%;
+	padding-left:20px;
+	text-weight:no	
+}
+.loginInfo .form-control {
+	border: 0;
+	border-radius: 0;
+	color: #666;
+	box-shadow: none;
+	font-size:16px;
+	width:200px;
+}
+.loginInfo .x-col {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.rowDiv {
+	border-bottom: 1px solid #E5E5E5;
+}
+.rowDiv label
+{
+	margin-bottom:0;
+	font-weight:normal;
+	font-size:16px;
+}
+.acc-login
+{
+	  padding-top:11%;
+	  padding-bottom:20px; 
+	  padding-left:10%;padding-right:10%;
+}
+.acc-login .btnLogin
+{
+	border:0;letter-spacing:5px;font-size:20px;border-radius:49px;background-color:#48c997;color:#fff;
+}
+.acc-register
+{
+	padding:0px 20px 20px 20px;
+}
+.acc-register .btnReg
+{
+	background:#4cd964;
+	border-radius:6px;
+	border:1px solid #4cd964;
+	color:#fff;
+}
+.acc-register .btnReg:active
+{
+	background-color:#000;
+	color:#FFFFFF;
+}
+button
+{
+	height:44px;
+	line-height:38px;
+	width:100%;
+	font-size:16px;
+}
+button:active
+{
+	opacity:0.5;
+}
+.forget-password
+{
+	text-align:center;
+	color:#f5a623;
+}
+.bannerimg{
+	width:100%;position:relative; height:35%;
+}
+.row4{
+	margin-top:15%;padding-right:10%;padding-left:3%;
+}
+.row1{
+	margin-top:10%;padding-right:10%;padding-left:3%;
+}
+.btnClose{
+	color:#fff;position:absolute;left:0;z-index:999;top:0;
+}
+.phoneimg{
+	width:15px;height:25px;
+}
+.pwdimg{
+	width:15px;height:22px;
+}
+.forgetpwdspan{
+	padding-left:12%;font-size:16px;color:#666;
+}
+.registerspan{
+	float:right;padding-right:12%;font-size:16px;color:#666;
+}
+.div2{
+	margin:5px;
+}
+.versionnumberspan{
+	font-size:medium;font-weight:bold;float:right;margin-bottom:0;
+}

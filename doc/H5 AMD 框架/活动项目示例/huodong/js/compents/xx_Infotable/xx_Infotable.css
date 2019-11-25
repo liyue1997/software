@@ -1,0 +1,22 @@
+#xx_InfoTable{
+	padding: 0;
+	margin-top: 15px;
+	width: 100%;
+	border-collapse: collapse;
+	line-height: 30px;
+}
+#xx_InfoTable, #xx_InfoTable tr th, #xx_InfoTable tr td{
+	text-align: center;
+	border: 1px solid #ACB3BB;
+}
+#xx_Dshowthead tr th{
+	font-size: 15px;
+}
+#xx_Infotable span{
+	font-size: 14px;
+	padding: 10px auto;
+	color: #888888;
+}
+#xx_Dshowtbody tr td:nth-child(3){
+	color: red;
+}

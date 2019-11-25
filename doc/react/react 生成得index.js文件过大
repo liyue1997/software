@@ -1,0 +1,13 @@
+https://blog.csdn.net/xuelang532777032/article/details/65635188
+https://github.com/iuap-design/blog/issues/222
+https://www.jianshu.com/p/0e01ca947e50
+
+需要引入webpack 来压缩
+
+
+index.156fbcda.js  3800K  8.2s
+index.9bb3a519.css 400k   0.16s
+logobg.6ef27877.png       1.8s
+
+react 项目优化方法
+先将js文件,上传到腾讯云,再服务器将html文件中的 引用js地址改成腾讯云之前上传的.

@@ -1,0 +1,9 @@
+先执行函数
+call initMenu('3511','SpDiscount','商铺优惠','35','Z2','admin');
+
+3511 要确保唯一,在 ts_menu_module 中查询
+35 是父菜单id,z2 是业务系统
+
+手工在ts_sys_role_menu_tree 表,增加结点
+
+后续改成 自动处理

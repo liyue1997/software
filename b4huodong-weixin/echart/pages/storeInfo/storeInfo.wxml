@@ -1,0 +1,26 @@
+<!--pages/storeInfo/storeInfo.wxml-->
+<view class="head">
+  <image src="../../images/img_shop@2x.png" class="pic"></image>
+  <view class="headtext">
+    门店信息
+  </view>
+</view>
+
+<view class="mendianInfo">
+<view class="tr">
+    <view class="td">门店简称:</view>
+    <input class="input" bindinput="shopName" value="{{listData.shopName}}" placeholder="请输入" disabled></input>
+  </view>
+  <view class="tr">
+    <view class="td">门店全称:</view>
+    <input class="input" bindinput="shopFullname" value="{{listData.shopFullname}}" placeholder="请输入" disabled></input>
+  </view>
+  <view class="tr">
+    <view class="td">手机:</view>
+    <input class="input" bindinput="shopTel" value="{{listData.shopTel}}" placeholder="请输入" disabled></input>
+  </view>
+  <view class="tr">
+    <view class="td">门店地址:</view>
+    <textarea class="textarea" bindinput="shopAddress" value="{{listData.shopAddress}}" placeholder="请输入" disabled></textarea>
+  </view>
+</view>

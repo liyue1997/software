@@ -1,0 +1,41 @@
+ <img src="./msg.png" alt="" xid="image7"  style="z-index:999;position:absolute;margin-top:10%;top:-10px; margin-left:5px;left:0px;height:55px;width:55px;"></img>
+     <img src="./blue.png" alt="" xid="image8" style="z-index:99; position:absolute;margin-top:10%;top:2px;   margin-left:20px;width:90%;height:32px;" ></img>
+     <img src="./ose.png" alt="" xid="image6"  style="z-index:999;position:absolute;margin-top:10%;top:8px;   margin-left:86%;height:25px;" bind-click="image6Click"></img>
+     <span xid="span2"                         style="z-index:99; position:absolute;margin-top:10%;top:6px;  margin-left:78px;color:white;"><![CDATA[神速加油，加油方便，还免服务费！]]></span>
+     
+     <img src="./middle.jpg" alt="" xid="image3" style="z-index:999;position:fixed;width:60%;top:32%;left:20%;margin-left:width/2;margin-top:height/2;"></img>
+     <img src="./detele-icon.png" alt="" xid="image4" height="20px" style="width:20px;height:20px;position:absolute;z-index:999;top:28%;left:78%;" bind-click="image4Click"></img>
+     <span xid="span1" style="top:82%;z-index:999;position:absolute;left:35%;"><![CDATA[3秒后自动关闭...]]></span>
+
+
+
+
+var time = 3;
+window.setInterval(function() {
+
+			if (time > 0) {
+				--time;
+				$(self.getElementByXid("span1")).text(time + "秒后自动关闭...");
+				if (time === 0) {
+					$(self.getElementByXid("image4")).hide();
+					$(self.getElementByXid("image3")).hide();
+					$(self.getElementByXid("span1")).hide();
+				}
+			} else {
+				return;
+			}
+		}, 1000);
+
+
+
+Model.prototype.image6Click = function(event) {
+		$(this.getElementByXid("image6")).hide();
+		$(this.getElementByXid("image8")).hide();
+		$(this.getElementByXid("image7")).hide();
+		$(this.getElementByXid("span2")).hide();
+	};
+	Model.prototype.image4Click = function(event) {
+		$(this.getElementByXid("image4")).hide();
+		$(this.getElementByXid("image3")).hide();
+		$(this.getElementByXid("span1")).hide();
+	};

@@ -1,0 +1,103 @@
+.btn-need,.btn-need:focus{
+	width:70%;    
+	background-color:#1ca670;	
+	color:#FFFFFF;
+	border-radius:49px;
+	margin-left:15%;
+	height:50px;
+}
+.x-panel-bottom2{
+	position:absolute;
+	bottom:15px;
+	z-index:9999;
+	width:94%;
+	left:3%;
+}
+.pinfo{
+	height:100%;
+	background-color:#2B2B39;
+	border-radius:5px;
+	/*
+	margin:15px;padding-left:8px;padding-right:8px;
+	*/
+}
+.divtop{
+	position:absolute;
+	z-index:9999;
+	background-color:#2B2B39;
+	width:100%;
+	height:90px;
+	/*padding-top:20px;*/
+}
+.imgback,.imgmsg{width:20px;}
+.search{
+	width:260px;
+	height:30px;
+	background:url("./img/nav_icon_sousuo.png");
+	background-size:260px 30px;
+	border:0;
+	border-radius:15px;
+	color:#FFFFFF;
+}
+.search:focus{background:#2B2B38;}
+.span2,.span4,.span5{color:white;font-size:13px;}
+.down{height:8px;width:6px;}
+.x-row{padding:0px;}
+.col1{
+	padding:0px;
+	padding-top:3px;
+	width:100px;
+}
+.headImgDiv{
+	margin-top:16px;
+	margin-left:10px;
+	float:right;	
+}
+.headImgDiv img{
+	border-radius:5px;
+	width:100%;
+	height:78px;
+	float:right;
+}
+.title{
+	font-family:NotoSansHans-Medium;
+	color: #FFFFFF;
+	font-size: 18px;
+	padding: 1px;
+	white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.desc{color: #FFFFFF;font-size:14px;padding:1px;}
+.detail{margin:0;color: #FFFFFF;}
+.shopname{
+	display:inline-block;
+	width:90px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.status1{color: #000000;	font-size: 16px;padding: 20px 1px 1px 1px;}
+.winDia2 .x-dialog {
+	border-radius: 0px;
+	border: 0;z-index: 9999;
+}
+
+.winDia2 .x-dialog .x-dialog-body {
+	padding: 0;z-index: 9999;
+}
+.star{width:12px;height:12px;}
+input:focus{outline:none;box-shadow:none;}
+.btndetail{width:45px;height:20px;margin-right:10px;}
+
+/*弹出菜单*/
+.x-popOver-overlay{background-color:#252330;}
+.sorting2{top:248px !important;width:100%;background-color:#252330;}
+.sorting{top:168px !important;width:100%;background-color:#252330;}
+.sorting .list-group-item, .sorting2 .list-group-item{border:0;color:#FFFFFF;background:#252330;padding-left:0;padding-right:0; border-radius:0; border-left:0; border-right:0; border-top:0;margin:0 auto;}
+.sorting .list-group-item .liBtn, .sorting2 .list-group-item .liBtn{ display:none;}
+.sorting .list-group-item.current .liBtn, .sorting2 .list-group-item.current .liBtn{ display:block;}
+.sorting .list-group-item.current, .sorting2 .list-group-item.current{ color:#ED3BB9;}
+.sorting .list-group-item span, .sorting2 .list-group-item span{padding-left:10px;}
+
+/*在此区域内搜索*/
+.searchhere{position:absolute;z-index:9999;width:154px;height:53px;background:url("./img/btn_sousuo.png");background-size:154px 53px;border:none;border-radius:20px;left:50%;margin-left:-77px;}
+.searchdiv{position:absolute;z-index:9999;background:white;width:100%;height:40px;}

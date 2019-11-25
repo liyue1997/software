@@ -1,0 +1,19 @@
+1. 系统标题修改
+D:\work\software\b4huodong-web\src\index.ejs
+D:\work\software\b4huodong-web\src\utils\Constant.js
+
+2. 图片
+D:\work\software\b4huodong-web\src\components\GlobalHeader\index.js
+这个地方图片 是 手机状态下的 图标
+
+216*98 菜单上面的图标
+D:\work\software\b4huodong-web\src\layouts\BasicLayout.js
+
+
+3. 页面ico
+<link rel="icon" href="/b4huodong-web/favicon.png" type="image/x-icon">
+D:\work\software\b4huodong-web\public
+
+4:登录页面背景图
+D:\work\software\b4huodong-web\src\layouts\UserLayout.less
+D:\work\software\b4huodong-web\src\assets  logobg.png

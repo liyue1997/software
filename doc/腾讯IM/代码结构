@@ -1,0 +1,19 @@
+1.public -》 index.html   决定布局，入口
+  src -》 main.js  加载index.vue 到 div(app)
+          index.vue 加载 components login login.vue 登录界面
+          login.vue 只需要 userid 即可，通过 mounted 可以自动登录
+        
+        
+     -》layout -》side-bar.vue 里面初始化 菜单
+          handleClick(event)  处理的点击 群组列表 等事件  this.checkoutActive(activeName.GROUP_LIST)
+          
+          getGroupList() {
+              this.tim.getGroupList().then(({ data: groupList }) => {
+                this.$store.dispatch('updateGroupList', groupList)
+              })
+            }
+    -》group -》group-item。vue 里面
+          handleGroupClick() {
+              const conversationID = `GROUP${this.group.groupID}`
+              this.$store.dispatch('checkoutConversation', conversationID)
+            },

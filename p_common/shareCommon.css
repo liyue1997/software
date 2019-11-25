@@ -1,0 +1,42 @@
+.sharePopOver .x-row
+{
+	border:0;
+	text-align:center;
+}
+/*弹出栏目*/
+.x-popOver-overlay{ background-color:#000;}
+.x-popOver-content{ border-radius:0;}
+
+/**购买框**/
+.popOverBuy .x-popOver-overlay{ background-color:#000;}
+.popOverBuy .x-popOver-content{ width:100%; background-color:#fff; bottom:0!important;}
+
+.popOverBuy .btn
+{
+	color:#5A5A5A;
+}
+.popOverBuy .popOverTitileRow
+{
+	background-color:#F2F0F0;
+}
+.popOverBuy .popOverTitileRow .x-col
+{
+  padding-top:0;
+}
+/*取消按钮*/
+.btn-default
+{
+	border-radius:0;
+	background:#F3F3F3;
+	height：45px;
+	line-height:30px;
+	color:#545455;
+	border:0;
+}
+
+/*分享按钮*/
+
+.shareRow
+{
+
+}

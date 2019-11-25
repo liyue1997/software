@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "对账单",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-divider": "../../dist/divider/index",
+    "i-button": "../../dist/button/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

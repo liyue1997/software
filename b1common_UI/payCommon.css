@@ -1,0 +1,92 @@
+.window
+{	
+	padding:0px;
+	margin:0px;
+}
+.paymentPanel{
+	background-color:white;
+}
+.x-row
+{
+	 margin:0;	
+}
+.msgrow{
+	margin:0;padding:0;padding-bottom:2px;border-bottom:1px solid #c0c0c0;height:70px;
+}
+.closerow{
+	margin:0;padding:0;height:40px;
+}
+.x-titlebar
+{
+	color:#EEEEEE;
+	background-color:#fff;
+	font-size:16px;
+}
+.x-titlebar-title
+{
+	background-color:#EEEEEE;
+	color:#333333;
+	font-weight:lighter;
+}
+.panel{  border:0; }
+.panel.panel-default{ }
+.payPanelContent
+{	
+}
+.payPanelContent .x-row
+{	
+ padding:0px; 
+background:#FFFFFF;
+}
+.payPanelContent .x-row .x-col
+{
+	 padding-top:0; 
+	 padding-bottom:0; 
+	line-height:50px;
+	height:50px;	
+}
+.x-panel-bottom
+{
+	background-color:#FFFFFF;
+}
+.x-panel .x-panel-bottom
+{
+	height:auto;
+}
+.prcNameRow
+{
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	border-top:1px solid #fff;
+}
+.prcNameRow .x-col
+{
+ padding:0; 
+}
+.moneyRow
+{
+	font-size:18px;
+	padding-left:5px;padding-right:5px;
+}
+.moneyRow .btn
+{
+	border-color:#48c997;
+	background-color:#48c997;
+	 border:0;
+	font-size:18px;
+	width:100%;
+	border-radius: 49px;
+}
+.x-radio
+{
+	 margin:0;
+}
+.x-radio input[type="radio"]:checked + label:before, .x-checkbox input[type="checkbox"]:checked + label:before
+{
+	background-color:#1ca670;
+}
+.zfbPayRow,.wxPayRow,.unionPayRow,.wapwxPayRow
+{
+	padding-left:10px;padding-right:10px;
+}

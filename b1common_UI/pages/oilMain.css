@@ -1,0 +1,105 @@
+.window,.x-panel,.panel {
+	background-color: #f0f0f0;
+}
+.x-titlebar
+{
+	background-color: #fff;
+	color:#000000;	
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}
+.panel {
+	border: 0;
+}
+
+.panel.panel-default {
+	margin-bottom: 10px;
+}
+
+
+.x-row .x-col {
+	padding-right: 5px; 
+}
+
+
+.infoRow {
+	padding: 0 20px;
+}
+
+.infoRow img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.nickNamecol {
+	font-size: 16px;
+	color: #000;
+}
+
+.htCol {
+	font-size: 12px;
+	color: #fff;
+	background-color:#48c997;
+	border-radius: 10px;
+	border:1px solid #48c997;
+	float:right;width:50%;
+}
+.htCol1 {
+	font-size: 12px;
+	color: #fff;
+	background-color:#48c997;
+	border-radius: 10px;
+	border:1px solid #48c997;
+	float:right;width:50%;
+}
+.htCol2 {
+	font-size: 12px;
+	color: #fff;
+	background:rgba(169,169,169,0.5);
+	border-radius: 10px;
+	border:1px solid #a9a9a9;
+	float:right;width:50%;
+}
+.htCol3 {
+	font-size: 12px;
+	color: #fff;
+	background-color:#48c997;
+	border-radius: 10px;
+	border:1px solid #48c997;
+	float:right;width:50%;
+}
+.htCol4 {
+	float:right;width:50%;
+	font-size: 12px;
+	color: #fff;
+	background-color:#139642;
+	border-radius: 10px;
+	border:1px solid #139642;
+}
+.backBtn{
+	color:#1ca670;
+}
+.x-scroll{
+	background-color:white;
+}
+.historyrow{
+	padding:0;line-height:40px;height:40px;background-color:#efeff4;border-top:1px solid #b2b2b2;
+}
+.indentpanel{
+	padding-right:5px;padding-left:5px;margin-top:10px;background-color:white;
+}
+.indentdiv{
+	background-color:white;
+}
+.moneyrow{
+	border-bottom:1px solid #c0c0c0;
+}
+.ispay{
+	color:#38bb82;
+}
+.historycol{
+	padding:0;margin:0;
+}

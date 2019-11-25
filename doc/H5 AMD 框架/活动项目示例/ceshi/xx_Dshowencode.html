@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>核销码</title>
+		<script src="lib/dist/require.js" data-main="xx_requireconfig.js"></script>
+	</head>
+
+	<body>
+		<button class="btn btn-primary" id="xx_Dshowreturnbtn"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>返回</button>
+		<img id="make128code" />
+		<p id="textmsg">核销码是您享受服务的凭据<br>长按将图片保存到本地</p>
+		<p id="codeMsg"></p>
+		<p id="tagMsg">长按可复制核销码数字到剪贴板</p>
+		<script>
+			require(["ggao"]);
+		</script>
+	</body>
+
+</html>

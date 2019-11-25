@@ -1,0 +1,87 @@
+<!--海报-->
+<div id="xx_PicsDy"></div>
+<!--门店信息-->
+<div id="xx_ShopInfo">
+	<div class="xx_inforow">
+		<label>门店名:</label>
+		<span id="xx_ShopInfoshopname"></span>
+	</div>
+	<div class="xx_inforow">
+		<label>门店地址:</label>
+		<span id="xx_ShopInfoshopaddress"></span>
+		<img id="xx_Dshowlocationicon" src="https://xinxing-1259797882.cos.ap-shanghai.myqcloud.com/image/xinxingdingwei.png" />
+	</div>
+	<div class="xx_inforow">
+		<label>服务电话:</label>
+		<span id="xx_ShopInfoshoptel"></span>
+		<a id="xx_ShopInfoshoptela" href="tel:02585326545"><img src="https://xinxing-1259797882.cos.ap-shanghai.myqcloud.com/image/xinxingdianhua.png" /></a>
+	</div>
+</div>
+<!--用户信息-->
+<div id="xx_HuodongInfo">
+	<div class="xx_inforow">
+		<label>姓名:</label>
+		<input type="text" class="" id="xx_HuodongInfonameinput" placeholder="姓名(必填)" required="true" autocomplete="off">
+	</div>
+	<div class="xx_inforow">
+		<label>车牌号:</label>
+		<input id="xx_Dshowchepainum" style="display: none;" required="true" autocomplete="off">
+		<div id="xx_compChepai"></div>
+	</div>
+	<div class="xx_inforow">
+		<label>手机号码:</label>
+		<input type="text" class="" id="xx_HuodongInfophoneinput" placeholder="手机号(必填)" required="true" autocomplete="off">
+	</div>
+	<button id="xx_baomingbtn" class="xx_inforowbtn" type="button">立即报名</button>
+</div>
+<!--表格-->
+<div id="xx_HuodongTable">
+	<table id="xx_InfoTable">
+		<thead id='xx_Dshowthead'>
+			<tr>
+				<td>序号</td>
+				<td>车牌号码</td>
+				<td>报名状态</td>
+				<td>报名时间</td>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<input type="hidden" value="1" id="page">
+	<div id="gengduo">查看更多</div>
+</div>
+<!--申请创建活动-->
+<div id="xx_HuodongApply">
+	<div id="xx_HuodongApplydiv">
+		<b>我也要创建活动</b>
+	</div>
+	<div class="xx_HuodongApplyformdiv">
+		<div class="fixregisterbox" id="fixregisterbox">
+			<h4>活动申请信息登记</h4>
+			<div class="xx_applyrow">
+				<label>公司名称：</label>
+				<input type="text" id="xx_HuodongApplyInputCompany" placeholder="请输入公司名称">
+			</div>
+			<div class="xx_applyrow">
+				<label>公司地址：</label>
+				<input type="text" id="xx_HuodongApplyInputAddress" placeholder="请输入公司地址">
+			</div>
+			<div class="xx_applyrow">
+				<label>联系人姓名：</label>
+				<input type="text" id="xx_HuodongApplyInputUsername" placeholder="请输入联系人姓名">
+			</div>
+			<div class="xx_applyrow">
+				<label>联系电话：</label>
+				<input type="text" id="xx_HuodongApplyInputUserphone" placeholder="请输入联系电话">
+			</div>
+			<div style="text-align: center;">
+				<button id="xx_huodongapplybtn">提交</button>
+				<button id="xx_huodongapplyclose" class="close_formbox">取消</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="xinxingTag">
+技术支持:<a id="kuaixin">心星科技</a>
+</div>

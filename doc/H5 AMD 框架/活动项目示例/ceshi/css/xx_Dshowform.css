@@ -1,0 +1,59 @@
+.xx_Dshowform {
+	height: 35px;
+	width: 100%;
+	line-height: 35px;
+	margin: 0 auto;
+}
+
+.xx_Dshowform span{
+	font-size:14px ;
+	display:inline-block;
+	width: 60%;
+	white-space: normal;
+	line-height: 14px;
+	vertical-align: middle;
+}
+.xx_Dshowform label {
+	text-align: right;
+	font-size: 15px;
+	font-weight: bold;
+	width: 25%;
+	float: left;
+	text-align: right;
+	padding-right:10px;
+}
+.xx_Dshowform img{
+	float: right;
+	margin-right: 8%;
+	vertical-align: middle;
+	width: 26px;
+	height: 26px;
+}
+.xx_Dshowform input {
+	outline: none;
+	border: none;
+	width: 60%;
+}
+
+.xx_Dshowformbtn {
+	margin-top: 15px;
+	position: relative;
+	left: 50%;
+	margin-left: -25%;
+	display: inline-block;
+	width: 50%;
+	padding: 6px 20px;
+	border-radius: 50px;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background: rgb(249,192,39);
+	border: none;
+	box-shadow: 0 3px #999;
+}
+
+.xx_Dshowformbtn:active {
+	box-shadow: 0 3px #666;
+	transform: translateY(3px);
+}

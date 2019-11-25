@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>弹出遮罩层</title>
+		<script src="js/jquery-3.4.1.js"></script>
+		<style>
+			body{
+				width: 100%;
+				height: 100%;
+				margin:0;
+				padding: 0;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.fulled {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.2);
+				display: none;
+			}
+			
+			.container {
+				width: 100%;
+				height: 600px;
+			}
+			
+			.container a {
+				text-decoration: none;
+				color: #0099FF;
+				line-height: 100px;
+				font-size: 60px;
+				text-align: center;
+				display: block;
+			}
+			
+			.fulled .fix-box {
+				position: relative;
+				margin: 10% auto;
+				width: 70%;
+				height: 50%;	
+				background: transparent;
+			}
+			
+			.fulled .fix-box .close {
+				position: absolute;
+				right: 10px;
+				top: 0;
+				color: black;
+				cursor: pointer;
+			}
+			img{			
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<a href="javascript:;">点击弹出</a>
+		</div>
+		<div class="fulled">
+			<div class="fix-box">
+				<p class="close">X关闭</p>
+				<img src="img/1572945489(1).png" />
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function() {
+				$(".container").on("click", function(event) {
+					event.preventDefault();
+					$(".fulled").fadeIn();
+				})
+				$(".close").on("click", function(event) {
+					if($(event.target).is(".close") || $(event.target).is(".fix-box")) {
+						event.preventDefault();
+						$(".fulled").hide();
+					}
+				})
+				$(document).keyup(function(event) {
+					if(event.which == "27") {
+						$(".fulled").fadeOut();
+					}
+				})
+			})
+		</script>
+	</body>
+
+</html>

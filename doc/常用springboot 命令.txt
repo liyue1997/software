@@ -1,0 +1,2 @@
+mvn clean package   打包
+java -jar .\target\b2mapshop-server-1.0-SNAPSHOT-exec.jar   运行

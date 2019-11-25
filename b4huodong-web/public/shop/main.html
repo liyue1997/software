@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扫码核销</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/40076/DecoderWorker.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/40076/exif.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/40076/BarcodeReader.js"></script>
+    
+	<!-- <script type="text/javascript" src="js/vconsole.min.js" ></script> -->
+
+</head>
+<style>
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #F8F9FA;
+    }
+    #findInfo{
+        padding-left: 16.5pt;
+        padding-top: 17.5pt;
+        padding-bottom: 21pt;
+        background: #FFFFFF;
+    }
+    .tagblue{
+        color: #0C0C0C;
+        font-size: 13pt;
+        line-height: 25px;
+    }
+</style>
+<body>
+    <input type="file" style="display:none" id="barCode" accept="image/*" mutiple="mutiple" capture="camera" />
+    <div class="m-12"
+        style="width: 100%;display: flex;justify-content: center;align-content: center;flex-direction: column;">
+        <div style="width: 100%; height:300px; margin: 0 auto; background-color: #3F88E7; text-align: center; position: relative;">
+            <!-- <button type="button" onclick="$('#barCode').click()" style="width: 140px;">点击扫码</button>  -->
+            <img id="img" class="mt-12" width="140" height="140" src="img/paizhao.png"
+                style="border-radius: 50%;display:block;text-align: center; margin: 0 auto; margin-top: 50px;"
+                onclick="$('#barCode').click()" />
+            <p style="color: white;">优惠券码</p>
+            <p id="codeInfo" class="codeInfo mt-12"
+                style="color: white;font-size: 14px;text-align: center; position: absolute; bottom: 40px;width: 100%;">
+            </p>
+            <!-- <p class="time mt-24 fs-18 text-center"></p> -->
+            <!-- <button id="find" onclick="find()" style="margin-top: 20px;">查询</button>
+            <button id="verification" onclick="hexiao()" style="margin-top: 20px;">核销</button> -->
+            <p>
+                <span id="find" style="color: white; float: left; margin-left: 60px;" onclick="find()">
+                    <img src="img/find.png" alt="" style="width: 22px; height: 22px;vertical-align: middle;">查询
+                </span>
+                <span id="verification" style="color: white; float: right; margin-right: 60px;" onclick="hexiao()">
+                    <img src="img/hexiao.png" alt="" style="width: 22px; height: 22px;vertical-align: middle;">核销
+                </span>
+            </p>
+        </div>
+        <div id="findInfo">
+
+        </div>
+    </div>
+    <script>
+        
+        //  var vConsole=new VConsole();
+        // alert("console");
+        var find = document.getElementById('find');
+        var verification = document.getElementById('verification');
+        var codeInfo = document.getElementById('codeInfo');
+        var userid = localStorage.getItem("userid");// localStorage.getItem("userid");
+        console.log("userid", userid);
+
+        
+        var isactive = localStorage.getItem("isactiveb4huodong-web");	  
+        console.log("isactive", isactive);
+
+        var usertype = localStorage.getItem("userTypeb4huodong-web");	 
+        console.log("usertype", usertype);
+
+        find = () => {
+            console.log("find");
+            console.log("codeInfo", codeInfo.innerText);
+
+            $.ajax({
+                url: '/b4huodong/app/huodong?command=getpayorder&userid=' + 'USER15726681490088' + '&payorder=' + '1572668212059',
+                type: "get",
+                success: function (data) {
+                    //alert(JSON.parse(data))
+                    console.log(data.data.payStatus);
+                    $('#findInfo').html("");
+                    var payStatus = "";
+                    if (data.data.payStatus === "0") {
+                        payStatus = '未支付';
+                    } else if (data.data.payStatus === "1") {
+                        payStatus = '支付成功';
+                    } else if (data.data.payStatus === "2") {
+                        payStatus = '支付失败';
+                    } else if (data.data.payStatus === "3") {
+                        payStatus = '已核销';
+                    }
+                    if (data.ret === "success") {
+
+                        $('#findInfo').prepend('<span class="tagblue">核销码:' + codeInfo.innerText + '</span>');
+                        $('#findInfo').prepend('</span><span class="tagblue">支付金额:' + data.data.payMoney
+                            + '</span></br><span class="tagblue">姓名:' + data.data.userName
+                            + '</span></br><span class="tagblue">车牌号:' + data.data.userCar
+                            + '</span></br>' + '<span class="tagblue">支付时间:' + data.data.payTime
+                            + '</span></br>' + '<span class="tagblue">手机号:' + data.data.userPhone
+                            + '</span></br>' + '<span class="tagblue">支付状态:' + payStatus
+                            + '</span></br>');
+                    }
+
+                    else {
+                        $('#findInfo').prepend('<span class="tagred">错误信息:' + data.info + '</span>');
+
+                    }
+
+                }
+
+            })
+
+        }
+        hexiao = () => {
+            $.ajax({
+                url: '/b4huodong/app/huodong?command=hxpayorder&userid=' + userid + '&payorder=' + codeInfo.innerText,
+                type: "get",
+                success: function (data) {
+                    //alert(JSON.parse(data))
+                    if (data.ret === "success") {
+                        $('#findInfo').prepend('<span class="tagred">核销成功' + '</span></br>');
+                    }
+                    else {
+                        $('#findInfo').prepend('<span class="tagred">核销失败:' + data.info + '</span></br>');
+                    }
+                }
+
+            })
+        }
+        //获取url中的code值
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");//构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);//匹配目标参数
+            if (r != null) return unescape(r[2]); return null;//返回参数值
+        }
+        // alert(getUrlParam("userid"));
+        // alert(getUrlParam("shopid"));
+        $(function () {
+            compatibleInput();
+            var timeStart = '';
+            var timeEnd = '';
+            BarcodeReader.Init();
+            BarcodeReader.SetImageCallback(function (result) {
+                console.dir(result);
+                if (!result.length) {
+
+                    $(".codeInfo").html('条形码读取失败');
+                    return
+                }
+                var barcode = result[0];
+
+                if (barcode.Value) {
+                    $(".codeInfo").html(barcode.Value);
+                }
+                timeStart1 = new Date()
+                console.log(timeStart1)
+                var date3 = timeStart1.getTime() - timeStart.getTime() //时间差的毫秒数
+                $(".time").html('共用时：' + date3 + '毫秒')
+            });
+            document.querySelector("#barCode").addEventListener('change', function (evt) {
+                timeStart = new Date()
+                console.log(timeStart)
+                var file = evt.target.files[0];
+                reader = new FileReader();
+                console.log(reader)
+                reader.onloadend = function () {
+                    var img = new Image();
+                    img.src = reader.result;
+                    console.log(img)
+                    BarcodeReader.DecodeImage(img);
+                }
+                console.log(file)
+                //			$('#img').attr('src', window.createObjectURLcre(file))   ;   
+                reader.readAsDataURL(file);
+                img.src = URL.createObjectURL(file)
+            }, false);
+        });
+        // 判断当前是否属于ios移动端，兼容input同时调用手机相册和相机
+
+        function compatibleInput() {
+            //获取浏览器的userAgent,并转化为小写
+            var ua = navigator.userAgent.toLowerCase();
+            //判断是否是苹果手机，是则是true
+            var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+            if (isIos) {
+                $("input:file").removeAttr("capture");
+            };
+        }
+    </script>
+</body>
+
+</html>

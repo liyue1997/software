@@ -1,0 +1,74 @@
+.window,.x-panel,.panel,.x-panel-content
+{
+	
+background-image:url($UI/b1common/newimages/settingbg.png);background-size:100% 100%;
+}
+.row-1
+{
+	padding:0;margin:0;
+	height:62px;
+}
+.witheline{
+	margin-left:80px;background:rgba(255,255,255,0.2);width:50%;height:2px;margin-top:0;margin-bottom:0;
+}
+.spnTitle
+{
+	font-size:16px;
+	color:#FFFFFF;
+	margin:10px 0px;
+	padding:0;
+}
+.uicon{
+	width:30px;height:30px;margin-left:40px;margin-right:10px;
+}
+.btntext
+{		
+	font-size:18px;
+	color:#FFFFFF;
+	height:40px;
+	line-height:40px;
+}
+.x-row{
+	margin-bottom:10px;	
+}
+.bntico
+{
+	height:60px;	
+}
+.imgrow{
+	padding-top:25px;height:20%;
+}
+.middlerow{
+	height:50%;
+}
+.x-panel-bottom{
+	height:30%;
+}
+.phonerow{
+	margin:0;padding:0;
+}
+.portraitcol{
+	text-align:center;
+}
+.headimg{
+	width:60px;
+	height:60px;
+}
+.titlecol{
+	text-align:center;margin:0;padding:0;
+}
+.placerow{
+	margin-top:10%;;margin-bottom:0;padding:0;
+}
+.phonea{
+	margin-bottom:0;
+}
+.servicerow{
+	margin:0;
+}
+.setrow{
+	margin-top:5%;
+}
+.endcol{
+	width:80%;
+}

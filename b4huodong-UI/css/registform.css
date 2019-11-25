@@ -1,0 +1,43 @@
+.hdformdiv {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.2);
+	display: none;
+	z-index: 9999;
+}
+
+.hdformdiv .fixregisterbox {
+	overflow: auto;
+	min-height: 340px;
+	position: absolute;
+	width: 86%;
+	height: 100%;
+	left: 50%;
+	margin-left: -43%;
+	padding-top:8% ;
+	padding-bottom: 10%;
+}
+
+.hdformdiv .fixregisterbox .close_formbox {
+	cursor: pointer;
+}
+.fixregisterbox .form-group{
+	position: relative;
+	margin: 0 auto;
+}
+.fixregisterbox form{
+	padding: 8%;
+	background: #FFFFFF;
+}
+.fixregisterbox h4{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	text-align: center;
+}
+#warningmsg1,#warningmsg2,#warningmsg3,#warningmsg4{
+	color: red;
+}

@@ -1,0 +1,43 @@
+.x-panel-top{background:#252330;}
+.image1{width:21px;height:21px;}
+.icon{
+	width:20px;
+	height:20px;
+	margin-right:16px;
+	margin-top:8px;
+}
+.mapimg{width:12px;height:12px;}
+.shopimg{border-radius:5px;}
+.divtop{
+	width:95%;
+	height:30%;
+	border-radius:5px;
+	background:#2B2B38;
+	margin:0 auto;
+	padding:16px 10px 16px 10px;
+}
+.shopname{color:#FFFFFF;font-size:20px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.pinfendiv{float:left;margin-left:10px;}
+.fenshu{color:#FFFFFF;margin-left:5px;font-size:12px;}
+.star{width:13px;}
+.price{color:#FFFFFF;}
+.divcenter{
+	width:95%;
+	height:30%;
+	border-radius:5px;
+	background:#2B2B38;
+	margin:10px auto;
+	padding:14px 10px 14px 10px;
+}
+.x-row{padding:0;}
+.time{color:#FE291F;margin-left:13px;}
+.centertitle{color:#FFFFFF;font-size:17px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.join{width:57px;height:27px;border:0;background:url("./img/btn_jiaru.png");background-size:57px 27px;color:#FFFFFF;font-size:15px;}
+
+.msg{color:#FFFFFF;margin-top:10px;}
+
+.divbottom{padding:14px 10px 14px 10px;width:95%;height:25%;margin:0 auto;border-radius:5px;background:#2B2B38;}
+.touxiang{border-radius:50%;width:22px;height:22px;}
+
+.fcontentred{font-family:黑体;font-size:13px;color:red}
+.fcontentgreen{font-family:黑体;font-size:13px;color:green}

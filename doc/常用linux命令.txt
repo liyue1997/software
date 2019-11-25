@@ -1,0 +1,18 @@
+1.linux下获取占用CPU资源最多的10个进程，可以使用如下命令组合：
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
+
+2.linux下获取占用内存资源最多的10个进程，可以使用如下命令组合：
+ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
+
+3. 查找某个进程
+ps -ef | grep 进程名称
+
+4. 查找某个端口
+netstat -tunlp|grep 12001
+
+5.计划任务
+https://jingyan.baidu.com/article/75ab0bcba7af1cd6864db280.html
+
+
+6. 删除文件
+rm -f /var/log/httpd/access.log

@@ -1,0 +1,19 @@
+.window,.x-panel,.panel {
+	background-color: #fff;
+}
+.x-titlebar
+{
+	background-color:#fff;
+	color:#000;
+}
+.x-row{	
+	margin-bottom:8px;
+	background-color:#fff;
+}
+.backBtn{
+	color:#1ca670;
+}
+.x-titlebar .x-titlebar-title
+{
+	font-weight:normal;
+}

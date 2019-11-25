@@ -1,0 +1,14 @@
+插件：cordova.plugins.barcodeScanner二维码扫描
+
+注意事项：在打包时手动选择插件，不要自动追加
+          jquery.qrcode.min.js用于二维码生成
+
+关键代码：require("cordova!phonegap-plugin-barcodescanner");
+
+            function onSuccess(result){
+            			alert(result.text);
+            		}
+            		function onError(error){
+            			alert(error);
+            		}
+            		justep.barcodeScanner.scan(onSuccess,onError);
